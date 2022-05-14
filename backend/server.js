@@ -28,9 +28,20 @@ mongoose.connect(URI,{
     console.log('Connected to MongoDB')
 })
 
-app.get('/',(req,res) =>{
-    res.json({msg: "Welcome"})
-})
+const User = require('./models/User');
+
+const userInput = {
+    username:"DimaPerera",
+    password:"12341234",
+    role:"admin"
+}
+
+const user = new User(userInput);
+user.save((err,document)=>{
+    if(err)
+    console.log(err);
+    console.log(document);
+});
 
 const PORT = process.env.PORT || 5000
 app.listen(PORT, () =>{
