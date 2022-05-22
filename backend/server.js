@@ -28,20 +28,8 @@ mongoose.connect(URI,{
     console.log('Connected to MongoDB')
 })
 
-const User = require('./models/User');
-
-const userInput = {
-    username:"DimaPerera",
-    password:"12341234",
-    role:"admin"
-}
-
-const user = new User(userInput);
-user.save((err,document)=>{
-    if(err)
-    console.log(err);
-    console.log(document);
-});
+const userRouter = require('./routes/User');
+app.use('/user',userRouter);
 
 const PORT = process.env.PORT || 5000
 app.listen(PORT, () =>{
