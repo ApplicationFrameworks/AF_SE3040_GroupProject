@@ -12,6 +12,7 @@ app.use(express.urlencoded({ limit: '50mb', extended: true }));
 app.use(cors());
 
 const StaffRouter = require("./routes/staffrouter");
+const DocumentRouter = require("./routes/documentrouter");
 
 //getting the database url
 const URL = process.env.MONGODB_URL;
@@ -31,8 +32,10 @@ connection.once("open", function() {
 }); 
 
 
-//when http://localhost:8070/doctor ran it will execute doctorrouter.js file
+//when http://localhost:8070/staff ran it will execute staffrouter.js file
 app.use("/staff",StaffRouter);
+//when http://localhost:8070/staff ran it will execute staffrouter.js file
+app.use("/tdoc",DocumentRouter);
 
 
 //defining a port to run the application
