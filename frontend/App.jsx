@@ -11,6 +11,9 @@ import ViewSubmissions from "./src/components/TopicManagement/ViewSubmissions/Vi
 import Homepage from './src/components/Home/Homepage';
 import Header from './src/components/Header/Header';
 import Footer from './src/components/Footer/Footer';
+import AdminSignIn from './src/components/AdminManagement/AdminLogin';
+import StudentSignIn from './src/components/StudentManagement/SignIn/SignIn';
+import StudentSignUp from './src/components/StudentManagement/SignUp/SignUp';
 
 
 function App() {
@@ -19,6 +22,8 @@ function App() {
             <Header/>
             <Switch>
             <Route path="/" exact component={Homepage} />
+            <Route path="/student/signin" exact component={StudentSignIn} />
+            <Route path="/student/signup" exact component={StudentSignUp} />
             <Route path="/staff/register" exact component={StaffSignUp} />
             <Route path="/staff/login" exact component={StaffLogin} />
             <Route path="/staff/profile" exact component={StaffProfile} />
@@ -28,6 +33,7 @@ function App() {
             <Route path="/tdocAdd" exact component={DocumentSubmission}/>
             <Route path="/tdocView" exact component={ViewSubmissions}/> 
             <Route path="/tdocView/:id" exact component={OneSubmission}/> 
+            <Route path="/admin/signin" exact component={AdminSignIn} />
             </Switch>
             <Footer/>
         </Router>

@@ -121,11 +121,11 @@ function Header() {
     }
 
     function signin() {
-        history.push('/student/login')
+        history.push('/student/signin')
     }
 
     function signup() {
-        history.push('/student/register')
+        history.push('/student/signup')
     }
     
     //logout
@@ -155,7 +155,7 @@ function Header() {
                             }      
                         </ul>
                         <div className="header-title">
-                            <h3 onClick={home}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aspirus &nbsp; Health &nbsp; Care</h3>
+                            <h3 onClick={home}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SLIIT &nbsp; Research &nbsp; Camp</h3>
                         </div>
                         <ul className="mx-3">
                             {isSignedIn ?

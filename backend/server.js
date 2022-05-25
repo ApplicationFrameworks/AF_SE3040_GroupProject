@@ -13,6 +13,8 @@ app.use(cors());
 
 const StaffRouter = require("./routes/staffrouter");
 const DocumentRouter = require("./routes/documentrouter");
+const AdminRouter = require("./routes/adminrouter.js");
+const StudentRouter = require("./routes/studentrouter");
 
 //getting the database url
 const URL = process.env.MONGODB_URL;
@@ -31,11 +33,14 @@ connection.once("open", function() {
     console.log("db connection success");
 }); 
 
-
+//when http://localhost:8070/student ran it will execute studentrouter.js file
+app.use("/student",StudentRouter);
 //when http://localhost:8070/staff ran it will execute staffrouter.js file
 app.use("/staff",StaffRouter);
 //when http://localhost:8070/staff ran it will execute staffrouter.js file
 app.use("/tdoc",DocumentRouter);
+//when http://localhost:8070/admin ran it will execute adminrouter.js file
+app.use("/admin",AdminRouter);
 
 
 //defining a port to run the application
