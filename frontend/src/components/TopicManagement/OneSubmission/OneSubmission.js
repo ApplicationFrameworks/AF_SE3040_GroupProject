@@ -72,14 +72,14 @@ function OneSubmission(props) {
 
                     </div>
                 </div>
-                {/* <table className="singleItemBtn" >
+                <table className="singleItemBtn" >
                     <div> <div>
                                 <button className="mx-2 productBtn" style={{ backgroundColor: blue[400] }}>
                                     Approval
                                 </button>
                             </div>
                     </div>
-                </table> */}
+                </table>
             </div>
             <br></br>
 

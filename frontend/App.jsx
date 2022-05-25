@@ -8,15 +8,20 @@ import StaffUpdate from "./src/components/StaffManagement/StaffUpdate/StaffUpdat
 import DocumentSubmission from "./src/components/TopicManagement/DocumentSubmission/DocumentSubmission";
 import OneSubmission from "./src/components/TopicManagement/OneSubmission/OneSubmission";
 import ViewSubmissions from "./src/components/TopicManagement/ViewSubmissions/ViewSubmissions";
+import Homepage from './src/components/Home/Homepage';
+import Header from './src/components/Header/Header';
+import Footer from './src/components/Footer/Footer';
 
 
 function App() {
     return (
         <Router>
+            <Header/>
             <Switch>
-            <Route path="/staffRegister" exact component={StaffSignUp} />
-            <Route path="/staffLogin" exact component={StaffLogin} />
-            <Route path="/staffProfile" exact component={StaffProfile} />
+            <Route path="/" exact component={Homepage} />
+            <Route path="/staff/register" exact component={StaffSignUp} />
+            <Route path="/staff/login" exact component={StaffLogin} />
+            <Route path="/staff/profile" exact component={StaffProfile} />
             <Route path="/staff/update/:id" exact component={StaffUpdate}/> 
             <Route path="/staff/all" exact component={DisplayStaff}/> 
             <Route path="/staff/all/:id" exact component={SingleStaff}/>
@@ -24,6 +29,7 @@ function App() {
             <Route path="/tdocView" exact component={ViewSubmissions}/> 
             <Route path="/tdocView/:id" exact component={OneSubmission}/> 
             </Switch>
+            <Footer/>
         </Router>
     );
 }
