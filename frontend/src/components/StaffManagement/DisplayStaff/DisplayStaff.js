@@ -1,8 +1,9 @@
 import React,{useEffect, useState} from 'react'
 import { useHistory,useLocation } from 'react-router';
-import { orange,red,blue,green } from '@material-ui/core/colors';
+import { orange,red,blue,green, lightBlue } from '@material-ui/core/colors';
 import './DisplayStaff.css'
 import axios from 'axios'
+import SearchIcon from '@mui/icons-material/Search';
 
 
 function DisplayStaff() {
@@ -59,32 +60,33 @@ function DisplayStaff() {
               <div className="col-3">
               </div>
               <div className="col-5">
-                <div className="px-3 search" align="right">
-                  <input 
+                <div className="" align="right" style={{top:'40px',position:'relative'}}>
+                  <input style={{color:"black",fontWeight:"500",borderRadius:"8px",border:"2px solid grey",padding:'6px 83px'}}
                     type="text" 
                     name="search" 
                     id="search"
                     placeholder="Search" 
                     onChange={handleSearchAll} 
                     required 
-                  />
+                  /><div style={{position:'relative',right:'25px',top:'-35px'}}><SearchIcon/></div>
                 </div>
               
           </div>
         </div>
-        <div className="productGrid"  > 
+        <br/><br/><br/>
+        <div className="staffGrid"  > 
           {staff.map((Staff,key)=>( 
                 <div key={key}> 
-                    <div className="productCard" >
+                    <div className="staffCard" >
                         <div className="imgBx">
-                            <img  src={`${Staff.imgUrl}`} alt="product" className="itemProduct"/>
+                            <img  src={`${Staff.imgUrl}`} alt="staff" className="itemstaff"/>
                         </div>
                         <div className="p-3">
                             <h7>{Staff.name}</h7>
                             <h6>{Staff.speciality}</h6>
                             <div align="right">
                               <span>
-                                  <button className="productBtn" style={{backgroundColor:red[400]}} onClick={()=>view(Staff._id)}> View Item </button>
+                                  <button className="staffBtn1" style={{backgroundColor:orange[400],color:"white",fontWeight:"500",borderRadius:"8px",border:"5px solid orange",padding:'3px 13px'}} onClick={()=>view(Staff._id)}> View Proflie </button>
                               </span> 
                             </div>
                         </div>

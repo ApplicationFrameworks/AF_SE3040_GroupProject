@@ -10,7 +10,7 @@ const StaffSchema =new Schema({
     },
 
     reg:{
-        type:Number,
+        type:String,
         required:true,
         unique:true,
     },

@@ -5,14 +5,12 @@ import DehazeIcon from '@material-ui/icons/Dehaze';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import HomeIcon from '@material-ui/icons/Home';
 import PersonIcon from '@material-ui/icons/Person';
-import EventAvailableIcon from '@material-ui/icons/EventAvailable';
 import AssignmentIcon from '@material-ui/icons/Assignment';
-import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 import FeedbackIcon from '@material-ui/icons/Feedback';
-import Badge from '@material-ui/core/Badge';
 import Avatar from '@material-ui/core/Avatar';
+import PeopleIcon from '@mui/icons-material/People';
 import onClickOutside from "react-onclickoutside";
 import { blue } from '@material-ui/core/colors';
 import { Button } from '@material-ui/core';
@@ -22,7 +20,6 @@ import './Sidebar.css';
 
 function Header() {
     const [isSignedIn, setIsSignedIn] = useState(false);
-    const [cartCount, setCartCount] = useState();
     const [user, setUser] = useState("");
     const [URL, setURL] = useState("/student");
     const history = useHistory();
@@ -43,15 +40,15 @@ function Header() {
           cName: 'nav-text'
         },
         {
-            title: 'Pharmacy',
-            path: '/pharmacy/items',
-            icon: <LocalHospitalIcon/>,
+            title: 'Supervisours',
+            path: '/staff/all',
+            icon: <PeopleIcon/>,
             cName: 'nav-text'
         },
         {
-          title: 'Appointments',
-          path: `/Appointment/${user._id}`,
-          icon: <EventAvailableIcon/>,
+          title: 'Research Topic',
+          path: `/tdocAdd`,
+          icon: <AssignmentIcon/>,
           cName: 'nav-text'
         },
         {
@@ -90,15 +87,6 @@ function Header() {
                 setUser(JSON.parse(localStorage.getItem('user')))
             }
             
-            async function getCartCount() {
-                await axios.get(`http://localhost:8070/cart/${user._id}&shopping`).then((res) => {
-                    let result = res.data.result;
-                    setCartCount(result.length) 
-                }).catch((error) => {
-                    console.log(error)
-                })
-            }
-            getCartCount();
 
             if(localStorage.getItem("studentAuthToken")){
                 setURL(`/student`)
@@ -116,9 +104,6 @@ function Header() {
         history.push(`${URL}/profile/`)
     }
 
-    function cart() {
-        history.push(`/cart/${user._id}/shopping`)
-    }
 
     function signin() {
         history.push('/student/signin')
@@ -160,11 +145,6 @@ function Header() {
                         <ul className="mx-3">
                             {isSignedIn ?
                                 <div>
-                                    <IconButton onClick={cart}>
-                                        <Badge badgeContent={cartCount} color="error">
-                                            <ShoppingCartIcon fontSize="large"/>
-                                        </Badge>
-                                    </IconButton>
                                     <IconButton onClick={profile}>
                                         <Avatar alt="user" src={`${user.imgUrl}`} />
                                     </IconButton> 

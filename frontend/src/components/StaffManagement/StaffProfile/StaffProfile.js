@@ -21,7 +21,7 @@ function StaffProfile() {
                     localStorage.setItem("user",JSON.stringify(res.data))
                     setStaff(JSON.parse(localStorage.getItem('user')))
                 }).catch((error)=>{
-                    alert("Failed to fetch item data")
+                    // alert("Failed to fetch item data")
                     
                 })
             }
@@ -67,9 +67,9 @@ function StaffProfile() {
             </div>
             <div className="row">
                 <div className="col-xl-9">
-                    <div className="row doc-card align-items-center">
+                    <div className="row staff-card align-items-center">
                         <div className="col-xl-3">
-                            <div className="docProfile_img">
+                            <div className="staffProfile_img">
                                 {staff.imgUrl === "" ?
                                     <img src="/images/user-img.png" className="rounded-circle" alt="profile pic"/>
                                 :

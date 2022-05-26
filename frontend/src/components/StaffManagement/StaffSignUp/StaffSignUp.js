@@ -83,7 +83,7 @@ function StaffSignUp(){
             
                 await axios.post("http://localhost:8070/staff/signup",newStaff,config);
                 alert("user added successfully")
-                history.push(`/`)
+                history.push(`/staff/login`)
             } catch(error){
                 alert("Register failed!");
                 
@@ -96,11 +96,11 @@ function StaffSignUp(){
 
    
     const interests =[
-        'Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'
+        'Software Engineering','Design Lab','Visual Computing','Mobile Computing','Robotics','Machine Learning','Image Processing','Artificial Intelligence'
     ]
 
     const faculties = [
-        'Sinhala', 'English', 'Tamil'
+        'FACULTY OF COMPUTING | INFORMATION TECHNOLOGY', 'FACULTY OF COMPUTING | COMPUTER SCIENCE & SOFTWARE ENGINEERING', 'FACULTY OF COMPUTING | COMPUTER SYSTEMS ENGINEERING'
     ]
 
     
@@ -358,7 +358,7 @@ function StaffSignUp(){
                             {previewSource ? 
                                 <img src={previewSource} alt="preview" className="previewImg"/>
                             :
-                                <img src="/images/avatar.jpg" className="previewImg" alt="profile pic"/>
+                                <img src="./images/avatar.jpg" className="previewImg" alt="profile pic"/>
                             }
                             <div className="form-group">
                                 <label htmlFor="profilepic">

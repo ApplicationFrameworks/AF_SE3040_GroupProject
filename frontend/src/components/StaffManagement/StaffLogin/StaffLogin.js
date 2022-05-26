@@ -45,7 +45,7 @@ function StaffLogin() {
     return (
        
      <div className="container" align="center">
-        <form className="docLogin" onSubmit={signIn}>
+        <form className="staffLogin" onSubmit={signIn}>
             <h2>Staff login</h2>
             <br></br>
             <input
@@ -70,7 +70,7 @@ function StaffLogin() {
                 
             <div className="text-muted">
              <p >or</p>
-             <p> Don't have an Account? <Link to="/staff/staffSignup"> Click Here</Link></p>
+             <p> Don't have an Account? <Link to="/staff/register"> Click Here</Link></p>
             </div>
         </form>
     </div>
