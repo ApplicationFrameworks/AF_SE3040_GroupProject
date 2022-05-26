@@ -1,0 +1,21 @@
+tr:hover {background-color: rgba(206, 204, 200, 0.623);}
+
+tr {
+    padding: 1px;
+    text-align: left;
+  }
+
+td {
+    text-align:left;
+    font-size: 18px;
+    display: table-cell;
+}
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  table, td, th {
+    border-bottom: 1px solid gray;
+  }

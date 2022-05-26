@@ -47,7 +47,7 @@ function Header() {
         },
         {
           title: 'Research Topic',
-          path: `/tdocAdd`,
+          path: `/tdocView`,
           icon: <AssignmentIcon/>,
           cName: 'nav-text'
         },

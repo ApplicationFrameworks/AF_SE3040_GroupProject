@@ -1,6 +1,6 @@
 .staffCard{  
     max-height: 351px;
-    width: 280px;
+    width: 350px;
     background: #ffffff;
     border-radius: 15px;
     border: none;
@@ -31,8 +31,9 @@
     display: grid;
     grid-gap: 2rem;
     padding: 1rem;
-    max-width: 1150px;
-    margin: 0 auto;
+    max-width: 1250px;
+    left:-90px;
+    position: relative;
 
 }
 
