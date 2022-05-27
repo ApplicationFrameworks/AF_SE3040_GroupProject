@@ -90,7 +90,7 @@ function DocumentSubmission() {
                         <div className="row">
                             <div className="col-md-8 mb-4">
                             <div className="col-md-8 mb-4">
-                                    <div className="form-price">
+                                    <div className="form-group">
                                         <OutlinedInput 
                                             type="group" id="group" placeholder="Group ID" required fullWidth
                                             onChange={(e)=>setGroup(e.target.value)}
@@ -98,17 +98,19 @@ function DocumentSubmission() {
                                         />
                                     </div>
                                 </div>
-                                <div className="form-name">
+                                <div className="col-md-8 mb-4">
+                                <div className="form-group">
                                     <OutlinedInput
-                                        type="text" id="topic" placeholder="Your Topic" 
+                                        type="topic" id="topic" placeholder="Your Topic" 
                                         required fullWidth
                                         onChange={(e)=>setTopic(e.target.value)}
                                         inputProps={{style: {padding: 12}}} 
                                     />
                                 </div>
+                                </div>
 
                                 <div className="col-md-8 mb-4">
-                                    <div className="form-price">
+                                    <div className="form-group">
                                         <OutlinedInput 
                                             type="leader" id="leader" placeholder="Group Leader" required fullWidth
                                             onChange={(e)=>setLeader(e.target.value)}
@@ -119,7 +121,7 @@ function DocumentSubmission() {
                             </div>
                             <div> 
                                 <div className="col-md-8 mb-4">
-                                    <div className="form-price">
+                                    <div className="form-group">
                                         <OutlinedInput 
                                             type="details" id="details" placeholder="Group Details" required fullWidth
                                             onChange={(e)=>setDetails(e.target.value)}
