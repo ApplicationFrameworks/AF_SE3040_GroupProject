@@ -2,15 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 import OutlinedInput from "@material-ui/core/OutlinedInput";
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
+import axios from 'axios';
 import './Request.css';
 
 
-function AddRequest() {
+function AddRequest(props) {
 
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')));
   const [staffID, setStaffID] = useState("");
   const [studentID, setStudentID] = useState("");
   const [msg, setMsg] = useState("");
+  const [subject, setSubject] = useState("");
   const history = useHistory()
 
   const config = {
@@ -19,19 +21,34 @@ function AddRequest() {
     }
   };
 
+  useEffect(() => {
+    async function getStaffDetails() {
+      axios.get(`http://localhost:8070/staff/all/${props.match.params.id}`, config).then((res) => {
+        setStaffID(res.data._id)
+        setStudentID(user._id)
+      }).catch((error) => {
+        console.log(error)
+        alert("Failed to fetch details")
+      })
+    }
+    getStaffDetails();
+
+  }, [props])
 
   function sendData(e) {
     e.preventDefault();
     const newRequest = {
       staffID,
       studentID,
+      subject,
       msg
     }
 
-    localStorage.setItem("appointment", JSON.stringify(newRequest))
+    localStorage.setItem("request", JSON.stringify(newRequest))
     history.push(`/student/appointmentpayment`)
 
   }
+  console.log(staffID)
 
   return (
     <div className="container" align="center">
@@ -80,6 +97,18 @@ function AddRequest() {
                   />
                 </div>
               </div>
+
+              <label className='label4'>Subject</label>
+              <div className="col-md-10 mb-4 mx-3">
+                <div className="form-group10">
+                  <OutlinedInput
+                    type="student" id="student" placeholder="Enter the Subject" required fullWidth
+                    onChange={(e) => setSubject(e.target.value)}
+                    inputProps={{ style: { padding: 12 } }}
+                  />
+                </div>
+              </div>
+
               <label className='label4'>Your Message</label>
               <div className="col-md-10 mb-4 mx-3">
                 <div className="form-group10">
@@ -90,6 +119,9 @@ function AddRequest() {
                   />
                 </div>
               </div>
+
+              
+
 
               <div className="col-12">
                 <div className="form-group11">
