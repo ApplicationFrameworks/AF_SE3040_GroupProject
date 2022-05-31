@@ -6,7 +6,7 @@ const { viewOneRequest } = require('../controllers/requestcontroller.js')
 router.post('/add', addRequest);
 
 //view Request
-router.get('/:id', viewRequest);
+router.get('/show', viewRequest);
 
 //view one Request
 router.get('/view/:id', viewOneRequest);

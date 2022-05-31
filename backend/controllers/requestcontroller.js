@@ -4,8 +4,7 @@ let Request = require("../models/Request");
 //add new Request
 exports.addRequest = async (req, res) => {
   //constant variables for attributes
-  const studentID = req.body.studentID;
-  const staffID = req.body.staffID;
+  const {studentID, staffID, subject, group,supervisour,msg} = req.body;
 
   //object
   const newRequest = new Request({
@@ -13,6 +12,8 @@ exports.addRequest = async (req, res) => {
     studentID,
     staffID,
     subject,
+    group,
+    supervisour,
     msg
   })
 
@@ -27,21 +28,14 @@ exports.addRequest = async (req, res) => {
 
 
 //view Request
-exports.viewRequest = async (req, res) => {
-    let studentID = req.params.id;
-    let staffID = req.params.id;
-  
-    try {
-      //find Request by student id
-      const request = await Request.find({ $or: [{ studentID }, { staffID }] }).populate(
-        { path: 'studentID staffID', select: ['firstname', 'lastname', 'name',  'title','reg'] });
-      //success message
-      res.status(200).json({ success: true, result: request })
-      
-    } catch (error) {
-      //error message
-      res.status(500).json({ message: "fetching Request failed", error: error.message })
-    }
+exports.viewRequest = async (req, res) => { 
+ 
+  //calling request model
+  Request.find().then((request) => {
+    res.status(200).json(request)
+  }).catch((error) => {
+    res.status(500).json({ message: "Error with fetching all requests", error: error.message });
+  })
 }
 
 //view one Request

@@ -20,6 +20,16 @@ const RequestSchema = new Schema({
     required: true
   },
 
+  group: {
+    type: String,
+    required: true
+  },
+
+  supervisour: {
+    type: String,
+    required: true
+  },
+
   msg: {
     type: String,
     required: true

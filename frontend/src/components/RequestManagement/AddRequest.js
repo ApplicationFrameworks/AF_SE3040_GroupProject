@@ -13,6 +13,8 @@ function AddRequest(props) {
   const [studentID, setStudentID] = useState("");
   const [msg, setMsg] = useState("");
   const [subject, setSubject] = useState("");
+  const [group, setGroup] = useState("");
+  const [supervisour, setSupervisour] = useState("");
   const history = useHistory()
 
   const config = {
@@ -41,11 +43,20 @@ function AddRequest(props) {
       staffID,
       studentID,
       subject,
+      group,
+      supervisour,
       msg
     }
 
     localStorage.setItem("request", JSON.stringify(newRequest))
-    history.push(`/student/appointmentpayment`)
+        
+        axios.post("http://localhost:8070/request/add", newRequest).then(() => {
+            alert ("Successful Request")
+            localStorage.removeItem("request")
+            history.push(`/`)
+        }).catch((error) => {
+            alert(error)
+        })
 
   }
   console.log(staffID)
@@ -93,6 +104,28 @@ function AddRequest(props) {
                   <OutlinedInput
                     type="student" id="student" placeholder="Student Name" readOnly fullWidth
                     value={user.email}
+                    inputProps={{ style: { padding: 12 } }}
+                  />
+                </div>
+              </div>
+
+              <label className='label4'>Supervisour's Name</label>
+              <div className="col-md-10 mb-4 mx-3">
+                <div className="form-group10">
+                  <OutlinedInput
+                    type="student" id="student" placeholder="Enter the Subject" required fullWidth
+                    onChange={(e) => setSupervisour(e.target.value)}
+                    inputProps={{ style: { padding: 12 } }}
+                  />
+                </div>
+              </div>
+
+              <label className='label4'>Group ID</label>
+              <div className="col-md-10 mb-4 mx-3">
+                <div className="form-group10">
+                  <OutlinedInput
+                    type="student" id="student" placeholder="Enter the Subject" required fullWidth
+                    onChange={(e) => setGroup(e.target.value)}
                     inputProps={{ style: { padding: 12 } }}
                   />
                 </div>
