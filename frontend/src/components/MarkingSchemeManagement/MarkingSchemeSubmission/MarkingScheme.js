@@ -111,8 +111,8 @@ function MarkingScheme() {
                         ) : (
                           <img className="previewImgsub" />
                         )}
-                        <div className="form-group4">
-                          <label className="label2">
+                        <div className="form-group7">
+                          <label className="label7">
                             Upload Marking Scheme
                           </label>
                           <label htmlFor="profilepic">
@@ -144,10 +144,10 @@ function MarkingScheme() {
                     </div>
 
                     <div>
-                      <label className="label1">More Detail :</label>
+                      <label className="label8">More Detail :</label>
                       <br />
                       <div className="col-md-10 mb-4">
-                        <div className="form-group3">
+                        <div className="form-group8">
                           <OutlinedInput
                             type="details"
                             id="details"
@@ -166,7 +166,7 @@ function MarkingScheme() {
                   </div>
                 </div>
 
-                <div className="form-group5">
+                <div className="form-group9">
                   <input
                     className="btn"
                     type="submit"
@@ -175,7 +175,7 @@ function MarkingScheme() {
                       padding: "10px 50px",
                       borderRadius: "10px",
                       background: "orange",
-                      border: "2px solid orangered",
+                      border: "2px solid blue",
                       color: "white",
                       fontWeight: "600",
                       fontSize: "18px",

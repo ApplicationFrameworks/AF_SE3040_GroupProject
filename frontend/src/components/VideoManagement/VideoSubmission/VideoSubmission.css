@@ -1,18 +1,17 @@
-.addsub {
+.addvid {
     width: 90%;
     text-align: left;
     padding: 40px;
     background: rgb(255, 255, 255);
-    border-radius: 0 15px 15px 0;
     box-shadow:0px 24px 48px 0 rgba(0,0,0,0.3);
     position:relative;
-    border-left: 5px solid orange;
+    border-left: 10px solid orange;
     border-right: 10px solid blue;
-    margin-left: 50px;
+    margin-left: 90px;
     margin-top: 20px;
 }
 
-.label1{
+.label10{
     font-size: 18.5px;
     font-weight: 500;
     position:relative;
@@ -21,37 +20,42 @@
 
 }
 
-.form-group3{
+.form-group13{
     position: relative;
     left:210px;
     top:-27px;
 }
 
-.previewImgsub {
-    border-radius: 10px;
-    vertical-align: middle;
-    border-style: none;
-    position: relative;
-    max-width: 110%;
-    margin-bottom: 20px;
-    background-image: url("Logo.png");
+.previewImgsub2 {
+    position: absolute;
+    border-radius: 15px;
+    background-size: cover;
+    height: 250px;
+    width: 380px;
+    background-image: url("upload.gif");
+    left: 1025px;
+    top: 10px;
 }
 
-.form-group4{
+.form-group14{
     position: relative;
-    left:600px;
-    top: 120px;
+    left:560px;
+    top: 280px;
 }
 
-.label2{
-    font-size: 20px;
-    font-weight: 600;
+.label12{
+    font-size: 25px;
+    font-weight: 700;
     position:relative;
-    top:-50px;
+    top:-30px;
     left: 15px;
 }
 
-.form-group5{
+.form-group15{
     position: relative;
     left:370px;
+}
+
+.uploadBtn2{
+    left: 0px;
 }

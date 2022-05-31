@@ -101,16 +101,16 @@ function VideoSubmission() {
           </div>
           <br></br>
           <div className="create_sub">
-            <form onSubmit={add} className="addsub">
+            <form onSubmit={add} className="addvid">
               <div className="row">
                 <div className="col-8">
                   <div className="row">
                     <br />
                     <div>
-                      <label className="label1">Group ID</label>
+                      <label className="label10">Group ID</label>
                       <br />
                       <div className="col-md-10 mb-4">
-                        <div className="form-group3">
+                        <div className="form-group13">
                           <OutlinedInput
                             type="group"
                             id="group"
@@ -123,10 +123,10 @@ function VideoSubmission() {
                         </div>
                       </div>
 
-                      <label className="label1">Research Topic</label>
+                      <label className="label10">Research Topic</label>
                       <br />
                       <div className="col-md-10 mb-4">
-                        <div className="form-group3">
+                        <div className="form-group13">
                           <OutlinedInput
                             type="topic"
                             id="topic"
@@ -139,10 +139,10 @@ function VideoSubmission() {
                         </div>
                       </div>
 
-                      <label className="label1">Group Leader</label>
+                      <label className="label10">Group Leader</label>
                       <br />
                       <div className="col-md-10 mb-4">
-                        <div className="form-group3">
+                        <div className="form-group13">
                           <OutlinedInput
                             type="group"
                             id="leader"
@@ -155,10 +155,10 @@ function VideoSubmission() {
                         </div>
                       </div>
 
-                      <label className="label1">Group Details</label>
+                      <label className="label10">Group Details</label>
                       <br />
                       <div className="col-md-10 mb-4">
-                        <div className="form-group3">
+                        <div className="form-group13">
                           <OutlinedInput
                             type="details"
                             id="details"
@@ -176,13 +176,16 @@ function VideoSubmission() {
 
                 <div className="col-4 d-flex justify-content-center">
                     <div>
+                    <div className="previewImgsub2">
+                      &nbsp;
+                     </div>
                         {previewSource ?
                         <img className="previewImgsub"/>
                         :
                         <img className="previewImgsub"/>
                         }
-                        <div className="form-group4">
-                            <label className="label2">Upload Video</label>
+                        <div className="form-group14">
+                            <label className="label12">Upload Video</label>
                             <label htmlFor="profilepic">
                                 <input style={{display: 'none'}}
                                 id="profilepic"
@@ -192,7 +195,12 @@ function VideoSubmission() {
                                 onChange={handleFileInputChange}
                                 value={fileInputState}
                                 />
-                                <Button color="primary" variant="contained" component="span">
+                                <Button color="primary" variant="contained" component="span" className="uploadBtn2"
+                                style={{
+                                  padding: "10px 20px",
+                                  fontWeight: "600",
+                                  fontSize: "15px",
+                                }}>
                                     <FileUploadOutlinedIcon/> &nbsp; Upload Video
                                 </Button>
                             </label>
@@ -201,19 +209,20 @@ function VideoSubmission() {
                 </div>
                 
 
-                <div className="form-group5">
+                <div className="form-group15">
                   <input
                     className="btn"
                     type="submit"
                     value="Submit"
                     style={{
-                      padding: "5px 20px",
+                      padding: "10px 50px",
                       borderRadius: "10px",
                       background: "orange",
-                      border: "2px solid orangered",
+                      border: "2px solid blue",
                       color: "white",
                       fontWeight:"600",
                       fontSize: "18px",
+                      marginLeft:"-20px"
                     }}
                   />
                 </div>
