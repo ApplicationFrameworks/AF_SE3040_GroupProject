@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom';
 import { useLocation } from 'react-router-dom'
 import axios from 'axios'
-import { blue, red, orange } from '@mui/material/colors'
+import { blue, red, orange ,black} from '@mui/material/colors'
+import SearchIcon from '@mui/icons-material/Search';
 import './Request.css'
 
 
@@ -82,27 +83,28 @@ function ViewRequest() {
             </div>
             <div className="col-5">
                 <div className="requestGrid"  >
-                    <div className="px-3 search">
-                        <input
+                    <div className="px-3 search" align="right" style={{top:'50px',position:'relative',right:'-170px'}}>
+                        <input style={{color:"black",fontWeight:"500",borderRadius:"8px",border:"2px solid grey",padding:'6px 123px'}}
                             type="text"
                             name="search"
                             id="search"
                             placeholder="Search appointments"
                             onChange={handleSearch}
                             required
-                        />
+                        /><div style={{position:'relative',right:'520px',top:'-32px'}}><SearchIcon/></div>
                     </div>
                     {requests.map((Request, key) => (
                         <div key={key}>
-                            <div className='RequestCard'>
-                                <div className='p-3' style={{overflowX:'auto',width:1500}}>
+                            <div>
+                            <div className='RequestCard' style={{width:1550,height:'auto',left:-120,position:'relative',top:60}}>
+                                <div className='p-3' style={{overflowX:'auto',width:1550}}>
                                     <table >
                                         <tbody>
                                             <tr>
-                                                <td><h6 style={{ color: red[300], fontSize: 17 }}>{Request.group}</h6></td>
-                                                <td> <h6 style={{ color: red[300], fontSize: 17 }}>{Request.supervisour}</h6></td>
-                                                <td> <h6 style={{ color: red[300], fontSize: 17 }}>{Request.subject}</h6></td>
-                                                <td> <h6 style={{ color: blue[500], fontSize: 17 }}>{Request.msg}</h6></td>
+                                                <td><h6 style={{ color: black, fontSize: 17,width:200}}>{Request.group}</h6></td>
+                                                <td> <h6 style={{ color: black, fontSize: 17,width:200 }}>{Request.supervisour}</h6></td>
+                                                <td> <h6 style={{ color: black, fontSize: 17,width:360}}>{Request.subject}</h6></td>
+                                                <td> <h6 style={{ color: blue, fontSize: 17 ,width:500,fontWeight:480}}>{Request.msg}</h6></td>
 
 
 
@@ -123,6 +125,7 @@ function ViewRequest() {
                                         </tbody>
                                     </table>
                                 </div>
+                            </div>
                             </div>
                         </div>
                     ))}
