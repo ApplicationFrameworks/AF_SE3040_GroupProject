@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="aa29b0ce-a660-4f39-9470-9b57712b043b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/frontend/src/components/StudentManagement/SignUp/SignUp.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/StudentManagement/SignUp/SignUp.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/StudentManagement/SignUp/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/StudentManagement/SignUp/SignUp.js" afterDir="false" />
     </list>
+=======
+    <list default="true" id="aa29b0ce-a660-4f39-9470-9b57712b043b" name="Changes" comment="" />
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+<<<<<<< Updated upstream
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="developer" />
       </map>
     </option>
+=======
+>>>>>>> Stashed changes
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -46,7 +53,11 @@
       <updated>1653591710032</updated>
       <workItem from="1653591714070" duration="1814000" />
       <workItem from="1653598873824" duration="1284000" />
+<<<<<<< Updated upstream
       <workItem from="1653838450935" duration="11147000" />
+=======
+      <workItem from="1653838450935" duration="8028000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
