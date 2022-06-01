@@ -18,6 +18,7 @@ import VideoSubmission from "./src/components/VideoManagement/VideoSubmission/Vi
 import MarkingScheme from "./src/components/MarkingSchemeManagement/MarkingSchemeSubmission/MarkingScheme";
 import ViewMarkingSchemes from "./src/components/MarkingSchemeManagement/ViewMarkingScheme/ViewMarkingSchemes";
 import ViewOneMarkingScheme from "./src/components/MarkingSchemeManagement/ViewMarkingScheme/ViewOneMarkingScheme";
+import EvaluationMarks from "./src/components/EvaluationMarksManagement/MarksSubmission/MarksSubmission";
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
             <Route path="/markingSchemaAdd" exact component={MarkingScheme} />
             <Route path="/markingSchemaView" exact component={ViewMarkingSchemes} />
             <Route path="/markingSchemaView/:id" exact component={ViewOneMarkingScheme} />
+            <Route path="/evaluationMarksAdd" exact component={EvaluationMarks} />
             </Switch>
             <Footer/>
         </Router>
