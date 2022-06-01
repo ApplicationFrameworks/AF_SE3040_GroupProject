@@ -49,7 +49,7 @@ function StaffLogin() {
             <h2>Staff login</h2>
             <br></br>
             <input
-                type="text"
+                type="reg"
                 name="reg"
                 id="reg"
                 placeholder="Registration number"

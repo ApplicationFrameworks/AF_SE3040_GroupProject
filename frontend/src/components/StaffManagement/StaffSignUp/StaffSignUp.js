@@ -124,7 +124,7 @@ function StaffSignUp(){
                     </div>
                 </div>
             </div>
-            <form  onSubmit={add} className="docSignUp" >
+            <form  onSubmit={add} className="staffSignUp" >
                 <div className="row"> 
                     
                     <div className="col-8">
@@ -165,7 +165,7 @@ function StaffSignUp(){
                     
                             <div className="col-xl-6 mb-3">
                         <OutlinedInput
-                            type="text"
+                            type="name"
                             name="fullname"
                             id="fullname"
                             placeholder="Full Name"
@@ -193,7 +193,7 @@ function StaffSignUp(){
                    
                             <div className="col-xl-6 mb-3">
                                 <OutlinedInput
-                                    type="text"
+                                    type="speciality"
                                     name="speciality"
                                     id="speciality"
                                     placeholder="Speciality"
@@ -242,7 +242,7 @@ function StaffSignUp(){
                 </div>
                             <div className="col-xl-6 mb-3">
                     <OutlinedInput
-                        type="text"
+                        type="qualification"
                         name="qualification"
                         id="qualification"
                         placeholder="Qualification"
@@ -287,7 +287,7 @@ function StaffSignUp(){
                 
                             <div className="col-xl-6 mb-3">  
                                 <OutlinedInput
-                                    type="text"
+                                    type="reg"
                                     name="reg"
                                     id="reg"
                                     placeholder="Registration Number"
@@ -300,7 +300,7 @@ function StaffSignUp(){
                             <div className="col-xl-6 mb-3">  
                                 <div className="form-group"> 
                                     <OutlinedInput
-                                        type="text"
+                                        type="about"
                                         name="about"
                                         id="about"
                                         placeholder="Career Summery"
@@ -379,7 +379,7 @@ function StaffSignUp(){
         
                         </div>
                     <div className="col-xl-12">
-                        <input type="submit" className="form-submit-btn" value="Register"  /> 
+                        <input type="submit" className="form-submit-btn" style={{backgroundColor:'orange',color:'white',padding:'5px 30px',borderRadius:'10px',border:'2px solid orangered'}} value="Register"  /> 
                     </div>
                </div> 
             </form>

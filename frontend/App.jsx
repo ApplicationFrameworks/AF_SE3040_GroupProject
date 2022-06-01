@@ -14,6 +14,8 @@ import Footer from './src/components/Footer/Footer';
 import AdminSignIn from './src/components/AdminManagement/AdminLogin';
 import StudentSignIn from './src/components/StudentManagement/SignIn/SignIn';
 import StudentSignUp from './src/components/StudentManagement/SignUp/SignUp';
+import AddRequest from "./src/components/RequestManagement/AddRequest";
+import DisplayRequest from "./src/components/RequestManagement/DisplayRequest";
 
 
 function App() {
@@ -34,6 +36,8 @@ function App() {
             <Route path="/tdocView" exact component={ViewSubmissions}/> 
             <Route path="/tdocView/:id" exact component={OneSubmission}/> 
             <Route path="/admin/signin" exact component={AdminSignIn} />
+            <Route path="/student/request/:id" exact component={AddRequest}/>
+            <Route path="/request/:id" exact component={DisplayRequest}/>
             </Switch>
             <Footer/>
         </Router>
