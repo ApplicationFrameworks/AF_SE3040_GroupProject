@@ -16,6 +16,7 @@ import StudentSignIn from './src/components/StudentManagement/SignIn/SignIn';
 import StudentSignUp from './src/components/StudentManagement/SignUp/SignUp';
 import AddRequest from "./src/components/RequestManagement/AddRequest";
 import DisplayRequest from "./src/components/RequestManagement/DisplayRequest";
+import AddTopics from "./src/components/TopicManagement/AddTopics/AddTopics";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
             <Route path="/staff/update/:id" exact component={StaffUpdate}/> 
             <Route path="/staff/all" exact component={DisplayStaff}/> 
             <Route path="/staff/all/:id" exact component={SingleStaff}/>
+            <Route path="/topic/add" exact component={AddTopics}/>
             <Route path="/tdocAdd" exact component={DocumentSubmission}/>
             <Route path="/tdocView" exact component={ViewSubmissions}/> 
             <Route path="/tdocView/:id" exact component={OneSubmission}/> 

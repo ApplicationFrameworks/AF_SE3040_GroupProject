@@ -7,6 +7,11 @@ const TopicSchema = new Schema({
         type : String,
         required : true
     },
+
+    category : {
+        type : String,
+        required : true
+    },
     
     topic : {
         type : String,
@@ -17,6 +22,11 @@ const TopicSchema = new Schema({
         type : String,
         required : true
     },
+
+    status: {
+        type : String,
+        default: 'Submitted for grading'
+    }
 
     
 });

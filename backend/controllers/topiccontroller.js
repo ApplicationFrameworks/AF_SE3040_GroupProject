@@ -5,11 +5,12 @@ let Topic = require("../models/Topic");
 exports.addTopic = async (req, res) => {
  
     //constant variables for the attributes
-    const {group,topic,leader} = req.body;
+    const {group,category,topic,leader} = req.body;
    
     //object
     const newTopic= new Topic({
       group,
+      category,
       topic,
       leader,
     })
