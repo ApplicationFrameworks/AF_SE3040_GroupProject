@@ -15,6 +15,8 @@ function ViewRequest() {
 
     const [isStaff, setIsStaff] = useState(false)
     const [user, setUser] = useState("");
+    const [value, setValue] = useState("");
+
 
     const config = {
         headers: {
@@ -53,28 +55,39 @@ function ViewRequest() {
         })
     }
 
-    function view(id) {
-        history.push(`/request/update/${id}`)
+    function view() {
+        
+        const value="Approved";
+        setValue(value);
+        console.log(value);
     }
 
-    function filterContent(data, searchTerm) {
-        const result = data.filter((Request) =>
-            Request.supervisour.toLowerCase().includes(searchTerm) ||
-            Request.group.toLowerCase().includes(searchTerm)
-        )
-        setRequests(result)
-    }
+    
 
-    function handleSearch(event) {
-        const searchTerm = event.currentTarget.value
-        axios.get(`http://localhost:8070/request/show`).then((res) => {
-            filterContent(res.data.result, searchTerm.toLowerCase())
-        }).catch((error) => {
-            alert("Request fetching failed")
-        })
-    }
+    
+
+    
+  function filterContent(data, searchTerm) {
+    const result = data.filter((request) =>
+      request.group.toLowerCase().includes(searchTerm)||
+      request.supervisour.toLowerCase().includes(searchTerm)
+    )
+    setRequests(result)
+  }
 
 
+  function handleSearchAll(event) {
+    const searchTerm = event.currentTarget.value
+    axios.get(`http://localhost:8070/request/show`).then((res) => {
+      filterContent(res.data, searchTerm.toLowerCase())
+    }).catch((error) => {
+      alert("Failed to fetch documents")
+    })
+  }
+
+   
+    
+    
     return (
         <div className="container">
             <div className="row">
@@ -89,10 +102,11 @@ function ViewRequest() {
                             name="search"
                             id="search"
                             placeholder="Search appointments"
-                            onChange={handleSearch}
+                            onChange={handleSearchAll}
                             required
                         /><div style={{position:'relative',right:'520px',top:'-32px'}}><SearchIcon/></div>
                     </div>
+                    {value}
                     {requests.map((Request, key) => (
                         <div key={key}>
                             <div>
@@ -105,14 +119,15 @@ function ViewRequest() {
                                                 <td> <h6 style={{ color: black, fontSize: 17,width:200 }}>{Request.supervisour}</h6></td>
                                                 <td> <h6 style={{ color: black, fontSize: 17,width:360}}>{Request.subject}</h6></td>
                                                 <td> <h6 style={{ color: blue, fontSize: 17 ,width:500,fontWeight:480}}>{Request.msg}</h6></td>
-
+                                                <td> <h6 style={{ color: black, fontSize: 17,width:100 }}>{value}</h6></td>
 
 
                                                 <div align="center">
                                                     <div>
                                                         {isStaff === true ?
                                                             <div>
-                                                                <button className='cancelBtn' style={{ backgroundColor: '#2f89fc' }} onClick={() => view(Request._id)}> Edit </button>
+                                                                <button className='cancelBtn' style={{ backgroundColor: orange[500] }} onClick={() => view()}> Approve </button>
+
                                                             </div>
                                                             :
                                                             <div>
