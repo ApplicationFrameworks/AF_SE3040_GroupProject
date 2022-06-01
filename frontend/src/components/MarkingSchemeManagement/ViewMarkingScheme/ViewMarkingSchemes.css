@@ -1,0 +1,27 @@
+.tableRow:hover {
+    background-color: #ffaa00f1;
+    cursor: pointer;
+}
+
+.tableRow {
+    padding: 1px;
+    text-align: left;
+    background-color: #c7c7c794;
+  }
+
+.tableData {
+    padding-left: 20px;
+    text-align:left;
+    font-size: 20px;
+    font-weight: 600;
+    display: table-cell;
+}
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  table, td, th {
+    border-bottom: 1px solid rgb(128, 128, 128);
+  }
