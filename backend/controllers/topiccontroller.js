@@ -35,6 +35,25 @@ exports.addTopic = async (req, res) => {
     })
   }
    
+
+  exports.updateTopic = async(req,res) => {
+
+    let topicID = req.params.id;
+    const { tstatus } = req.body;
+
+
+    const updateTopic= { tstatus } 
+    
+    try{
+        //find topic by ID  
+         await Topic.findByIdAndUpdate(topicID ,updateTopic);
+
+        res.status(200).json({message:"topic updated"})
+    }catch(error){
+        res.status(500).json({message:"Error with updating data",error:error.message});
+    }
+
+}
   
   
   

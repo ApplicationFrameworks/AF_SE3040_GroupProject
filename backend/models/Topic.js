@@ -23,7 +23,7 @@ const TopicSchema = new Schema({
         required : true
     },
 
-    status: {
+    tstatus: {
         type : String,
         default: 'Submitted for grading'
     }
