@@ -139,8 +139,8 @@ function Header() {
                             </IconButton>
                             }      
                         </ul>
-                        <div className="header-title">
-                            <h3 onClick={home}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SLIIT &nbsp; Research &nbsp; Camp</h3>
+                        <div className="">
+                            <h3 className="header-title" onClick={home}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SLIIT &nbsp; Research &nbsp; Camp</h3>
                         </div>
                         <ul className="mx-3">
                             {isSignedIn ?
