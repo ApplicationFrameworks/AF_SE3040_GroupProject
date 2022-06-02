@@ -45,6 +45,14 @@ function Header() {
             icon: <PeopleIcon/>,
             cName: 'nav-text'
         },
+
+        {
+            title: 'Register Topics',
+            path: `/topic/add`,
+            icon: <AssignmentIcon/>,
+            cName: 'nav-text'
+          },
+
         {
             title: 'Research Topics',
             path: `/topic/view`,
@@ -58,8 +66,8 @@ function Header() {
           cName: 'nav-text'
         },
         {
-          title: 'Prescriptions',
-          path: `/prescription/history/${user._id}`,
+          title: 'View Requests',
+          path: `/request/view`,
           icon: <AssignmentIcon/>,
           cName: 'nav-text'
         },
