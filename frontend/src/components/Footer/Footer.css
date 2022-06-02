@@ -13,4 +13,5 @@ footer{
 footer ul li{
     list-style: none;
     color: #fff;
+    text-decoration: none;
 }
