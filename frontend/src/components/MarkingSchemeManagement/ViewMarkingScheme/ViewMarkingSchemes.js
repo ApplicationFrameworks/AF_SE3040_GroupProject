@@ -62,7 +62,9 @@ function ViewMarkingSchemes() {
   }
 
   return (
-    <div className="container">
+    <div className="container" style={{
+      height: "550px"
+    }}>
       <div className="row">
         <div className="col-4">
           <div className="pb-2 px-3 d-flex flex-wrap align-items-center justify-content-between"></div>
@@ -121,26 +123,28 @@ function ViewMarkingSchemes() {
               <table>
                 <tbody>
                   <tr className="tableRow">
-                    <td className="tableData" style={{ width: 1100 }}>
+                    <td className="tableData" style={{ width: 1600 }}>
                       {Document.details}
                     </td>
 
                     <td style={{ width: 120 }}>
-                      <IconButton>
+                      
                         <PictureAsPdfIcon
                           style={{
                             color: red[800],
                             backgroundPosition: "center",
                           }}
                         ></PictureAsPdfIcon>
-                      </IconButton>
+                      
                     </td>
                     <td>
                       <span>
+                      <IconButton>
                         <MoreHorizIcon
-                          style={{ color: blue[900], cursor: "pointer" }}
+                          style={{ color: blue[900], cursor: "pointer", marginRight:"15px" }}
                           onClick={() => view(Document._id)}
                         />
+                      </IconButton>
                       </span>
                     </td>
                   </tr>
