@@ -18,6 +18,7 @@ import AddRequest from "./src/components/RequestManagement/AddRequest";
 import DisplayRequest from "./src/components/RequestManagement/DisplayRequest";
 import AddTopics from "./src/components/TopicManagement/AddTopics/AddTopics";
 import ViewTopics from "./src/components/TopicManagement/ViewTopics/VIewTopics";
+import Modulepage from "./src/components/ModulePage/ModulePage";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Header/>
             <Switch>
             <Route path="/" exact component={Homepage} />
+            <Route path="/module" exact component={Modulepage} />
             <Route path="/student/signin" exact component={StudentSignIn} />
             <Route path="/student/signup" exact component={StudentSignUp} />
             <Route path="/staff/register" exact component={StaffSignUp} />
