@@ -52,7 +52,7 @@ function ViewMarks() {
   }
 
   function view(id) {
-    history.push(`/videoSubmissionView/${id}`);
+    history.push(`/evaluationMarksView/${id}`);
   }
 
   return (

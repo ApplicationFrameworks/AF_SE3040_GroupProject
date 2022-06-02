@@ -22,6 +22,7 @@ import EvaluationMarks from "./src/components/EvaluationMarksManagement/MarksSub
 import ViewVideoSubmissions from "./src/components/VideoManagement/ViewVideoSubmission/ViewVideoSubmission";
 import ViewOneVideoSubmission from "./src/components/VideoManagement/ViewVideoSubmission/ViewOneVideoSubmission";
 import ViewMarks from "./src/components/EvaluationMarksManagement/ViewMarks/ViewMarks";
+import ViewOneMark from "./src/components/EvaluationMarksManagement/ViewMarks/ViewOneMark";
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
             <Route path="/markingSchemaView" exact component={ViewMarkingSchemes} />
             <Route path="/markingSchemaView/:id" exact component={ViewOneMarkingScheme} />
             <Route path="/evaluationMarksView" exact component={ViewMarks} />
+            <Route path="/evaluationMarksView/:id" exact component={ViewOneMark} />
             </Switch>
             <Footer/>
         </Router>
