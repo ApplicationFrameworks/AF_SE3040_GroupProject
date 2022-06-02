@@ -14,6 +14,11 @@ import Footer from './src/components/Footer/Footer';
 import AdminSignIn from './src/components/AdminManagement/AdminLogin';
 import StudentSignIn from './src/components/StudentManagement/SignIn/SignIn';
 import StudentSignUp from './src/components/StudentManagement/SignUp/SignUp';
+
+
+
+
+
 import VideoSubmission from "./src/components/VideoManagement/VideoSubmission/VideoSubmission";
 import MarkingScheme from "./src/components/MarkingSchemeManagement/MarkingSchemeSubmission/MarkingScheme";
 import ViewMarkingSchemes from "./src/components/MarkingSchemeManagement/ViewMarkingScheme/ViewMarkingSchemes";
@@ -42,6 +47,13 @@ function App() {
             <Route path="/tdocView" exact component={ViewSubmissions}/> 
             <Route path="/tdocView/:id" exact component={OneSubmission}/> 
             <Route path="/admin/signin" exact component={AdminSignIn} />
+            
+            
+
+
+
+            
+            
             <Route path="/videoSubmissionAdd" exact component={VideoSubmission} />
             <Route path="/videoSubmissionView" exact component={ViewVideoSubmissions} />
             <Route path="/videoSubmissionView/:id" exact component={ViewOneVideoSubmission} />

@@ -15,6 +15,8 @@ const StaffRouter = require("./routes/staffrouter");
 const DocumentRouter = require("./routes/documentrouter");
 const AdminRouter = require("./routes/adminrouter.js");
 const StudentRouter = require("./routes/studentrouter");
+
+
 const VideoRouter = require("./routes/videorouter");
 const markingSchemeRouter = require("./routes/markingSchemeRouter")
 const evaluationMarksRouter = require("./routes/evaluationMarksRouter")
@@ -44,12 +46,23 @@ app.use("/staff",StaffRouter);
 app.use("/tdoc",DocumentRouter);
 //when http://localhost:8070/admin ran it will execute adminrouter.js file
 app.use("/admin",AdminRouter);
+
+
+
+
+
+
+
+
+
 //when http://localhost:8070/submissionVideo ran it will execute videorouter.js file
 app.use("/submissionVideo",VideoRouter);
 //when http://localhost:8070/markingScheme ran it will execute markingSchemeRouter.js file
 app.use("/markingScheme",markingSchemeRouter);
 //when http://localhost:8070/evaluationMarks ran it will execute evaluationMarksRouter.js file
 app.use("/evaluationMarks",evaluationMarksRouter);
+
+
 
 
 //defining a port to run the application
