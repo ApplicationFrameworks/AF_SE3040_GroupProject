@@ -4,11 +4,12 @@ import "./MarksSubmission.css";
 import Button from "@material-ui/core/Button";
 import FileUploadOutlinedIcon from "@mui/icons-material/FileUploadOutlined";
 import OutlinedInput from "@material-ui/core/OutlinedInput";
+import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 
 function EvaluationMarks() {
-    const[group,setGroup]=useState("");
-    const[topic,setTopic]=useState("");
-    const[marks,setMarks]=useState(""); 
+  const [group, setGroup] = useState("");
+  const [topic, setTopic] = useState("");
+  const [marks, setMarks] = useState("");
 
   const [previewSource, setPreviewSource] = useState();
   const [selectedFile, setSelectedFile] = useState();
@@ -83,12 +84,12 @@ function EvaluationMarks() {
             style={{
               fontSize: "28px",
               fontWeight: "700",
-              color: "orange",
+              color: "black",
               marginTop: "120px",
-              marginLeft: "620px"
+              marginLeft: "400px",
             }}
           >
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EVALUATION MARKS
+            EVALUATION MARKS
           </h2>
           <div className="row">
             <div className="col-12">
@@ -98,6 +99,18 @@ function EvaluationMarks() {
           <br></br>
           <div className="create_pdf">
             <form onSubmit={add} className="addmarks">
+              <div className="box-cover1">
+                <div className="pdfIcon">
+                  <img
+                    src={require("./pdf.png")}
+                    style={{
+                      height: "110px",
+                      marginTop: "10px",
+                      marginLeft: "90px",
+                    }}
+                  ></img>
+                </div>
+              </div>
               <div className="row">
                 <div className="col-8">
                   <div className="row">
@@ -105,18 +118,12 @@ function EvaluationMarks() {
 
                     <div className="col-8 d-flex justify-content-center">
                       <div>
-                          <div className="previewImgsub3">
-                              &nbsp;
-                          </div>
                         {previewSource ? (
                           <img className="previewImgsub" />
                         ) : (
                           <img className="previewImgsub" />
                         )}
                         <div className="form-group17">
-                          <label className="label17">
-                            Upload Marking Sheet
-                          </label>
                           <label htmlFor="profilepic">
                             <input
                               style={{ display: "none" }}
@@ -193,7 +200,6 @@ function EvaluationMarks() {
                           />
                         </div>
                       </div>
-
                     </div>
                   </div>
                 </div>
@@ -211,8 +217,8 @@ function EvaluationMarks() {
                       color: "white",
                       fontWeight: "600",
                       fontSize: "18px",
-                      marginTop:"0px",
-                      marginLeft:"280px"
+                      marginTop: "10px",
+                      marginLeft: "110px",
                     }}
                   />
                 </div>

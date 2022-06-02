@@ -19,6 +19,8 @@ import MarkingScheme from "./src/components/MarkingSchemeManagement/MarkingSchem
 import ViewMarkingSchemes from "./src/components/MarkingSchemeManagement/ViewMarkingScheme/ViewMarkingSchemes";
 import ViewOneMarkingScheme from "./src/components/MarkingSchemeManagement/ViewMarkingScheme/ViewOneMarkingScheme";
 import EvaluationMarks from "./src/components/EvaluationMarksManagement/MarksSubmission/MarksSubmission";
+import ViewVideoSubmissions from "./src/components/VideoManagement/ViewVideoSubmission/ViewVideoSubmission";
+import ViewOneVideoSubmission from "./src/components/VideoManagement/ViewVideoSubmission/ViewOneVideoSubmission";
 
 
 function App() {
@@ -40,6 +42,8 @@ function App() {
             <Route path="/tdocView/:id" exact component={OneSubmission}/> 
             <Route path="/admin/signin" exact component={AdminSignIn} />
             <Route path="/videoSubmissionAdd" exact component={VideoSubmission} />
+            <Route path="/videoSubmissionView" exact component={ViewVideoSubmissions} />
+            <Route path="/videoSubmissionView/:id" exact component={ViewOneVideoSubmission} />
             <Route path="/markingSchemaAdd" exact component={MarkingScheme} />
             <Route path="/markingSchemaView" exact component={ViewMarkingSchemes} />
             <Route path="/markingSchemaView/:id" exact component={ViewOneMarkingScheme} />

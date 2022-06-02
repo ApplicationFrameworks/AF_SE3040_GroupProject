@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useLocation } from "react-router";
 import { orange, red, blue, green } from "@material-ui/core/colors";
-import "./ViewMarkingSchemes.css";
+import "./ViewVideoSubmission.css";
 import axios from "axios";
 import IconButton from "@material-ui/core/IconButton";
 import AddIcon from "@material-ui/icons/Add";
-import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
+import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
 import SearchIcon from "@mui/icons-material/Search";
-import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import PreviewIcon from "@mui/icons-material/Preview";
 
-function ViewMarkingSchemes() {
+function ViewVideoSubmissions() {
   const [document, setDocuments] = useState([]);
   const history = useHistory();
   const location = useLocation();
@@ -20,18 +20,18 @@ function ViewMarkingSchemes() {
       setUser(JSON.parse(localStorage.getItem("user")));
     }
 
-    async function getAllDocuments() {
+    async function getAllVideos() {
       axios
-        .get(`http://localhost:8070/markingScheme`)
+        .get(`http://localhost:8070/submissionVideo`)
         .then((res) => {
           setDocuments(res.data);
         })
         .catch((error) => {
-          alert("Failed to fetch document");
+          alert("Failed to fetch video");
         });
     }
 
-    getAllDocuments();
+    getAllVideos();
   }, [location]);
 
   function filterContent(data, searchTerm) {
@@ -44,76 +44,42 @@ function ViewMarkingSchemes() {
   function handleSearchAll(event) {
     const searchTerm = event.currentTarget.value;
     axios
-      .get(`http://localhost:8070/markingScheme`)
+      .get(`http://localhost:8070/submissionVideo`)
       .then((res) => {
         filterContent(res.data, searchTerm.toLowerCase());
       })
       .catch((error) => {
-        alert("Failed to fetch documents");
+        alert("Failed to fetch video");
       });
   }
 
   function view(id) {
-    history.push(`/markingSchemaView/${id}`);
-  }
-
-  function add(id) {
-    history.push(`/markingSchemaAdd`);
+    history.push(`/videoSubmissionView/${id}`);
   }
 
   return (
-    <div className="container">
+    <div className="container5">
+      <h2 className="textVideo">Submitted Videos</h2>
       <div className="row">
         <div className="col-4">
           <div className="pb-2 px-3 d-flex flex-wrap align-items-center justify-content-between"></div>
         </div>
         <div className="col-3"></div>
         <div className="col-5">
-          <div
-            className="px-3 search"
-            align="right"
-            style={{ top: "40px", position: "relative", right: "460px" }}
-          >
-            <input
-              style={{
-                color: "black",
-                fontWeight: "500",
-                borderRadius: "8px",
-                border: "2px solid grey",
-                padding: "6px 123px",
-              }}
+          {/* Search function disabled*/}
+          {/* <div className="px-3 search" align="right" style={{top:'40px',position:'relative',right:'460px'}}>
+            <input style={{color:"black",fontWeight:"500",borderRadius:"8px",border:"2px solid grey",padding:'6px 123px'}}
               type="text"
               name="search"
               id="search"
               placeholder="Search"
               onChange={handleSearchAll}
               required
-            />
-            <div style={{ position: "relative", right: "510px", top: "-35px" }}>
-              <SearchIcon />
-            </div>
-          </div>
+            /><div style={{position:'relative',right:'510px',top:'-35px'}}><SearchIcon/></div>
+          </div> */}
         </div>
       </div>
 
-      <span>
-        <button
-          className="productBtn"
-          style={{
-            backgroundColor: orange[400],
-            fontSize: "18px",
-            padding: "7px 30px",
-            borderRadius: "10px",
-            border: "2px solid orange",
-            position: "relative",
-            top: "-28px",
-            left: "1100px",
-          }}
-          onClick={() => add()}
-        >
-          <AddIcon /> Add New
-        </button>
-      </span>
       <div className="productGrid">
         {document.map((Document, key) => (
           <div key={key}>
@@ -122,25 +88,30 @@ function ViewMarkingSchemes() {
                 <tbody>
                   <tr className="tableRow">
                     <td className="tableData" style={{ width: 1100 }}>
-                      {Document.details}
+                      {Document.group}
+                    </td>
+                    <td className="tableData" style={{ width: 1100 }}>
+                      {Document.topic}
                     </td>
 
                     <td style={{ width: 120 }}>
-                      <IconButton>
-                        <PictureAsPdfIcon
-                          style={{
-                            color: red[800],
-                            backgroundPosition: "center",
-                          }}
-                        ></PictureAsPdfIcon>
-                      </IconButton>
+                      <OndemandVideoIcon
+                        style={{
+                          color: red[800],
+                          backgroundPosition: "center",
+                        }}
+                      ></OndemandVideoIcon>
                     </td>
                     <td>
                       <span>
-                        <MoreHorizIcon
-                          style={{ color: blue[900], cursor: "pointer" }}
-                          onClick={() => view(Document._id)}
-                        />
+                        <IconButton>
+                          <h5
+                            style={{ cursor: "pointer" }}
+                            onClick={() => view(Document._id)}
+                          >
+                            view
+                          </h5>
+                        </IconButton>
                       </span>
                     </td>
                   </tr>
@@ -154,4 +125,4 @@ function ViewMarkingSchemes() {
   );
 }
 
-export default ViewMarkingSchemes;
+export default ViewVideoSubmissions;

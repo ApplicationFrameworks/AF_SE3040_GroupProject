@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import "./VideoSubmission.css";
 import Button from "@material-ui/core/Button";
-import FileUploadOutlinedIcon from '@mui/icons-material/FileUploadOutlined';
+import FileUploadOutlinedIcon from "@mui/icons-material/FileUploadOutlined";
 import OutlinedInput from "@material-ui/core/OutlinedInput";
 
 function VideoSubmission() {
@@ -50,7 +50,7 @@ function VideoSubmission() {
       try {
         await axios
           .post(
-            "https://api.cloudinary.com/v1_1/movie-reservation/image/upload",
+            "https://api.cloudinary.com/v1_1/movie-reservation/video/upload",
             formData
           )
           .then((res) => {
@@ -80,23 +80,21 @@ function VideoSubmission() {
     <div>
       <div style={{ width: "1000px", height: "600px" }}>
         <div className="container" align="center">
-        <h2
-                  style={{
-                    fontSize: "30px",
-                    fontWeight: "700",
-                    color: "orange",
-                    marginTop: "120px",
-                    marginLeft:"600px"
-                  }}
-                >
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VIDEO
-                  SUBMISSION
-        </h2>
+          <h2
+            style={{
+              fontSize: "30px",
+              fontWeight: "700",
+              color: "orange",
+              marginTop: "120px",
+              marginLeft: "600px",
+            }}
+          >
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VIDEO
+            SUBMISSION
+          </h2>
           <div className="row">
             <div className="col-12">
-              <div className="pb-2 px-3 d-flex flex-wrap align-items-center justify-content-between">
-                
-              </div>
+              <div className="pb-2 px-3 d-flex flex-wrap align-items-center justify-content-between"></div>
             </div>
           </div>
           <br></br>
@@ -175,39 +173,42 @@ function VideoSubmission() {
                 </div>
 
                 <div className="col-4 d-flex justify-content-center">
-                    <div>
-                    <div className="previewImgsub2">
-                      &nbsp;
-                     </div>
-                        {previewSource ?
-                        <img className="previewImgsub"/>
-                        :
-                        <img className="previewImgsub"/>
-                        }
-                        <div className="form-group14">
-                            <label className="label12">Upload Video</label>
-                            <label htmlFor="profilepic">
-                                <input style={{display: 'none'}}
-                                id="profilepic"
-                                name="profilepic"
-                                type="file"
-                                accept=".mp4"
-                                onChange={handleFileInputChange}
-                                value={fileInputState}
-                                />
-                                <Button color="primary" variant="contained" component="span" className="uploadBtn2"
-                                style={{
-                                  padding: "10px 20px",
-                                  fontWeight: "600",
-                                  fontSize: "15px",
-                                }}>
-                                    <FileUploadOutlinedIcon/> &nbsp; Upload Video
-                                </Button>
-                            </label>
-                        </div>
+                  <div>
+                    <div className="previewImgsub2">&nbsp;</div>
+                    {previewSource ? (
+                      <img className="previewImgsub" />
+                    ) : (
+                      <img className="previewImgsub" />
+                    )}
+                    <div className="form-group14">
+                      <label className="label12">Upload Video</label>
+                      <label htmlFor="profilepic">
+                        <input
+                          style={{ display: "none" }}
+                          id="profilepic"
+                          name="profilepic"
+                          type="file"
+                          accept=".mp4"
+                          onChange={handleFileInputChange}
+                          value={fileInputState}
+                        />
+                        <Button
+                          color="primary"
+                          variant="contained"
+                          component="span"
+                          className="uploadBtn2"
+                          style={{
+                            padding: "10px 20px",
+                            fontWeight: "600",
+                            fontSize: "15px",
+                          }}
+                        >
+                          <FileUploadOutlinedIcon /> &nbsp; Upload Video
+                        </Button>
+                      </label>
                     </div>
+                  </div>
                 </div>
-                
 
                 <div className="form-group15">
                   <input
@@ -220,9 +221,9 @@ function VideoSubmission() {
                       background: "orange",
                       border: "2px solid blue",
                       color: "white",
-                      fontWeight:"600",
+                      fontWeight: "600",
                       fontSize: "18px",
-                      marginLeft:"-20px"
+                      marginLeft: "-20px",
                     }}
                   />
                 </div>
