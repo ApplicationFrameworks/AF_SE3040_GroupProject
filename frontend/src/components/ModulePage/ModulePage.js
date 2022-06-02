@@ -77,7 +77,7 @@ function Modulepage() {
                         <p className='para'>
 
                             Please check your eligibility to submit your documents. The deadline is 13th May 2023</p>
-                        <a className='linkModule' href="/tdocView"><img className="link" src={require('../../../public/images/pdf.png')} style={{ width: 30, height: 30, marginTop: -5 }} />
+                        <a className='linkModule' href="/tdocView"><img className="link" src={require('../../../public/images/internet.png')} style={{ width: 30, height: 30, marginTop: -5 }} />
                             <h5 className='mid'>Research Project - Topic Documents Evaluation Progress</h5></a>
                     </div>
                 </div>
@@ -90,7 +90,7 @@ function Modulepage() {
                         <p className='para'>
 
                             Please note that the deadline for the supervisors / co-supervisors requests is 24th May 2023. </p>
-                        <a className='linkModule' href="/request/view"><img className="link" src={require('../../../public/images/pdf.png')} style={{ width: 30, height: 30, marginTop: -5 }} />
+                        <a className='linkModule' href="/request/view"><img className="link" src={require('../../../public/images/internet.png')} style={{ width: 30, height: 30, marginTop: -5 }} />
                             <h5 className='mid'>Research Project - Requests Progress</h5></a>
                     </div>
                 </div>
