@@ -50,6 +50,25 @@ exports.viewOneRequest = async (req, res) => {
     })
 }
 
+exports.updateRequest = async(req,res) => {
+
+  let requestID = req.params.id;
+  const { rstatus } = req.body;
+
+
+  const updateRequest= { rstatus } 
+  
+  try{
+      //find Request by ID  
+       await Request.findByIdAndUpdate(requestID ,updateRequest);
+
+      res.status(200).json({message:"request updated"})
+  }catch(error){
+      res.status(500).json({message:"Error with updating data",error:error.message});
+  }
+
+}
+
 
 
 

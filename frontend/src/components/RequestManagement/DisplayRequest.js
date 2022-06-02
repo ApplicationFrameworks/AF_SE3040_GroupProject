@@ -15,7 +15,6 @@ function ViewRequest() {
 
     const [isStaff, setIsStaff] = useState(false)
     const [user, setUser] = useState("");
-    const [value, setValue] = useState("");
 
 
     const config = {
@@ -55,12 +54,7 @@ function ViewRequest() {
         })
     }
 
-    function view() {
-        
-        const value="Approved";
-        setValue(value);
-        console.log(value);
-    }
+  
 
     
 
@@ -85,6 +79,40 @@ function ViewRequest() {
     })
   }
 
+  const setData = async (rstatus, id) => {
+
+    const value = {
+        rstatus,
+    };
+
+    await axios
+        .put(`http://localhost:8070/request/show/${id}`, value)
+        .then(() => {
+            alert(`Topic is ${rstatus}ed`);
+            window.location.reload(false);
+        })
+        .catch((err) => {
+            alert(`Something went to wrong !!!`);
+        });
+};
+
+const setEvaluate = async (rstatus, id) => {
+
+    const value = {
+        rstatus,
+    };
+
+    await axios
+        .put(`http://localhost:8070/request/show/${id}`, value)
+        .then(() => {
+            alert(`Topic is ${rstatus}ed`);
+            window.location.reload(false);
+        })
+        .catch((err) => {
+            alert(`Something went to wrong !!!`);
+        });
+};
+
    
     
     
@@ -106,7 +134,6 @@ function ViewRequest() {
                             required
                         /><div style={{position:'relative',right:'520px',top:'-32px'}}><SearchIcon/></div>
                     </div>
-                    {value}
                     {requests.map((Request, key) => (
                         <div key={key}>
                             <div>
@@ -115,19 +142,37 @@ function ViewRequest() {
                                     <table >
                                         <tbody>
                                             <tr>
-                                                <td><h6 style={{ color: black, fontSize: 17,width:200}}>{Request.group}</h6></td>
-                                                <td> <h6 style={{ color: black, fontSize: 17,width:200 }}>{Request.supervisour}</h6></td>
-                                                <td> <h6 style={{ color: black, fontSize: 17,width:360}}>{Request.subject}</h6></td>
-                                                <td> <h6 style={{ color: blue, fontSize: 17 ,width:500,fontWeight:480}}>{Request.msg}</h6></td>
-                                                <td> <h6 style={{ color: black, fontSize: 17,width:100 }}>{value}</h6></td>
+                                                <td><h6 style={{ color: black, fontSize: 17,width:180}}>{Request.group}</h6></td>
+                                                <td> <h6 style={{ color: black, fontSize: 17,width:190 }}>{Request.supervisour}</h6></td>
+                                                <td> <h6 style={{ color: black, fontSize: 17,width:380}}>{Request.subject}</h6></td>
+                                                <td> <h6 style={{ color: blue, fontSize: 17 ,width:400,fontWeight:480}}>{Request.msg}</h6></td>
+                                                <td> <h6 style={{ color: black, fontSize: 17,width:150 }}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Request.rstatus}</h6></td>
 
 
                                                 <div align="center">
-                                                    <div>
+                                                    <div style={{width:200,marginTop:40}}>
                                                         {isStaff === true ?
                                                             <div>
-                                                                <button className='cancelBtn' style={{ backgroundColor: orange[500] }} onClick={() => view()}> Approve </button>
+                                                                <button
+                                                        className="btn btn-success"
+                                                        disabled={
+                                                            Request.rstatus === "Approved" 
+                                                        }
+                                                        onClick={() => setData("Approved", Request._id)}
+                                                    >
+                                                        &nbsp;Approve
+                                                    </button>
 
+                                                    &nbsp;&nbsp;&nbsp;
+                                                    <button
+                                                        class="btn btn-info"
+                                                        disabled={
+                                                            Request.rstatus === "Rejected" 
+                                                        }
+                                                        onClick={() => setEvaluate("Rejected", Request._id)}
+                                                    >
+                                                        &nbsp;Reject
+                                                    </button>
                                                             </div>
                                                             :
                                                             <div>
