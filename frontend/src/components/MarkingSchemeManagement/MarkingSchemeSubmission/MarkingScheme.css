@@ -1,62 +1,60 @@
 .addpdf {
-    width: 110%;
-    height: 520px;
-    text-align: left;
-    padding: 40px;
-    background: rgb(255, 255, 255);
-    box-shadow:0px 24px 48px 0 rgba(0,0,0,0.3);
-    position:relative;
-    border-left: 10px solid orange;
-    border-right: 10px solid blue;
-    margin-left: 320px;
+  width: 110%;
+  height: 520px;
+  text-align: left;
+  padding: 40px;
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 24px 48px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
+  border-left: 10px solid orange;
+  border-right: 10px solid blue;
+  margin-left: 320px;
 }
 
-.label8{
-    font-size: 25px;
-    font-weight: 700;
-    position:relative;
-    top:50px;
-    left:380px;
-
+.label8 {
+  font-size: 25px;
+  font-weight: 700;
+  position: relative;
+  top: 50px;
+  left: 380px;
 }
 
-.form-group8{
-    position: relative;
-    left:380px;
-    top:90px;
+.form-group8 {
+  position: relative;
+  left: 380px;
+  top: 90px;
 }
-
 
 .previewImgsub1 {
-    vertical-align: middle;
-    position: absolute;
-    height: 280px;
-    width: 225px;
-    background-size: cover;
-    background-image: url("Logo.png");
-    margin-top: 70px;
+  vertical-align: middle;
+  position: absolute;
+  height: 280px;
+  width: 225px;
+  background-size: cover;
+  background-image: url("Logo.png");
+  margin-top: 70px;
 }
 
-.form-group7{
-    position: relative;
-    left:368px;
-    top: 10px;
+.form-group7 {
+  position: relative;
+  left: 368px;
+  top: 10px;
 }
 
-.label7{
-    font-size: 25px;
-    font-weight: 700;
-    position:relative;
-    top:-50px;
-    left: -15px;
+.label7 {
+  font-size: 25px;
+  font-weight: 700;
+  position: relative;
+  top: -50px;
+  left: -15px;
 }
 
-.form-group9{
-    position: relative;
-    left:370px;
+.form-group9 {
+  position: relative;
+  left: 370px;
 }
 
-.uploadBtn{
-    left: -15px;
-    top:-10px;
+.uploadBtn {
+  left: -15px;
+  top: -10px;
 }

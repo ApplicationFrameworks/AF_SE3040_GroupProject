@@ -83,7 +83,7 @@ function MarkingScheme() {
               fontWeight: "700",
               color: "orange",
               marginTop: "120px",
-              marginLeft: "620px"
+              marginLeft: "620px",
             }}
           >
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MARKING SCHEMA
@@ -103,9 +103,7 @@ function MarkingScheme() {
 
                     <div className="col-8 d-flex justify-content-center">
                       <div>
-                          <div className="previewImgsub1">
-                              &nbsp;
-                          </div>
+                        <div className="previewImgsub1">&nbsp;</div>
                         {previewSource ? (
                           <img className="previewImgsub" />
                         ) : (
@@ -153,8 +151,8 @@ function MarkingScheme() {
                             id="details"
                             placeholder="More Details"
                             style={{
-                                height:"100px"
-                              }}
+                              height: "100px",
+                            }}
                             required
                             fullWidth
                             onChange={(e) => setDetails(e.target.value)}
@@ -179,8 +177,8 @@ function MarkingScheme() {
                       color: "white",
                       fontWeight: "600",
                       fontSize: "18px",
-                      marginTop:"100px",
-                      marginLeft:"220px"
+                      marginTop: "100px",
+                      marginLeft: "220px",
                     }}
                   />
                 </div>

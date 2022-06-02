@@ -60,38 +60,33 @@ function ViewOneMarkingScheme(props) {
         align="center"
         style={{ position: "absolute", left: "20px" }}
       >
-        <div className="detailProductCard11">
+        <div className="detailProductCard15">
           <div className="detailProduct">
             <div className="box-detailProduct">
               <div className="row8">
-                <h2 className="details">Details : </h2>
-                <h2 className="detailsdis"> {details}</h2>
+                <div className="box-cover15"></div>
+                <h2 className="details15">Details : </h2>
+                <h2 className="detailsdis15"> {details}</h2>
                 <br />
                 <br />
-                <IconButton
+                <div
+                  className="vidIcon"
                   style={{
                     position: "relative",
-                    left: "800px",
-                    top: "-200px",
+                    left: "785px",
+                    top: "-190px",
                     height: "150px",
                     width: "150px",
                   }}
                 >
-                  <PictureAsPdfIcon
-                    style={{
-                      color: red[600],
-                      backgroundPosition: "center",
-                      height: "150px",
-                      width: "150px",
-                    }}
-                  ></PictureAsPdfIcon>
-                </IconButton>
+                  <img src={require("./pdf1.png")}></img>
+                </div>
                 <Button
                   onClick={() => Pdf(`${url}`)}
                   color="primary"
                   variant="contained"
                   component="span"
-                  className="dBtn"
+                  className="dBtn15"
                   style={{
                     padding: "10px 40px",
                     fontWeight: "600",

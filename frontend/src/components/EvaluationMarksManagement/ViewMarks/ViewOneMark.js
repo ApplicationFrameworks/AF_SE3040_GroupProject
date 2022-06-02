@@ -7,7 +7,6 @@ import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import Button from "@material-ui/core/Button";
 import "./ViewOneMark.css";
 
-
 function ViewOneMark(props) {
   const [isAdmin, setIsAdmin] = useState(false);
   const [id, setId] = useState("");
@@ -72,7 +71,11 @@ function ViewOneMark(props) {
           <div className="detailProduct">
             <div className="box-detailProduct">
               <div className="row8">
-                <div className="box-cover"></div>
+                <div className="box-cover">
+                  <h3 className="noteText">
+                    <b>Note :</b> Download above pdf to see marking
+                  </h3>
+                </div>
                 <h2 className="details1">Group Id : </h2>
                 <h2 className="detailsdis1"> {group}</h2>
                 <h2 className="details1">Topic : </h2>

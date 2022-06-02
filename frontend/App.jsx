@@ -18,7 +18,6 @@ import VideoSubmission from "./src/components/VideoManagement/VideoSubmission/Vi
 import MarkingScheme from "./src/components/MarkingSchemeManagement/MarkingSchemeSubmission/MarkingScheme";
 import ViewMarkingSchemes from "./src/components/MarkingSchemeManagement/ViewMarkingScheme/ViewMarkingSchemes";
 import ViewOneMarkingScheme from "./src/components/MarkingSchemeManagement/ViewMarkingScheme/ViewOneMarkingScheme";
-import EvaluationMarks from "./src/components/EvaluationMarksManagement/MarksSubmission/MarksSubmission";
 import ViewVideoSubmissions from "./src/components/VideoManagement/ViewVideoSubmission/ViewVideoSubmission";
 import ViewOneVideoSubmission from "./src/components/VideoManagement/ViewVideoSubmission/ViewOneVideoSubmission";
 import ViewMarks from "./src/components/EvaluationMarksManagement/ViewMarks/ViewMarks";

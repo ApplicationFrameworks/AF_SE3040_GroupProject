@@ -5,7 +5,7 @@ import "./ViewMarks.css";
 import axios from "axios";
 import IconButton from "@material-ui/core/IconButton";
 import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
-import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 
 function ViewMarks() {
   const [document, setDocuments] = useState([]);
@@ -88,29 +88,33 @@ function ViewMarks() {
                     <td className="tableData" style={{ width: 400 }}>
                       {Document.group}
                     </td>
-                    <td className="tableData" style={{ width: 1100 }}>
+                    <td className="tableData" style={{ width: 900 }}>
                       {Document.topic}
                     </td>
-                    <td className="tableData" style={{ width: 200 }}>
+                    {/* <td className="tableData" style={{ width: 200 }}>
                       {Document.marks} Marks
-                    </td>
+                    </td> */}
 
-                    <td style={{ width: 150 }}>
+                    {/* <td style={{ width: 150 }}>
                       <PictureAsPdfIcon
                         style={{
                           color: red[800],
                           backgroundPosition: "center",
                         }}
                       ></PictureAsPdfIcon>
-                    </td>
+                    </td> */}
                     <td>
                       <span>
                         <IconButton>
                           <h5
-                            style={{ cursor: "pointer" }}
+                            style={{
+                              cursor: "pointer",
+                              color: "red",
+                              width: 150,
+                            }}
                             onClick={() => view(Document._id)}
                           >
-                            view
+                            View Marks
                           </h5>
                         </IconButton>
                       </span>

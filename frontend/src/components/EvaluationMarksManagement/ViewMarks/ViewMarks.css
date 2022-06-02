@@ -1,43 +1,43 @@
 .container5 {
-    width: 80%;
-    height: 100vh;
-    padding-top: 20px;
-    margin-left: 200px;
-  }
-  
-  .textMarks {
-    font-size: 25px;
-    margin-left: 580px;
-    font-weight: 600;
-    padding-bottom: 30px;
-  }
-  
-  .tableRow:hover {
-    background-color: #ffaa00f1;
-    cursor: pointer;
-  }
-  
-  .tableRow {
-    padding: 1px;
-    text-align: left;
-    background-color: #c7c7c794;
-  }
-  
-  .tableData {
-    padding-left: 20px;
-    text-align: left;
-    font-size: 18.5px;
-    font-weight: 600;
-    display: table-cell;
-  }
-  
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  table,
-  td,
-  th {
-    border-bottom: 1px solid rgb(128, 128, 128);
-  }
+  width: 80%;
+  height: 100vh;
+  padding-top: 20px;
+  margin-left: 200px;
+}
+
+.textMarks {
+  font-size: 25px;
+  margin-left: 580px;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+
+.tableRow:hover {
+  background-color: #ffaa00f1;
+  cursor: pointer;
+}
+
+.tableRow {
+  padding: 1px;
+  text-align: left;
+  background-color: #c7c7c794;
+}
+
+.tableData {
+  padding-left: 20px;
+  text-align: left;
+  font-size: 18.5px;
+  font-weight: 600;
+  display: table-cell;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table,
+td,
+th {
+  border-bottom: 1px solid rgb(128, 128, 128);
+}

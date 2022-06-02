@@ -87,14 +87,14 @@ function ViewVideoSubmissions() {
               <table>
                 <tbody>
                   <tr className="tableRow">
-                    <td className="tableData" style={{ width: 1100 }}>
+                    <td className="tableData" style={{ width: 400 }}>
                       {Document.group}
                     </td>
-                    <td className="tableData" style={{ width: 1100 }}>
+                    <td className="tableData" style={{ width: 700 }}>
                       {Document.topic}
                     </td>
 
-                    <td style={{ width: 120 }}>
+                    <td style={{ width: 100 }}>
                       <OndemandVideoIcon
                         style={{
                           color: red[800],
