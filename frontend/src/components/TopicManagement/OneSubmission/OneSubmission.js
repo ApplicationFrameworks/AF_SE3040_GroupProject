@@ -77,12 +77,12 @@ function OneSubmission(props) {
     };
 
     function enter() {
-        localStorage.setItem("reply",reply);
+        localStorage.setItem("reply", reply);
     }
 
     console.log(reply);
 
-  
+
 
     return (
 
@@ -91,32 +91,32 @@ function OneSubmission(props) {
                 <div>
                     {isOpen && <Popup
                         content={<>
-                          
+
                             <div className="col-xl-6 mb-3">
                                 <InputLabel id="demo-mutiple-chip-label">Your Reply</InputLabel>
-                                    <Select
-                                        id="demo-mutiple-chip"
-                                        multiple fullWidth
-                                        value={reply}
-                                        onChange={handleChange}
-                                        input={<Input id="select-multiple-chip"/>}
-                                        renderValue={(selected) => (
-                                            <div >
-                                                {selected.map((value) => (
-                                                    <Chip key={value} label={value}  />
-                                                ))}
-                                            </div>
-                                        )}
-                                    >
+                                <Select
+                                    id="demo-mutiple-chip"
+                                    multiple fullWidth
+                                    value={reply}
+                                    onChange={handleChange}
+                                    input={<Input id="select-multiple-chip" />}
+                                    renderValue={(selected) => (
+                                        <div >
+                                            {selected.map((value) => (
+                                                <Chip key={value} label={value} />
+                                            ))}
+                                        </div>
+                                    )}
+                                >
                                     {reply1.map((reply1) => (
                                         <MenuItem key={reply1} value={reply1} >
                                             {reply1}
                                         </MenuItem>
                                     ))}
-                                    </Select>
+                                </Select>
                             </div>
-                          
-                            <button style={{padding:'5px 20px',borderRadius:'10px',background:'orange',border:'2px solid orangered',color:'white'}} onClick={enter}><b>Submit</b></button>
+
+                            <button style={{ padding: '5px 20px', borderRadius: '10px', background: 'orange', border: '2px solid orangered', color: 'white' }} onClick={enter}><b>Submit</b></button>
                         </>}
                         handleClose={togglePopup}
                     />}
@@ -148,9 +148,19 @@ function OneSubmission(props) {
 
                     </div>
                     <div>
-                        <a className="approve" onClick={togglePopup}>
-                            Reply  |  Evaluate
-                        </a>
+                        {isAdmin === true ?
+                            <div>
+                                <a className="approve" onClick={togglePopup}>
+                                    Reply  |  Evaluate
+                                </a>
+                            </div>
+                            :
+                            <div>
+                                <a className="approve" >
+                                    Permalink
+                                </a>
+                            </div>
+                        }
                     </div>
 
                 </div>
@@ -162,7 +172,7 @@ function OneSubmission(props) {
                 </div>
             </div>
 
-            <div className='replyCard'><h6 style={{top:'25px',position:'relative'}}>Status</h6><br/><br/><div style={{background:'#02254bd0',color:'white'}}>{reply}</div></div>
+            <div className='replyCard'><h6 style={{ top: '25px', position: 'relative' }}>Status</h6><br /><br /><div style={{ background: '#02254bd0', color: 'white' }}>{reply}</div></div>
         </div>
     )
 }

@@ -46,13 +46,13 @@ function App() {
             <Route path="/staff/all" exact component={DisplayStaff}/> 
             <Route path="/staff/all/:id" exact component={SingleStaff}/>
 
-
+              
             <Route path="/tdocAdd" exact component={DocumentSubmission}/>
             <Route path="/tdocView" exact component={ViewSubmissions}/> 
             <Route path="/tdocView/:id" exact component={OneSubmission}/> 
             <Route path="/admin/signin" exact component={AdminSignIn} />
 
-
+             
             <Route path="/videoSubmissionAdd" exact component={VideoSubmission} />
             <Route path="/videoSubmissionView" exact component={ViewVideoSubmissions} />
             <Route path="/videoSubmissionView/:id" exact component={ViewOneVideoSubmission} />

@@ -4,6 +4,7 @@ nav {
 
 header{
   margin-bottom: 100px;
+  color:white;
 }
 
 .header-title{
@@ -11,6 +12,6 @@ header{
 }
 
 .header-bg{
-  background-color: rgba(246, 247, 251,0.7);
+  background-color: #02254b;
   backdrop-filter: blur(20px);
 }

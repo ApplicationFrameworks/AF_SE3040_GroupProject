@@ -2,12 +2,10 @@ import React, {useEffect, useState} from 'react';
 import { useHistory, useLocation,Link } from 'react-router-dom';
 import { IconButton } from '@material-ui/core';
 import DehazeIcon from '@material-ui/icons/Dehaze';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import HomeIcon from '@material-ui/icons/Home';
 import PersonIcon from '@material-ui/icons/Person';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 import FeedbackIcon from '@material-ui/icons/Feedback';
 import Avatar from '@material-ui/core/Avatar';
 import PeopleIcon from '@mui/icons-material/People';
@@ -45,33 +43,36 @@ function Header() {
             icon: <PeopleIcon/>,
             cName: 'nav-text'
         },
+
         {
-          title: 'Research Topic',
+            title: 'Register Topics',
+            path: `/topic/add`,
+            icon: <AssignmentIcon/>,
+            cName: 'nav-text'
+          },
+
+        {
+            title: 'Research Topics',
+            path: `/topic/view`,
+            icon: <AssignmentIcon/>,
+            cName: 'nav-text'
+          },
+        {
+          title: 'Topic Doc',
           path: `/tdocView`,
           icon: <AssignmentIcon/>,
           cName: 'nav-text'
         },
         {
-          title: 'Prescriptions',
-          path: `/prescription/history/${user._id}`,
+          title: 'View Requests',
+          path: `/request/view`,
           icon: <AssignmentIcon/>,
           cName: 'nav-text'
         },
-        {
-          title: 'Cart',
-          path: `/cart/${user._id}/shopping`,
-          icon: <ShoppingCartIcon />,
-          cName: 'nav-text'
-        },
-        {
-            title: 'Payment',
-            path: `/patient/payment/${user._id}`,
-            icon: <MonetizationOnIcon />,
-            cName: 'nav-text'
-        },
+       
         {
             title: 'Feedback',
-            path: `/patient/review/${user._id}`,
+            path: `/student/review/${user._id}`,
             icon: <FeedbackIcon />,
             cName: 'nav-text'
         }

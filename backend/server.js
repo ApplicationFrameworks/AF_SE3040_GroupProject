@@ -15,6 +15,14 @@ const StaffRouter = require("./routes/staffrouter");
 const DocumentRouter = require("./routes/documentrouter");
 const AdminRouter = require("./routes/adminrouter.js");
 const StudentRouter = require("./routes/studentrouter");
+const RequestRouter = require("./routes/requestrouter");
+const TopicRouter = require("./routes/topicrouter");
+
+
+
+
+
+
 
 
 const VideoRouter = require("./routes/videorouter");
@@ -46,6 +54,17 @@ app.use("/staff",StaffRouter);
 app.use("/tdoc",DocumentRouter);
 //when http://localhost:8070/admin ran it will execute adminrouter.js file
 app.use("/admin",AdminRouter);
+//when http://localhost:8070/request ran it will execute requestrouter.js file
+app.use("/request",RequestRouter);
+//when http://localhost:8070/request ran it will execute requestrouter.js file
+app.use("/topic",TopicRouter);
+
+
+
+
+
+
+
 
 
 

@@ -28,17 +28,17 @@ function StaffUpdate(props){
 
 
     const interests =[
-        'Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'
+        'Software Engineering','Design Lab','Visual Computing','Mobile Computing','Robotics','Machine Learning','Image Processing','Artificial Intelligence'
     ]
 
     const faculties = [
-        'Sinhala', 'English', 'Tamil'
+        'FACULTY OF COMPUTING | INFORMATION TECHNOLOGY', 'FACULTY OF COMPUTING | COMPUTER SCIENCE & SOFTWARE ENGINEERING', 'FACULTY OF COMPUTING | COMPUTER SYSTEMS ENGINEERING'
     ]
 
 
     useEffect(() => {
         async function fetchUser(){
-            await axios.get(`http://localhost:8070/staff/${props.match.params.id}`).then((res)=>{
+            await axios.get(`http://localhost:8070/staff/all/${props.match.params.id}`).then((res)=>{
                 setName(res.data.name)
                 setSpeciality(res.data.speciality)
                 setInterest(res.data.interest)
@@ -124,7 +124,7 @@ function StaffUpdate(props){
                     
                             <div className="col-xl-6 mb-3">
                         <OutlinedInput
-                            type="text"
+                            type="staff"
                             name="fullname"
                             id="fullname"
                             placeholder="Full Name"
@@ -142,7 +142,7 @@ function StaffUpdate(props){
                    
                             <div className="col-xl-6 mb-3">
                                 <OutlinedInput
-                                    type="text"
+                                    type="staff"
                                     name="speciality"
                                     id="speciality"
                                     placeholder="Speciality"
@@ -180,7 +180,7 @@ function StaffUpdate(props){
         
                             <div className="col-xl-6 mb-3">
                     <OutlinedInput
-                        type="text"
+                        type="staff"
                         name="qualification"
                         id="qualification"
                         placeholder="Qualification"
@@ -226,7 +226,7 @@ function StaffUpdate(props){
                             <div className="col-xl-6 mb-3">  
                                 <div className="form-group"> 
                                     <OutlinedInput
-                                        type="text"
+                                        type="staff"
                                         name="about"
                                         id="about"
                                         placeholder="Career Summery"
@@ -270,7 +270,7 @@ function StaffUpdate(props){
                     </div>
                 </div>
               
-                <input type="submit" className="form-submit-btn" value="Update"/> 
+                <input type="submit" className="form-submit-btn" style={{backgroundColor:'orange',color:'white',padding:'5px 30px',borderRadius:'10px',border:'2px solid orangered'}} value="Update"/> 
         </form>
     </div>
    )

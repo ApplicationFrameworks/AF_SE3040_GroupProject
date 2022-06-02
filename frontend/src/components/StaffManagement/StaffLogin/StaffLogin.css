@@ -9,7 +9,7 @@
     box-shadow: 0px 24px 48px 0 rgba(0,0,0,0.1);
 } 
 
-.staffLogin Input[type="email"],.staffLogin Input[type="text"],
+.staffLogin Input[type="email"],.staffLogin Input[type="reg"],
 .staffLogin Input[type="password"] {
     border-bottom: none;
     border: 0;

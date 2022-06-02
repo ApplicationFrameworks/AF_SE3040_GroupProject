@@ -1,0 +1,46 @@
+.green-card{
+    padding: 25px;
+    margin-bottom: 30px !important;
+    background-color: white;
+    height: calc(100% - 30px);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow:0px 3px 24px 0 rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(50px);
+}
+
+.label4{
+    font-size: 18.5px;
+    font-weight: 500;
+    position:relative;
+    top:32px;
+    left:-70px;
+
+
+}
+
+.form-group10{
+    position: relative;
+    left:210px;
+    top:-2px;
+    width:400px;
+}
+
+.form-group11{
+    position: relative;
+    left:800px;
+    top:-55px;
+    width:400px;
+}
+
+.cancelBtn{
+    padding:5px 20px;
+    border-radius: 10px;
+    color:white;
+    font-weight: 500;
+    font-size: 16px;
+    border:3px solid orange;
+    position: relative;
+    top:30px;
+    left:7px;
+}

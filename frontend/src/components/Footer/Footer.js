@@ -20,7 +20,7 @@ function Footer() {
                 <div className="row">
                     <div className="col-xl-1" align="center">
                         <br/>
-                        <img src="/images/Logo.png" className="logoFooter" alt="logo"/>
+                        <img src="../images/Logo.png" className="logoFooter" alt="logo"/>
                     </div>
                     <div className="col-xl-3"style={{ paddingLeft: 70 }}>
                         <br/>
