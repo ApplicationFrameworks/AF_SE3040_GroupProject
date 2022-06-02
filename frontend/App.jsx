@@ -21,6 +21,15 @@ import ViewTopics from "./src/components/TopicManagement/ViewTopics/VIewTopics";
 import Modulepage from "./src/components/ModulePage/ModulePage";
 
 
+
+
+
+
+
+
+
+
+
 function App() {
     return (
         <Router>
@@ -44,6 +53,16 @@ function App() {
             <Route path="/admin/signin" exact component={AdminSignIn} />
             <Route path="/student/request/:id" exact component={AddRequest}/>
             <Route path="/request/:id" exact component={DisplayRequest}/>
+
+
+
+
+
+
+
+
+
+
             </Switch>
             <Footer/>
         </Router>
