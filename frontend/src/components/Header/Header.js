@@ -46,7 +46,13 @@ function Header() {
             cName: 'nav-text'
         },
         {
-          title: 'Research Topic',
+            title: 'Research Topics',
+            path: `/topic/view`,
+            icon: <AssignmentIcon/>,
+            cName: 'nav-text'
+          },
+        {
+          title: 'Topic Doc',
           path: `/tdocView`,
           icon: <AssignmentIcon/>,
           cName: 'nav-text'

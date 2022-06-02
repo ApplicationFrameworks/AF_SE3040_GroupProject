@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "test": "react-scripts test"
   },
   "keywords": [],
   "author": "",
@@ -18,13 +19,17 @@
     "@material-ui/lab": "^4.0.0-alpha.61",
     "@mui/icons-material": "^5.8.0",
     "@mui/material": "^5.8.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^14.2.0",
     "aos": "^2.3.4",
     "axios": "^0.27.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-google-login": "^5.2.2",
     "react-onclickoutside": "^6.12.1",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "buffer": "^6.0.3",
