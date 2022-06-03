@@ -69,12 +69,12 @@ function AddRequest(props) {
         <div className="col-11">
           <div className="pb-2 px-5 d-flex align-items-center justify-content-between">
 
-            <h2 style={{ fontSize: '25px', position: 'relative', top: '70px', left: '250px' }}>Make a Request</h2>
+            <h2 style={{ fontSize: '25px', position: 'relative', top: '70px', left: '170px' }}>Make a Request</h2>
           </div>
         </div>
       </div>
       <br /><br /><br />
-      <div className="boxUpdate px-5" style={{ border: '3px solid rgba(73, 73, 73, 0.445)', borderRadius: '15px', width: '800px', position: 'relative', left: '-140px', background: 'rgba(192, 192, 192, 0.342)' }}>
+      <div className="boxUpdate px-5" style={{ border: '3px solid rgba(73, 73, 73, 0.445)', borderRadius: '15px', width: '800px', position: 'relative', left: '-250px', background: 'rgba(192, 192, 192, 0.342)' }}>
         <div className="row">
           <form onSubmit={sendData} className="col-6 mt-5">
             <div className="row">
@@ -92,7 +92,7 @@ function AddRequest(props) {
               <div className="col-md-8 mb-4 mx-3">
                 <div className="form-group10">
                   <OutlinedInput
-                    type="student" id="student" placeholder="Student Name" readOnly fullWidth
+                    type="student" id="student" placeholder="Registration Number" readOnly fullWidth
                     value={user.itNo}
                     inputProps={{ style: { padding: 12 } }}
                   />
@@ -102,7 +102,7 @@ function AddRequest(props) {
               <div className="col-md-8 mb-4 mx-3">
                 <div className="form-group10">
                   <OutlinedInput
-                    type="student" id="student" placeholder="Student Name" readOnly fullWidth
+                    type="student" id="student" placeholder="Email Address" readOnly fullWidth
                     value={user.email}
                     inputProps={{ style: { padding: 12 } }}
                   />
@@ -113,7 +113,7 @@ function AddRequest(props) {
               <div className="col-md-10 mb-4 mx-3">
                 <div className="form-group10">
                   <OutlinedInput
-                    type="student" id="student" placeholder="Enter the Subject" required fullWidth
+                    type="student" id="student" placeholder="Enter the Supervisor's Name" required fullWidth
                     onChange={(e) => setSupervisour(e.target.value)}
                     inputProps={{ style: { padding: 12 } }}
                   />
@@ -124,7 +124,7 @@ function AddRequest(props) {
               <div className="col-md-10 mb-4 mx-3">
                 <div className="form-group10">
                   <OutlinedInput
-                    type="student" id="student" placeholder="Enter the Subject" required fullWidth
+                    type="student" id="student" placeholder="Enter the Group ID" required fullWidth
                     onChange={(e) => setGroup(e.target.value)}
                     inputProps={{ style: { padding: 12 } }}
                   />
@@ -158,7 +158,7 @@ function AddRequest(props) {
 
               <div className="col-12">
                 <div className="form-group11">
-                  <input className="submit-btn mb-0" type="submit" value="Send" style={{ padding: '5px 65px', borderRadius: '10px', background: 'orange', border: '2px solid orangered', color: 'white', fontSize: '18px' }} /><div style={{ left: '60px', position: 'relative', top: '-33px' }}><SendOutlinedIcon style={{ color: 'white' }} /></div>
+                  <input className="submit-btn mb-0" type="submit" value="Send" style={{ padding: '5px 65px', borderRadius: '10px', background: 'orange', border: '2px solid orange', color: 'white', fontSize: '18px' }} /><div style={{ left: '60px', position: 'relative', top: '-33px' }}><SendOutlinedIcon style={{ color: 'white' }} /></div>
                 </div>
               </div>
             </div>
@@ -166,7 +166,7 @@ function AddRequest(props) {
         </div>
       </div>
       <div>
-        <img style={{ width: '250px', height: '350px', borderRadius: '50%', position: 'relative', left: '500px', top: '-540px' }} src={user.imgUrl} />
+        <img style={{ width: '500px', height: '420px', position: 'relative', left: '500px', top: '-840px' }} src={require('../../../public/images/contact.jpg')} />
       </div>
     </div>
   )
