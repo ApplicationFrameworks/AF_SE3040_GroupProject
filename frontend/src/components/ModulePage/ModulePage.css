@@ -133,7 +133,45 @@
     color: black;
 }
 
+.addBtnSubmission{
+    background-color: orange;
+    color: white;
+    border-radius: 6px;
+    width: 60px;
+    padding: 5px;
+    border: none;
+    transition: transform .2s;
+}
 
+.addBtnSubmission:hover{
+    transform: scale(1.1);
+}
 
+.inside1{
+    width:1000px;
+    max-height:1000px;
+    top:50px;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border:2.5px solid rgb(151, 151, 151);
 
+}
+
+.viewBtnSubmission{
+    background-color: orange;
+    color: white;
+    border-radius: 6px;
+    width: 60px;
+    padding: 5px;
+    border: none;
+    transition: transform .2s;
+    position: absolute;
+    margin-left: 850px;
+    margin-top: -30px;
+}
+
+.viewBtnSubmission:hover{
+    transform: scale(1.1);
+}
 
