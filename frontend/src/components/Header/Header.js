@@ -52,6 +52,12 @@ function Header() {
           cName: 'nav-text'
         },
         {
+            title: 'Research Documents',
+            path: `/researchdocView`,
+            icon: <AssignmentIcon/>,
+            cName: 'nav-text'
+        },
+        {
           title: 'Prescriptions',
           path: `/prescription/history/${user._id}`,
           icon: <AssignmentIcon/>,

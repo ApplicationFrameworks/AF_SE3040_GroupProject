@@ -14,7 +14,9 @@ import Footer from './src/components/Footer/Footer';
 import AdminSignIn from './src/components/AdminManagement/AdminLogin';
 import StudentSignIn from './src/components/StudentManagement/SignIn/SignIn';
 import StudentSignUp from './src/components/StudentManagement/SignUp/SignUp';
-
+import ResearchDocumentSubmission from './src/components/ResearchDocManagment/ResearchDocSubmission/ResearchDocSubmission';
+import OneResearchDocSubmission from './src/components/ResearchDocManagment/OneResearchSubmission/OneResearchSubmission';
+import ViewResearchSubmissions from './src/components/ResearchDocManagment/ViewResearchSubmissions/ViewResearchSubmissions';
 
 function App() {
     return (
@@ -34,6 +36,10 @@ function App() {
             <Route path="/tdocView" exact component={ViewSubmissions}/> 
             <Route path="/tdocView/:id" exact component={OneSubmission}/> 
             <Route path="/admin/signin" exact component={AdminSignIn} />
+            <Route path="/researchdocAdd" exact component={ResearchDocumentSubmission}/>
+            <Route path="/researchdocView/:id" exact component={OneResearchDocSubmission}/> 
+            <Route path="/researchdocView" exact component={ViewResearchSubmissions}/> 
+            
             </Switch>
             <Footer/>
         </Router>

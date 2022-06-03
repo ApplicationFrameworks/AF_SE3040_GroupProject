@@ -4,6 +4,19 @@ import './ResearchDocSubmission.css'
 import Button from "@material-ui/core/Button";
 import AddAPhotoIcon from '@material-ui/icons/AddAPhoto';
 import OutlinedInput from "@material-ui/core/OutlinedInput";
+import FileUploadOutlinedIcon from '@mui/icons-material/FileUploadOutlined';
+import OutlinedInput from "@material-ui/core/OutlinedInput";
+import KeyboardOutlinedIcon from '@mui/icons-material/KeyboardOutlined';
+import FormatColorTextOutlinedIcon from '@mui/icons-material/FormatColorTextOutlined';
+import FormatBoldOutlinedIcon from '@mui/icons-material/FormatBoldOutlined';
+import FormatItalicOutlinedIcon from '@mui/icons-material/FormatItalicOutlined';
+import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBulletedOutlined';
+import FormatListNumberedOutlinedIcon from '@mui/icons-material/FormatListNumberedOutlined';
+import FormatAlignCenterOutlinedIcon from '@mui/icons-material/FormatAlignCenterOutlined';
+import FormatAlignJustifyOutlinedIcon from '@mui/icons-material/FormatAlignJustifyOutlined';
+import FormatAlignLeftOutlinedIcon from '@mui/icons-material/FormatAlignLeftOutlined';
+import FormatAlignRightOutlinedIcon from '@mui/icons-material/FormatAlignRightOutlined';
+import AddPhotoAlternateOutlinedIcon from '@mui/icons-material/AddPhotoAlternateOutlined';
 
 
 function ResearchDocumentSubmission() {
@@ -54,7 +67,7 @@ function ResearchDocumentSubmission() {
 
            
             try {
-                await axios.post("", formData).then((res) =>{
+                await axios.post("https://api.cloudinary.com/v1_1/movie-reservation/image/upload", formData).then((res) =>{
                     url = res.data.secure_url
                 })
             } catch (error) {
@@ -62,7 +75,7 @@ function ResearchDocumentSubmission() {
             }
         }
 
-        const newDocument = {group,topic,leader,url}
+        const newDocument = { group,topic,leader,url }
         
         try {
             await axios.post("http://localhost:8070/researchdoc/add", newDocument , config)
@@ -74,7 +87,9 @@ function ResearchDocumentSubmission() {
     }
     
     return (
-    <div className="container" align="center" >
+<div>
+<div style={{ width: '1000px', height: '900px' }}>
+    <div className="container" align="left" >
         <div className="row">
             <div className="col-12">
                 <div className="pb-2 px-3 d-flex flex-wrap align-items-center justify-content-between">
@@ -88,27 +103,33 @@ function ResearchDocumentSubmission() {
                 <div className="row">
                     <div className="col-8">
                         <div className="row">
-                            <div className="col-md-8 mb-4">
-                            <div className="col-md-8 mb-4">
-                                    <div className="form-price">
+                            <br /><br />
+                        <div>
+                            <label className='label1'>Group ID</label><br /><br />
+                                <div className="col-md-10 mb-4">
+                                    <div className="form-group3">
                                         <OutlinedInput 
                                             type="group" id="group" placeholder="Group ID" required fullWidth
                                             onChange={(e)=>setGroup(e.target.value)}
-                                            inputProps={{style: {padding: 12}}}
+                                            inputProps={{ style: { padding: 12 } }}
                                         />
                                     </div>
                                 </div>
-                                <div className="form-name">
-                                    <OutlinedInput
-                                        type="text" id="topic" placeholder="Your Topic" 
-                                        required fullWidth
-                                        onChange={(e)=>setTopic(e.target.value)}
-                                        inputProps={{style: {padding: 12}}} 
-                                    />
+
+                            <label className='label1'>Research Topic</label><br /><br />
+                                <div className="col-md-10 mb-4">
+                                    <div className="form-group3">
+                                        <OutlinedInput
+                                            type="topic" id="topic" placeholder="Your Topic" required fullWidth
+                                            onChange={(e)=>setTopic(e.target.value)}
+                                            inputProps={{style: { padding: 12 } }} 
+                                        />
+                                    </div>
                                 </div>
 
-                                <div className="col-md-8 mb-4">
-                                    <div className="form-price">
+                            <label className='label1'>Group Leader</label><br /><br />
+                                <div className="col-md-10 mb-4">
+                                    <div className="form-group3">
                                         <OutlinedInput 
                                             type="leader" id="leader" placeholder="Group Leader" required fullWidth
                                             onChange={(e)=>setLeader(e.target.value)}
@@ -125,11 +146,13 @@ function ResearchDocumentSubmission() {
                     <div className="col-4 d-flex justify-content-center">
                         <div>
                             {previewSource ? 
-                                <img src={previewSource} alt="preview" className="previewImgProduct"/>
-                            :
-                                <img src="/images/product.png" className="previewImgProduct" alt="product pic"/>
-                            }
-                            <div className="form-group">
+                                 <img className="previewImgsub" />
+                                 :
+                                 <img className="previewImgsub"  />
+                             }
+                            
+                            <div className="form-group4">
+                            <label className='label2'>Upload Your Research Documents</label>
                                 <label htmlFor="profilepic">
                                     <input
                                         style={{ display: 'none' }}
@@ -142,7 +165,7 @@ function ResearchDocumentSubmission() {
                                     />
 
                                     <Button color="primary" variant="contained" component="span">
-                                        <AddAPhotoIcon/> &nbsp; Upload document
+                                        <AddAPhotoIcon/> &nbsp; &nbsp; Upload Document
                                     </Button>
                                 </label>
                             </div>
@@ -159,8 +182,8 @@ function ResearchDocumentSubmission() {
             </form>            
         </div>                    
     </div>
-
-
+    </div>
+</div>
         
     )
 }
