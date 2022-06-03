@@ -55,11 +55,6 @@ function ViewSubmissions() {
     history.push(`/tdocView/${id}`)
   }
 
-  function add(id) {
-    history.push(`/tdocAdd`)
-  }
-
-
   return (
     <div className="container">
       <div className="row">
@@ -82,10 +77,10 @@ function ViewSubmissions() {
           </div>
         </div>
       </div>
-
-      <span>
+<br/><br/><br/>
+      {/* <span>
         <button className="productBtn" style={{ backgroundColor: orange[400],fontSize:'18px',padding:'7px 30px' ,borderRadius:'10px',border:'2px solid orange',position:'relative',top:'-28px',left:'1100px'}} onClick={() => add()}><AddIcon/> Add New</button>
-      </span>
+      </span> */}
       <div className="productGrid"  >
         {document.map((Document, key) => (
           <div key={key}>

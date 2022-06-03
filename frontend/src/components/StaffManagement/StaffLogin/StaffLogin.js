@@ -45,7 +45,7 @@ function StaffLogin() {
     return (
        
      <div className="container" align="center">
-        <form className="staffLogin" onSubmit={signIn}>
+        <form className="staffLogin" onSubmit={signIn} style={{position:'relative',top:70,width:500}}>
             <h2>Staff login</h2>
             <br></br>
             <input
@@ -65,7 +65,7 @@ function StaffLogin() {
                 onChange={(event) => {setPassword(event.target.value)}} 
                 required 
              />
-              
+              <br/>
              <input type="submit" value="Sign In" className="form-submit-btn"/>
                 
             <div className="text-muted">

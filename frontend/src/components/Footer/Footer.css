@@ -8,9 +8,10 @@ footer{
     margin-top: 120px;
 }
 .logoFooter{
-    width: 150px;
+    width: 110px;
 }
 footer ul li{
     list-style: none;
     color: #fff;
+    text-decoration: none;
 }

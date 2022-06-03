@@ -119,12 +119,12 @@ function StaffSignUp(){
         <div className="container" align="center">
             <div className="row">
                 <div className="col-12">
-                    <div className="pb-2 px-3 d-flex flex-wrap align-items-center justify-content-between">
+                    <div className="pb-2 px-3 d-flex flex-wrap align-items-center justify-content-between" style={{position:'relative',top:70}} >
                         <h2>Sign Up</h2>
                     </div>
                 </div>
             </div>
-            <form  onSubmit={add} className="staffSignUp" >
+            <form  onSubmit={add} className="staffSignUp" style={{position:'relative',top:80,width:1400}} >
                 <div className="row"> 
                     
                     <div className="col-8">
@@ -173,7 +173,7 @@ function StaffSignUp(){
                             required fullWidth
                             inputProps={{style: {padding: 12}}}
                          />
-                    </div>
+                    </div><br/><br/><br/>
                             <div className="col-xl-6 mb-3">
                         <OutlinedInput
                             type="email"
@@ -201,7 +201,7 @@ function StaffSignUp(){
                                     required fullWidth
                                     inputProps={{style: {padding: 12}}}
                                 />
-                            </div>
+                            </div><br/><br/><br/>
                             <div className="col-xl-6 mb-3">
                                 <InputLabel id="demo-mutiple-chip-label">Research Interests</InputLabel>
                                     <Select
@@ -253,7 +253,7 @@ function StaffSignUp(){
                 </div>
            
                             <br/>
-                
+                            <br/>
             
                             <br/>
                 
@@ -282,7 +282,7 @@ function StaffSignUp(){
                         </div>
                   
                             <br/>
-   
+                            <br/>
                             <br/>
                 
                             <div className="col-xl-6 mb-3">  
@@ -311,7 +311,7 @@ function StaffSignUp(){
                                 </div>
                             </div>
                     
-                            <br/>
+                            <br/><br/><br/>
                 
                             <div className="col-xl-6 mb-3">  
                                 <div  className="form-group">
@@ -353,12 +353,12 @@ function StaffSignUp(){
                  
                         </div>
                     </div>
-                    <div className="col-4">
+                    <div className="col-4" style={{position:'relative',left:100}}>
 
                             {previewSource ? 
                                 <img src={previewSource} alt="preview" className="previewImg"/>
                             :
-                                <img src="./images/avatar.jpg" className="previewImg" alt="profile pic"/>
+                                <img src={require('../../../../public/images/avatar.jpg')} className="previewImg" alt="profile pic"/>
                             }
                             <div className="form-group">
                                 <label htmlFor="profilepic">
@@ -377,9 +377,9 @@ function StaffSignUp(){
                                 </label>
                             </div>
         
-                        </div>
+                        </div><br/><br/><br/>
                     <div className="col-xl-12">
-                        <input type="submit" className="form-submit-btn" style={{backgroundColor:'orange',color:'white',padding:'5px 30px',borderRadius:'10px',border:'2px solid orangered'}} value="Register"  /> 
+                        <input type="submit" className="form-submit-btn" style={{backgroundColor:'orange',color:'white',padding:'8px 35px',borderRadius:'10px',border:'3px solid orange',fontWeight:500,fontSize:17}} value="Register"  /> 
                     </div>
                </div> 
             </form>

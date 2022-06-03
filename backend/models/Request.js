@@ -33,6 +33,11 @@ const RequestSchema = new Schema({
   msg: {
     type: String,
     required: true
+  },
+
+  rstatus: {
+    type: String,
+    default: "Pending"
   }
 
 
