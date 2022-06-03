@@ -1,13 +1,61 @@
-import React from 'react'
-
+import React, { useEffect, useState } from 'react'
 import ForumIcon from '@mui/icons-material/Forum';
 import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router';
 import './ModulePage.css'
+import axios from 'axios'
 
 function Modulepage() {
 
     const history = useHistory()
+    const [isAdmin, setIsAdmin] = useState(false)
+    const [document, setDocuments] = useState([])
+    const location = useLocation();
+    const [user, setUser] = useState("");
 
+    useEffect(() => {
+        if (localStorage.getItem("user")) {
+          setUser(JSON.parse(localStorage.getItem("user")));
+        }
+
+        if (localStorage.getItem("adminAuthToken")) {
+            setIsAdmin(true)
+        }
+    
+        async function getSubmissionType() {
+          axios
+            .get(`http://localhost:8070/submissionType`)
+            .then((res) => {
+              setDocuments(res.data);
+            })
+            .catch((error) => {
+              alert("Failed to fetch Submission Type");
+            });
+        }
+    
+        getSubmissionType();
+      }, [location,isAdmin]);
+
+      function filterContent(data, searchTerm) {
+        const result = data.filter((product) =>
+          product.group.toLowerCase().includes(searchTerm)
+        );
+        setDocuments(result);
+      }
+
+      function handleSearchAll(event) {
+        const searchTerm = event.currentTarget.value;
+        axios
+          .get(`http://localhost:8070/submissionType`)
+          .then((res) => {
+            filterContent(res.data, searchTerm.toLowerCase());
+          })
+          .catch((error) => {
+            alert("Failed to fetch Submission Type");
+          });
+      }
+
+console.log(Document.weekName)
 
     return (
         <div className="container">
@@ -94,10 +142,41 @@ function Modulepage() {
                             <h5 className='mid'>Research Project - Requests Progress</h5></a>
                     </div>
                 </div>
-            </div>
-            <br /><br /><br /><br />
 
 
+                <div className='week5'>
+                <h4 className='weekT4'>Documentations / Presentations Evaluation</h4>
+                <div>
+                                            {isAdmin &&
+                                                <div style={{width:180}}>
+                                                    <button
+                                                        onClick={() => add()}
+                                                    >
+                                                        &nbsp;Add
+                                                    </button>
+                                                </div>
+
+                                            }</div>
+                <div className='inside'>
+                {document.map((Document, key) => (
+                    <div key={key}>
+                        <div className="p-3" style={{ overflowX: 'auto', width: 1500,marginLeft:-50 }}>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td style={{ width: 260 }}>{Document.subName}</td>
+                                        <td style={{ width: 400 }}>{Document.details}</td>
+                                        
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                ))}
+</div>
+</div>
+        </div>
         </div>
     )
 }
