@@ -81,8 +81,8 @@ function MarkingScheme() {
             style={{
               fontSize: "30px",
               fontWeight: "700",
-              color: "orange",
-              marginTop: "120px",
+              color: "black",
+              marginTop: "150px",
               marginLeft: "620px",
             }}
           >

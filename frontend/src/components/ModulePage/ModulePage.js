@@ -236,7 +236,7 @@ function Modulepage() {
                   height: 30,
                   position: "absolute",
                   top: "35px",
-                  left: "22px"
+                  left: "22px",
                 }}
               />
             </a>
@@ -250,7 +250,7 @@ function Modulepage() {
                   height: 30,
                   position: "absolute",
                   top: "177px",
-                  left: "22px"
+                  left: "22px",
                 }}
               />
             </a>
@@ -264,7 +264,7 @@ function Modulepage() {
                   height: 30,
                   position: "absolute",
                   top: "318px",
-                  left: "22px"
+                  left: "22px",
                 }}
               />
             </a>
@@ -278,7 +278,7 @@ function Modulepage() {
                   height: 30,
                   position: "absolute",
                   top: "460px",
-                  left: "22px"
+                  left: "22px",
                 }}
               />
             </a>
