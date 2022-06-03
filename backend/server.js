@@ -28,6 +28,7 @@ const TopicRouter = require("./routes/topicrouter");
 const VideoRouter = require("./routes/videorouter");
 const markingSchemeRouter = require("./routes/markingSchemeRouter")
 const evaluationMarksRouter = require("./routes/evaluationMarksRouter")
+const submissionTypeRouter = require("./routes/SubmissionTypeRouter")
 
 //getting the database url
 const URL = process.env.MONGODB_URL;
@@ -80,6 +81,8 @@ app.use("/submissionVideo",VideoRouter);
 app.use("/markingScheme",markingSchemeRouter);
 //when http://localhost:8070/evaluationMarks ran it will execute evaluationMarksRouter.js file
 app.use("/evaluationMarks",evaluationMarksRouter);
+//when http://localhost:8070/submissionType ran it will execute submissionTypeRouter.js file
+app.use("/submissionType",submissionTypeRouter);
 
 
 
