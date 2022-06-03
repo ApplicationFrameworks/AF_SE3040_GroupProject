@@ -105,6 +105,7 @@ function SignUp() {
 
     return (
         <div className="main_input_filed">
+
             <div className="flex-container11">
                 <div className="" align="center">
                     <div className="row">
@@ -119,9 +120,8 @@ function SignUp() {
                 </div>
             </div>
             <div className="flex-container12">
-
                 <form onSubmit={register} className="main_input_filed_2">
-                    <div className="">
+                    <div >
                         <div className="">
                             <div className=""><br/>
                                 <h6>First Name </h6>
@@ -130,22 +130,23 @@ function SignUp() {
 
                                         <OutlinedInput
                                             className="input_filed"
-                                            type="text" id="firstname"
+                                            type="" id="firstname"
                                             required fullWidth
                                             onChange={(event) => {
                                                 setFirstName(event.target.value)
                                             }}
-                                            inputProps={{style: {padding: 12}}}
+
                                         />
                                     </div>
                                 </div><br/>
+
                                 <h6>Last Name </h6>
                                 <div className="div_input_filed">
                                     <div className="">
 
                                         <OutlinedInput
                                             className="input_filed"
-                                            type="text" id="lastname"
+                                            type="" id="lastname"
                                             required fullWidth
                                             onChange={(event) => {
                                                 setLastName(event.target.value)
@@ -160,7 +161,7 @@ function SignUp() {
 
                                         <OutlinedInput
                                             className="input_filed"
-                                            type="text" id="it"
+                                            type="" id="it"
                                             required fullWidth
                                             onChange={(event) => {
                                                 setITno(event.target.value)
@@ -175,7 +176,7 @@ function SignUp() {
 
                                         <OutlinedInput
                                             className="input_filed"
-                                            type="email" id="email"
+                                            type="" id="email"
                                             required fullWidth
                                             onChange={(event) => {
                                                 setEmail(event.target.value)
@@ -190,7 +191,8 @@ function SignUp() {
 
                                         <OutlinedInput
                                             className="input_filed"
-                                            type="tel" id="phone" required fullWidth
+                                            type="tel" id="phone"
+                                            required fullWidth
                                             onChange={(event) => {
                                                 setPhone(event.target.value)
                                             }}
@@ -198,6 +200,9 @@ function SignUp() {
                                         />
                                     </div>
                                 </div><br/>
+
+
+
                                 <h6>Password </h6>
                                 <div className="div_input_filed">
                                     <div className="">
@@ -247,31 +252,34 @@ function SignUp() {
                                         />
                                     </div>
                                 </div>
-                                <div className="col-xl-12 mb-4">
+                                <br/>
+
+                                <div  className="items_in_form">
+                                <div className="">
                                     {showMessage &&
-                                        <div className="PWmessage">
+                                        <div className="">
                                             <p>Password must contain lowercase letters, uppercase letters, numbers
                                                 and should consist minimum of 8 characters</p>
                                         </div>
                                     }
                                 </div>
-                                <div className="col-md-12">
-                                    <div className="form-group">
-                                        <input id="terms" type="checkbox" required/>
-                                        <label htmlFor="terms">&nbsp;I agree to the <Link to="/terms">Terms and
-                                            Conditions</Link>.</label>
+                                <div className="">
+                                    <div className="">
+                                       <nobr> <input id="terms" type="checkbox" required/>
+                                        <label htmlFor="terms">&nbsp;I agree to the <Link to="/terms" style={{color:"darkBlue", textDecoration:"none"}}>Terms and
+                                            Conditions</Link></label></nobr>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-4 d-flex justify-content-center">
+                        </div><br/>
+                        <div className="">
                             <div>
                                 {previewSource ?
-                                    <img src={previewSource} alt="preview" className="previewImg"/>
+                                    <img src={previewSource} alt="preview" className="img_input_filed"/>
                                     :
-                                    <img src="/images/avatar.jpg" className="previewImg" alt="profile pic"/>
+                                    <img  src="/images/avatar.jpg" className="img_input_filed" alt="profile pic"/>
                                 }
-                                <div className="form-group">
+                                <div className="">
                                     <label htmlFor="profilepic">
                                         <input
                                             style={{display: 'none'}}
@@ -281,25 +289,25 @@ function SignUp() {
                                             onChange={handleFileInputChange}
                                             value={fileInputState}
                                         />
-
-                                        <Button color="primary" variant="contained" component="span">
-                                            <AddAPhotoIcon/> &nbsp; Upload Profile Picture
+<br/>
+                                        <Button className="form_btn1" variant="contained" component="span">
+                                            <AddAPhotoIcon style={{color:"white"}} /> &nbsp;<p style={{color:"white"}}>Upload Profile Picture</p>
                                         </Button>
                                     </label>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-md-12">
-                            <div className="form-group">
-                                <input className="form-submit-btn" type="submit" value="Sign Up"/>
+                    </div><br/>
+                    <div className="">
+                        <div className="">
+                            <div className="">
+                                <input className="form_btn" type="submit" value="Sign Up"/>
                             </div>
                         </div>
                     </div>
-
-                    <p>Already have an account? <Link to="/student/signin">Sign In</Link></p>
 <br/>
+                    <p>Already have an account? <Link to="/student/signin" style={{color:"darkBlue", textDecoration:"none"}}>Sign In</Link></p>
+                    </div>
                 </form>
             </div>
 
