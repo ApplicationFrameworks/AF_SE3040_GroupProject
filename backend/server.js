@@ -51,13 +51,13 @@ connection.once("open", function() {
 app.use("/student",StudentRouter);
 //when http://localhost:8070/staff ran it will execute staffrouter.js file
 app.use("/staff",StaffRouter);
-//when http://localhost:8070/staff ran it will execute staffrouter.js file
+//when http://localhost:8070/tdoc ran it will execute documentrouter.js file
 app.use("/tdoc",DocumentRouter);
 //when http://localhost:8070/admin ran it will execute adminrouter.js file
 app.use("/admin",AdminRouter);
 //when http://localhost:8070/request ran it will execute requestrouter.js file
 app.use("/request",RequestRouter);
-//when http://localhost:8070/request ran it will execute topicRouter.js file
+//when http://localhost:8070/topic ran it will execute topicrouter.js file
 app.use("/topic",TopicRouter);
 
 
