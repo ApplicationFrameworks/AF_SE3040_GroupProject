@@ -58,7 +58,7 @@ exports.updateDocument = async (req, res) => {
 //view Document
 exports.viewAllDocument = async (req, res) => { 
  
-  //calling Document model
+  //calling Research Document model
   ResearchDocument.find().then((researchdocument) => {
     res.status(200).json(researchdocument)
   }).catch((error) => {
@@ -68,7 +68,7 @@ exports.viewAllDocument = async (req, res) => {
  
 
 
-//view one Document
+//view one Research Document
 exports.viewOneDocument = async (req, res) => {
   let documentId = req.params.id;
 
