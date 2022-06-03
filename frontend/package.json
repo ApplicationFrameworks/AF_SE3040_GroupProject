@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -30,6 +31,7 @@
   },
   "devDependencies": {
     "buffer": "^6.0.3",
+    "jest": "^28.1.0",
     "parcel": "^2.5.0",
     "process": "^0.11.10"
   }
