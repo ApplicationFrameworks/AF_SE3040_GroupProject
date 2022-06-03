@@ -1,12 +1,52 @@
 import React from 'react'
-
 import ForumIcon from '@mui/icons-material/Forum';
 import { useHistory } from 'react-router-dom';
 import './ModulePage.css'
 
 function Modulepage() {
 
-    const history = useHistory()
+    const history = useHistory();
+    const [document, setDocuments] = useState([]);
+    const location = useLocation();
+    const [user, setUser] = useState("");
+
+    useEffect(() => {
+        if (localStorage.getItem("user")) {
+          setUser(JSON.parse(localStorage.getItem("user")));
+        }
+    
+        async function getSubmissionType() {
+          axios
+            .get(`http://localhost:8070/submissionType`)
+            .then((res) => {
+              setDocuments(res.data);
+            })
+            .catch((error) => {
+              alert("Failed to fetch Submission Type");
+            });
+        }
+    
+        getSubmissionType();
+      }, [location]);
+
+      function filterContent(data, searchTerm) {
+        const result = data.filter((product) =>
+          product.group.toLowerCase().includes(searchTerm)
+        );
+        setDocuments(result);
+      }
+
+      function handleSearchAll(event) {
+        const searchTerm = event.currentTarget.value;
+        axios
+          .get(`http://localhost:8070/submissionType`)
+          .then((res) => {
+            filterContent(res.data, searchTerm.toLowerCase());
+          })
+          .catch((error) => {
+            alert("Failed to fetch Submission Type");
+          });
+      }
 
 
     return (

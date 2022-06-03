@@ -82,8 +82,8 @@ function SubmissionType() {
                     src={require("./Submission.png")}
                     style={{
                       height: "150px",
-                      marginTop: "00px",
-                      marginLeft: "250px",
+                      marginTop: "130px",
+                      marginLeft: "230px",
                       position: "absolute"
                     }}
                   ></img>
@@ -228,8 +228,8 @@ function SubmissionType() {
                       color: "white",
                       fontWeight: "600",
                       fontSize: "18px",
-                      marginTop: "10px",
-                      marginLeft: "120px",
+                      marginTop: "-10px",
+                      marginLeft: "-120px",
                     }}
                   />
                 </div>

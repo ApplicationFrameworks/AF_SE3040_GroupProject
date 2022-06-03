@@ -116,6 +116,23 @@
     color: black;
 }
 
+.week1Btn{
+    margin-top: 0px;
+    font-size: 16px;
+    padding: 6px 15px 6px 15px;
+    margin-left: 750px;
+    background-color: orange;
+    border-radius: 10px;
+    border: none;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.week1Btn:hover{
+    transform: scale(1.1);
+    color: black;
+    text-decoration: none;
+}
 
 
 
