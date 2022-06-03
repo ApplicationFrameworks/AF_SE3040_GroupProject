@@ -2,7 +2,7 @@
     padding: 25px;
     margin-bottom: 30px !important;
     background-color: white;
-    height: calc(100% - 30px);
+    height: calc(100%);
     border-radius: 15px;
     text-align: left;
     box-shadow:0px 24px 48px 0 rgba(0,0,0,0.1);
@@ -14,7 +14,8 @@
     vertical-align: middle;
     border-style: none;
     position: relative;
-    max-width: 180px;
+    max-width: 300px;
+    height: 280px;
     transition: all .15s ease;
     transform: translate(0%, 0%);
     margin-bottom: 20px;

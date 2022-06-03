@@ -25,3 +25,14 @@
     border-radius: 24px;
     
 } 
+
+.form-submit-btn{
+    padding:8px 35px;
+    color:white;
+    font-weight:500;
+    background-color: orange;
+    border-radius: 10px;
+    border:3px solid white;
+
+
+}

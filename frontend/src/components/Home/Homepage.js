@@ -13,7 +13,7 @@ function Homepage() {
     return (
         <div>
 
-<img className="banner" src={require('../../../public/images/banner.png')} style={{width:1798,height:620,marginTop:-5}}/>
+<img className="banner" src={require('../../../public/images/banner.png')} style={{width:1798,height:660,marginTop:-5}}/>
         <div className="container">
             
             
