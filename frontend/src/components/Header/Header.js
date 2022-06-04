@@ -90,6 +90,18 @@ function Header() {
             icon: <HelpIcon/>,
             cName: 'nav-text'
           },
+          {
+            title: 'Research Documents',
+            path: `/researchdocView`,
+            icon: <AssignmentIcon/>,
+            cName: 'nav-text'
+        },
+        {
+            title: 'Chat With Groups',
+            path: '/chatView',
+            icon: <PeopleIcon/>,
+            cName: 'nav-text'
+        },
        
         {
             title: 'Feedback',

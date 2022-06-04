@@ -14,6 +14,7 @@ function ViewChats() {
     const [chat, setChats] = useState([])
     const history = useHistory()
     const location = useLocation()
+    const [user, setUser] = useState("");
 
   useEffect(() => {
     if (localStorage.getItem("user")) {
@@ -61,12 +62,14 @@ function ViewChats() {
 
   return (
     <div className="container">
+      <br/>  <br/> <br/> <br/><br/>  <br/> 
       <div className="row">
         <div className="col-4">
+        
           <div className="pb-2 px-3 d-flex flex-wrap align-items-center justify-content-between">
           </div>
         </div>
-       
+        
         <div className="col-5">
           <div className="px-3 search" align="right" style={{top:'40px',}}>
             <input style={{color:"black",fontWeight:"500",borderRadius:"8px",border:"2px solid grey",padding:'6px 83px'}}

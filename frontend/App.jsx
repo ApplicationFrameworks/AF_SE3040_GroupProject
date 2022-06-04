@@ -31,6 +31,14 @@ import SubmissionType from "./src/components/SubmissionTypesManagement/Submissio
 import Profile from "./src/components/StudentManagement/Profile/Profile.js";
 import DisplayGroups from "./src/components/GroupManagement/ViewGroups/viewGroups";
 import AddGroups from "./src/components/GroupManagement/AddGroups/addGroups";
+import ResearchDocumentSubmission from './src/components/ResearchDocManagment/ResearchDocSubmission/ResearchDocSubmission';
+import OneResearchDocSubmission from './src/components/ResearchDocManagment/OneResearchSubmission/OneResearchSubmission';
+import ViewResearchSubmissions from './src/components/ResearchDocManagment/ViewResearchSubmissions/ViewResearchSubmissions';
+import CreateChat from "./src/components/ChatManagement/CreateChat/CreateChat";
+import ViewChats from "./src/components/ChatManagement/ViewChats/ViewChats";
+import ViewOneChat from "./src/components/ChatManagement/ViewOneChat/ViewOneChat";
+import UpdateChat from "./src/components/ChatManagement/UpdateChat/UpdateChat";
+
 
 
 function App() {
@@ -68,7 +76,13 @@ function App() {
                 <Route path="/student/profile" exact component={Profile}/>
                 <Route path="/group/view" exact component={DisplayGroups}/>
                 <Route path="/group/add" exact component={AddGroups}/>
-
+                <Route path="/researchdocAdd" exact component={ResearchDocumentSubmission}/>
+                <Route path="/researchdocView/:id" exact component={OneResearchDocSubmission}/> 
+                <Route path="/researchdocView" exact component={ViewResearchSubmissions}/> 
+                <Route path="/createchat" exact component={CreateChat}/> 
+                <Route path="/updateChat/:id" exact component={UpdateChat}/>
+                <Route path="/onechat/:id" exact component={ViewOneChat}/> 
+                <Route path="/chatView" exact component={ViewChats}/> 
 
             </Switch>
             <Footer/>

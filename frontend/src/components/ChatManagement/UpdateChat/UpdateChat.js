@@ -58,6 +58,7 @@ function UpdateChat(props) {
 
     return (
         <div align="center">
+               <br></br>   <br></br>   <br></br>
         <div style={{ width: '1000px', height: '900px' }}>
             <div className="container" align="left" >
             <div className="row">

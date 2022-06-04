@@ -17,13 +17,8 @@ const AdminRouter = require("./routes/adminrouter.js");
 const StudentRouter = require("./routes/studentrouter");
 const RequestRouter = require("./routes/requestrouter");
 const TopicRouter = require("./routes/topicrouter");
-
-
-
-
-
-
-
+const ResearchDocumentRouter = require("./routes/researchdocrouter");
+const ChatRouter = require("./routes/chatRouter");
 
 const VideoRouter = require("./routes/videorouter");
 const markingSchemeRouter = require("./routes/markingSchemeRouter")
@@ -60,6 +55,9 @@ app.use("/admin",AdminRouter);
 app.use("/request",RequestRouter);
 //when http://localhost:8070/topic ran it will execute topicrouter.js file
 app.use("/topic",TopicRouter);
+app.use("/researchdoc",ResearchDocumentRouter);
+//when http://localhost:8070/chatmsg ran it will execute chatRouter.js file
+app.use("/chatmsg",ChatRouter);
 
 
 

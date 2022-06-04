@@ -77,14 +77,15 @@ function ResearchDocumentSubmission() {
     <div className="container" align="left" >
         <div className="row">
             <div className="col-12">
+            <br></br>  <br></br>
                 <div className="pb-2 px-3 d-flex flex-wrap align-items-center justify-content-between">
-                    <h2>&nbsp;Research Documents Submission</h2>
+                    <h2 style={{marginLeft:400}}>&nbsp;Research Documents Submission</h2>
                 </div>
             </div>
         </div>
         <br></br>
-        <div className="create_sub">
-            <form onSubmit={add} className="addDoc">
+        <div className="create_sub" style={{marginLeft:400}}>
+            <form onSubmit={add} className="addDoc01">
                 <div className="row">
                     <div className="col-8">
                         <div className="row">
@@ -136,7 +137,7 @@ function ResearchDocumentSubmission() {
                                  <img className="previewImgsub"  />
                              }
                             
-                            <div className="form-group4">
+                            <div className="form-group04">
                             <label className='label2'>Upload Your Research Documents</label>
                                 <label htmlFor="profilepic">
                                     <input
@@ -149,7 +150,7 @@ function ResearchDocumentSubmission() {
                                         value={fileInputState}
                                     />
 
-                                    <Button color="primary" variant="contained" component="span">
+                                    <Button color="primary" variant="contained" component="span" className='upBtn'>
                                         <AddAPhotoIcon/> &nbsp; &nbsp; Upload Document
                                     </Button>
                                 </label>
