@@ -2,15 +2,103 @@ nav {
   text-transform: uppercase;
 }
 
+
+.header-bg{
+  background-color: #02254b;
+  backdrop-filter: blur(20px);
+}
+
+nav {
+  text-transform: uppercase;
+}
+
 header{
   margin-bottom: 100px;
 }
 
 .header-title{
-  letter-spacing: 3px;
+  letter-spacing: 2px;
+  color: rgb(255, 255, 255);
+ text-align:center;
+ margin-left:260px;
+  font-size:20px;
+  margin-top: 1%;
+  width:1500px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+  
 }
 
-.header-bg{
-  background-color: rgba(246, 247, 251,0.7);
-  backdrop-filter: blur(20px);
+.width_header{
+  height: 120px;
+}
+
+.black_line{
+  width: 100%;
+  background-color: orange;
+  height: 10px;
+}
+
+.signing{
+  width: 110px;
+  height: 40px;
+  font-weight: 700;
+  background-color: orange;
+  border-radius: 5px;
+  margin-right: 10px;
+  border: 3px solid rgb(255, 255, 255);
+  color:white;
+}
+
+.signing:hover{
+  background-color: rgb(255, 255, 255);
+  color: orange;
+  font-weight: 700;
+  border: 3px solid orange;
+  box-shadow: 0 4px 8px 0 black, 0 3px 10px black;
+}
+
+.signing:active{
+  background-color: rgb(255, 255, 255);
+  color: orange;
+  font-weight: 700;
+  border: 3px solid orange;
+  box-shadow: 0 4px 8px 0 black, 0 3px 10px black;
+}
+
+.icon_sidebar{
+  background-color:none;
+  color: #ffffff;
+}
+
+.home_button{
+  background-color: #02254b;
+  color: rgb(255, 255, 255);
+  width:165px;
+  font-size: 16px;
+  font-weight:none;
+  border: none;
+  padding-left: 30px;
+  text-decoration: none;
+  
+}
+
+.home_button:hover{
+ 
+  color: orange;
+  width:175px;
+  font-size: 18px;
+  font-weight:400;
+  border: none;
+  padding-left: 30px;
+  transform: scale(1.05);
+	transition: transform 1s;
+}
+
+.log_out_button{
+  width: 140px;
+  height: 40px;
+  background-color: orange;
+  border-radius: 5px;
+  margin-right: 10px;
 }

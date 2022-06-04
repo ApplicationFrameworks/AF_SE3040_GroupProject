@@ -51,7 +51,7 @@ exports.signupStaff = async(req,res) => {
     } 
 }
 
-//doctor update
+//staff update
 exports.updateStaff = async(req,res) => {
 
     let staffID = req.params.id;

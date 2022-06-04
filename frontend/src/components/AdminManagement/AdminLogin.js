@@ -52,14 +52,14 @@ function AdminLogin() {
     return (
         <div className="container" align="center">
             <div className="card-form">
-                <form className="boxSignIn" onSubmit={signIn}>
-                    <h1 className="form-h1">Admin Login</h1>
-                    <p className="text-muted"> All your health needs at one place!</p> 
+                <form className="boxSignIn" onSubmit={signIn} style={{position:'relative',top:70,width:500}}>
+                    <h1 className="form-h1">Sign In</h1><br/>
+                    <p className="text-muted"> All your project needs at one place!</p> 
                     <input 
                         type="email" 
                         name="email" 
                         id="email"
-                        placeholder="E-mail" 
+                        placeholder="E-mail&nbsp;&nbsp; Address" 
                         onChange={(event)=> {setEmail(event.target.value)}} 
                         required 
                     />
@@ -78,7 +78,7 @@ function AdminLogin() {
                             {showPassword ? <Visibility /> : <VisibilityOff />}
                         </IconButton>
                     </span>
-
+<br/>
                     <input className="form-submit-btn" type="submit" value="Sign In" />
 
                     <br></br><br></br>

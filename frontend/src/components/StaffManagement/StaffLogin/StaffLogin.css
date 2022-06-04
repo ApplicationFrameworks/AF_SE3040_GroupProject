@@ -9,7 +9,7 @@
     box-shadow: 0px 24px 48px 0 rgba(0,0,0,0.1);
 } 
 
-.staffLogin Input[type="email"],.staffLogin Input[type="text"],
+.staffLogin Input[type="email"],.staffLogin Input[type="reg"],
 .staffLogin Input[type="password"] {
     border-bottom: none;
     border: 0;
@@ -25,3 +25,14 @@
     border-radius: 24px;
     
 } 
+
+.form-submit-btn{
+    padding:8px 35px;
+    color:white;
+    font-weight:500;
+    background-color: orange;
+    border-radius: 10px;
+    border:3px solid white;
+
+
+}

@@ -54,7 +54,7 @@ function SingleStaff(props) {
 
 
     function Request() {
-        history.push(`/staff/request`)
+        history.push(`/student/request/${id}`)
     }
 
     function Send() {

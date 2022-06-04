@@ -60,15 +60,15 @@ function DisplayStaff() {
               <div className="col-3">
               </div>
               <div className="col-5">
-                <div className="" align="right" style={{top:'40px',position:'relative'}}>
-                  <input style={{color:"black",fontWeight:"500",borderRadius:"8px",border:"2px solid grey",padding:'6px 83px'}}
+                <div className=""  style={{top:'50px',position:'relative',right:'340px'}}>
+                  <input style={{color:"black",fontWeight:"500",borderRadius:"8px",border:"2px solid grey",padding:'6px 123px'}}
                     type="text" 
                     name="search" 
                     id="search"
                     placeholder="Search" 
                     onChange={handleSearchAll} 
                     required 
-                  /><div style={{position:'relative',right:'25px',top:'-35px'}}><SearchIcon/></div>
+                  /><div style={{position:'relative',right:'225px',top:'-35px'}}><SearchIcon/></div>
                 </div>
               
           </div>
