@@ -24,25 +24,17 @@ exports.createChat = async (req, res) => {
     })
   }
 
+//update chat
+exports.updateChat = async (req, res) => {
+  if (req.params && req.params.id) {
+      const {id} = req.params; //id of the chat
+      const chat = req.body;
 
-  //chat update
-exports.updateChat = async(req,res) => {
-
-    let chatId = req.params.id;
-    const { group, topic, leader, message, reply } = req.body;
-
-    const updateChat = { group, topic, leader, message, reply } 
-    
-    try{
-        //find message by ID  
-         await ChatGroup.findByIdAndUpdate(chatId ,this.updateChat);
-
-        res.status(200).json({message:"Chat updated"})
-    }catch(error){
-        res.status(500).json({message:"Error with updating chat",error:error.message});
-    }
-
+      const updatedChat = await ChatGroup.findByIdAndUpdate(id, chat, {new: true}); //Find & update
+      res.json(updatedChat);
+  }
 }
+
 
 
 //view all chats

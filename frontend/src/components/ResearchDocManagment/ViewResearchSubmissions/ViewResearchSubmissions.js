@@ -62,13 +62,15 @@ function ViewResearchSubmissions() {
 
   return (
     <div className="container">
-      <div className="row">
-        <div className="col-4">
-          <div className="pb-2 px-3 d-flex flex-wrap align-items-center justify-content-between">
-          </div>
-        </div>
-        <div className="col-3">
-        </div>
+        
+            <div className="col-12">
+                <div className="pb-2 px-3 d-flex flex-wrap align-items-center justify-content-between">
+                    <h2>&nbsp;Research Documents Submission</h2>
+                </div>
+            </div>
+        
+        <br></br>
+      <div align='center'>
         <div className="col-5">
           <div className="px-3 search" align="right" style={{top:'40px',position:'relative'}}>
             <input style={{color:"black",fontWeight:"500",borderRadius:"8px",border:"2px solid grey",padding:'6px 83px'}}
@@ -81,7 +83,7 @@ function ViewResearchSubmissions() {
             /><div style={{position:'relative',right:'25px',top:'-35px'}}><SearchIcon/></div>
           </div>
         </div>
-      </div>
+        </div>
 
       <span>
         <button className="productBtn" style={{ backgroundColor: orange[400],fontSize:'20px',padding:'7px 30px' ,borderRadius:'10px',border:'2px solid orange',position:'relative',top:'-28px'}} onClick={() => add()}><AddIcon/> Add Submission</button>

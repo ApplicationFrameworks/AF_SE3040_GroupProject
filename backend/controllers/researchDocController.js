@@ -46,7 +46,7 @@ exports.updateDocument = async (req, res) => {
 
   //check whether there's a research document for the relevent ID
   try {
-    await ResearchDocument.findByIdAndUpdate(documentId, updateProduct);
+    await ResearchDocument.findByIdAndUpdate(documentId, updateDocument);
 
     //sending the successful status
     res.status(200).json({ success: true, message: "Document Updated" })

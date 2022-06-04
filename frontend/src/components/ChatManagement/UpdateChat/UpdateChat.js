@@ -80,7 +80,7 @@ function UpdateChat(props) {
                                 <div className="col-md-10 mb-4">
                                     <div className="form-group3">
                                         <OutlinedInput 
-                                            type="group" id="group" value={group} placeholder="Group ID" required fullWidth
+                                            type="group" id="group" value={group} placeholder="Group ID" required fullWidth disabled
                                             onChange={(e)=>setGroup(e.target.value)}
                                             inputProps={{ style: { padding: 12 } }}
                                         />
@@ -91,7 +91,7 @@ function UpdateChat(props) {
                                 <div className="col-md-10 mb-4">
                                     <div className="form-group3">
                                         <OutlinedInput
-                                            type="topic" id="topic" value={topic} placeholder="Your Topic" required fullWidth
+                                            type="topic" id="topic" value={topic} placeholder="Your Topic" required fullWidth disabled
                                             onChange={(e)=>setTopic(e.target.value)}
                                             inputProps={{style: { padding: 12 } }} 
                                         />
@@ -101,7 +101,7 @@ function UpdateChat(props) {
                                 <div className="col-md-10 mb-4">
                                     <div className="form-group3">
                                         <OutlinedInput 
-                                            type="leader" id="leader" value={leader} placeholder="Group Leader" required fullWidth
+                                            type="leader" id="leader" value={leader} placeholder="Group Leader" required fullWidth disabled
                                             onChange={(e)=>setLeader(e.target.value)}
                                             inputProps={{style: {padding: 12}}}
                                         />
@@ -112,7 +112,7 @@ function UpdateChat(props) {
                                 <div className="col-md-10 mb-4">
                                     <div className="form-group3">
                                         <OutlinedInput 
-                                            type="textarea" id="message" value={message} placeholder="Enter Message" required fullWidth
+                                            type="textarea" id="message" value={message} placeholder="Enter Message" required fullWidth disabled
                                             onChange={(e)=>setMessage(e.target.value)}
                                             inputProps={{style: {padding: 12}}}
                                         />
@@ -140,7 +140,7 @@ function UpdateChat(props) {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="form-group" align="center">
-                            <input className="btn btn-info" type="submit" value="Reply" />
+                            <input className="btn btn-info" type="submit" value="Send" />
                         </div>
                     </div>
                 </div>
