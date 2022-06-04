@@ -40,7 +40,7 @@ function StaffSignUp(){
         setFileInputState(event.target.value);
     };
 
-    //display a preview of uploaded image
+    //display a view of uploaded image
     const previewFile = (file) => {
         const reader = new FileReader();
         reader.readAsDataURL(file)
