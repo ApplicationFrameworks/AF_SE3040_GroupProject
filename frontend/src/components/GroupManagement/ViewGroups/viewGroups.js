@@ -11,7 +11,7 @@ import { Button } from '@material-ui/core';
 function DisplayGroups() {
 
     const [isAdmin, setIsAdmin] = useState(false)
-    const [group, setGroups] = useState([])
+    const [groups, setGroups] = useState([])
     const history = useHistory()
     const location = useLocation()
     const [user, setUser] = useState("");
@@ -52,13 +52,8 @@ function DisplayGroups() {
             alert("Admin Failed to fetch groups")
         })
     }
-    function view(id) {
-        history.push(`/movie/groups/${id}`)
-    }
 
-    function addMovie() {
-        history.push(`/movie/addMovie`)
-    }
+
     return (
         <div className="container  display_movies"><br /><br />
             <div className="row">
@@ -91,7 +86,31 @@ function DisplayGroups() {
                     //     <strong>Add Movie</strong> <AddIcon />
                     // </Button>
                 } */}
+                       {groups.map((Group, key) => (
+          <div key={key}>
+              <div className="p-3" style={{overflowX:'auto'}}>
+                <table>
+                  <tbody>
+                  <tr>
+                <td style={{width:600}}>{Group.leaderItNo}</td>
                
+                <td style={{width:120}}>
+
+                  <IconButton>
+                    <PictureAsPdfIcon style={{ color: red[500], backgroundPosition: 'center' }} ></PictureAsPdfIcon>
+                  </IconButton>
+                </td>
+<td>
+                  <span>
+                    <MoreHorizIcon style={{ color: orange[900] ,cursor:'pointer'}} onClick={() => view(Document._id)}/>
+                  </span>
+                  </td>
+                  </tr>
+                </tbody>
+                </table>
+              </div>
+            </div>
+        ))}
             </div>
         </div>
     )

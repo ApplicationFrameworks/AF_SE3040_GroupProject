@@ -356,7 +356,7 @@ function StaffSignUp(){
                     <div className="col-4" style={{position:'relative',left:100}}>
 
                             {previewSource ? 
-                                <img src={previewSource} alt="preview" className="previewImg" />
+                                <img src={previewSource} alt="preview" className="previewImg" style={{position:'relative',left:100,height:100}}/>
                             :
                                 <img src={require('../../../../public/images/avatar.jpg')} className="previewImg" alt="profile pic"/>
                             }
