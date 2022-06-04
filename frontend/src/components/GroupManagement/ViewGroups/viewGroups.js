@@ -1,8 +1,8 @@
-import React,{useEffect, useState} from 'react'
-import { useHistory,useLocation } from 'react-router';
+import React, { useEffect, useState } from 'react'
+import { useHistory, useLocation } from 'react-router';
 import './viewGroups.css'
 import axios from 'axios'
-import { red,blue } from '@material-ui/core/colors';
+import { red, blue } from '@material-ui/core/colors';
 import AddIcon from '@material-ui/icons/Add';
 import { Button } from '@material-ui/core';
 
@@ -10,73 +10,73 @@ import { Button } from '@material-ui/core';
 
 function DisplayGroups() {
 
-    const [isAdmin,setIsAdmin]= useState(false)
-    const [movies, setMovies] = useState([])
+    const [isAdmin, setIsAdmin] = useState(false)
+    const [group, setGroups] = useState([])
     const history = useHistory()
     const location = useLocation()
     const [user, setUser] = useState("");
 
     useEffect(() => {
-        if(localStorage.getItem("user")){
+        if (localStorage.getItem("user")) {
             setUser(JSON.parse(localStorage.getItem('user')))
         }
 
-        if(localStorage.getItem("adminAuthToken")){
+        if (localStorage.getItem("adminAuthToken")) {
             setIsAdmin(true)
         }
 
-        async function getAllMovies() {
-            axios.get(`http://localhost:8070/groups/get`).then((res) => {
-                setMovies(res.data)
+        async function getAllGroups() {
+            axios.get(`http://localhost:8070/groups`).then((res) => {
+                setGroups(res.data)
             }).catch((error) => {
-                alert("Failed to fetch the movies")
+                alert("Failed to fetch the groups")
             })
         }
 
-        getAllMovies()
-    }, [location,isAdmin])
+        getAllGroups()
+    }, [location, isAdmin])
 
 
-    function filterContent(data, searchTerm){
-        const result = data.filter((movie) =>
-            movie.name.toLowerCase().includes(searchTerm)
+    function filterContent(data, searchTerm) {
+        const result = data.filter((group) =>
+            group.leaderItNo.toLowerCase().includes(searchTerm)
         )
-        setMovies(result)
+        setGroups(result)
     }
 
-    function handleSearchAll(event){
+    function handleSearchAll(event) {
         const searchTerm = event.currentTarget.value
-        axios.get(`http://localhost:8280/movies/getMovies`).then((res) => {
+        axios.get(`http://localhost:8270/groups`).then((res) => {
             filterContent(res.data, searchTerm.toLowerCase())
         }).catch((error) => {
-            alert("Admin Failed to fetch movies")
+            alert("Admin Failed to fetch groups")
         })
     }
-    function view(id){
-        history.push(`/movie/movies/${id}`)
+    function view(id) {
+        history.push(`/movie/groups/${id}`)
     }
 
-    function addMovie(){
+    function addMovie() {
         history.push(`/movie/addMovie`)
     }
     return (
-        <div className="container  display_movies"><br/><br/>
+        <div className="container  display_movies"><br /><br />
             <div className="row">
                 <div className="col-4">
                     <div className="pb-2 px-3 d-flex flex-wrap align-items-center justify-content-between">
-                        <h2 className='h1_displayMovies'>NOW SHOWING</h2>
+                        <h2 className='h1_displayMovies'>Student Groups List</h2>
                     </div>
                 </div>
                 <div className="col-5">
                     {isAdmin === true ?
                         <div className="px-3 search search1" align="right">
-                            <input style={{ color:'black' }} className="search1"
-                                   type="text"
-                                   name="search"
-                                   id="search"
-                                   placeholder="Search"
-                                   onChange={handleSearchAll}
-                                   required
+                            <input style={{ color: 'black' }} className="search1"
+                                type="text"
+                                name="search"
+                                id="search"
+                                placeholder="Search"
+                                onChange={handleSearchAll}
+                                required
                             />
                         </div>
                         :
@@ -86,32 +86,15 @@ function DisplayGroups() {
                 </div>
             </div>
             <div className="productGrid"  >
-                {isAdmin &&
-                    <Button  className="productBtn "  style={{ color:'black', backgroundColor:'#0000008a',width:400 }} onClick={()=>addMovie()}>
-                        <strong>Add Movie</strong> <AddIcon/>
-                    </Button>
-                }
-                {movies.map((Movie,key)=>(
-                    <div key={key}>
-                        <div className="productCard" >
-                            <div className="imgBx">
-                                <img  src={`${Movie.imgUrl}`} alt="movie" className="itemProduct"/>
-                            </div>
-                            <div className="p-3">
-                                <h7>{Movie.name}</h7>
-                                <h6>{Movie.genre}</h6>
-                                <div align="center">
-                              <span>
-                                  <button className="productBtn"  onClick={()=>view(Movie._id)}> Show More </button>
-                              </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                ))}
+                {/* {isAdmin &&
+                    // <Button className="productBtn " style={{ color: 'black', backgroundColor: '#0000008a', width: 400 }} onClick={() => addMovie()}>
+                    //     <strong>Add Movie</strong> <AddIcon />
+                    // </Button>
+                } */}
+               
             </div>
         </div>
     )
 }
 
-export default DisplayMovies
+export default DisplayGroups
