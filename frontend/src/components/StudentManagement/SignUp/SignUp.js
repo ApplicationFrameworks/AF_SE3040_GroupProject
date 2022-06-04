@@ -113,7 +113,7 @@ function SignUp() {
                         </div>
                         <div className="col-11">
                             <div className="pb-2 px-5 d-flex align-items-center justify-content-between">
-                                <h2 className="signup_text"><nobr>Sign Up</nobr></h2>
+                                <h2 className="signup_text"><nobr>Register Now</nobr></h2>
                             </div>
                         </div>
                     </div>
@@ -124,7 +124,7 @@ function SignUp() {
                     <div >
                         <div className="">
                             <div className=""><br/>
-                                <h6 className="h6" style={{fontWeight:"bold",fontSize:20,color:"black",textAlign:"center"}}>First Name </h6>
+                                <h6 className="h6" style={{fontWeight:"bold",fontSize:18,color:"black",textAlign:"center"}}>First Name </h6>
                                 <div className="div_input_filed">
                                     <div>
 
@@ -140,7 +140,7 @@ function SignUp() {
                                     </div>
                                 </div><br/>
 
-                                <h6 className="h6" style={{fontWeight:"bold",fontSize:20,color:"black",textAlign:"center"}}>Last Name </h6>
+                                <h6 className="h6" style={{fontWeight:"bold",fontSize:18,color:"black",textAlign:"center"}}>Last Name </h6>
                                 <div className="div_input_filed">
                                     <div className="">
 
@@ -155,7 +155,7 @@ function SignUp() {
                                         />
                                     </div>
                                 </div><br/>
-                                <h6 className="h6" style={{fontWeight:"bold",fontSize:20,color:"black",textAlign:"center"}}>Course </h6>
+                                <h6 className="h6" style={{fontWeight:"bold",fontSize:18,color:"black",textAlign:"center"}}>Course </h6>
                                 <div className="div_input_filed">
                                     <div className="">
 
@@ -170,7 +170,7 @@ function SignUp() {
                                         />
                                     </div>
                                 </div><br/>
-                                <h6 className="h6" style={{fontWeight:"bold",fontSize:20,color:"black",textAlign:"center"}}>Email </h6>
+                                <h6 className="h6" style={{fontWeight:"bold",fontSize:18,color:"black",textAlign:"center"}}>Email </h6>
                                 <div className="div_input_filed">
                                     <div className="">
 
@@ -185,7 +185,7 @@ function SignUp() {
                                         />
                                     </div>
                                 </div><br/>
-                                <h6 className="h6" style={{fontWeight:"bold",fontSize:20,color:"black",textAlign:"center"}} >Phone Number </h6>
+                                <h6 className="h6" style={{fontWeight:"bold",fontSize:18,color:"black",textAlign:"center"}} >Phone Number </h6>
                                 <div className="div_input_filed">
                                     <div className="">
 
@@ -203,7 +203,7 @@ function SignUp() {
 
 
 
-                                <h6 className="h6" style={{fontWeight:"bold",fontSize:20,color:"black",textAlign:"center"}}>Password </h6>
+                                <h6 className="h6" style={{fontWeight:"bold",fontSize:18,color:"black",textAlign:"center"}}>Password </h6>
                                 <div className="div_input_filed">
                                     <div className="">
 
@@ -227,7 +227,7 @@ function SignUp() {
                                         />
                                     </div>
                                 </div><br/>
-                                <h6 className="h6" style={{fontWeight:"bold",fontSize:20,color:"black",textAlign:"center"}}>Confirm Password</h6>
+                                <h6 className="h6" style={{fontWeight:"bold",fontSize:18,color:"black",textAlign:"center"}}>Confirm Password</h6>
                                 <div className="div_input_filed">
                                     <div className="">
 
@@ -264,7 +264,7 @@ function SignUp() {
                                     }
                                 </div>
                                 <div className="">
-                                    <div className="" className="h6" style={{fontWeight:"bold",fontSize:20,color:"black",textAlign:"center"}}>
+                                    <div className="" className="h6" style={{fontWeight:"bold",fontSize:18,color:"black",textAlign:"center"}}>
                                        <nobr> <input id="terms" type="checkbox" required/>
                                         <label htmlFor="terms">&nbsp;I agree to the <Link to="/terms" style={{color:"darkBlue", textDecoration:"none"}}>Terms and
                                             Conditions</Link></label></nobr>
@@ -306,7 +306,7 @@ function SignUp() {
                         </div>
                     </div>
 <br/>
-                    <p >Already have an account? <Link to="/student/signin" style={{color:"darkBlue", textDecoration:"none"}}>Sign In</Link></p>
+                        <div style={{fontWeight:"bold",fontSize:18,color:"black",textAlign:"center"}} > <p >Already have an account? <Link to="/student/signin" style={{color:"darkBlue", textDecoration:"none"}}>Sign In</Link></p></div>
                     </div>
                 </form>
             </div>
