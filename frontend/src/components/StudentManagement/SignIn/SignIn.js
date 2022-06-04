@@ -75,7 +75,7 @@ function Login() {
                 <form className="boxSignIn" onSubmit={signIn}>
                     <h1 className="form-h1">Login</h1>
                     <input 
-                        type="email" 
+                        type="email1"
                         name="email" 
                         id="email"
                         placeholder="E-mail" 
@@ -84,7 +84,7 @@ function Login() {
                     />
 
                     <input
-                        type={showPassword ? "text" : "password"} 
+                        type={showPassword ? "text" : "password1"}
                         name="password"
                         id="password" 
                         placeholder="Password" 

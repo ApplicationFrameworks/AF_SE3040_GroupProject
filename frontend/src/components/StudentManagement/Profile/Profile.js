@@ -13,8 +13,6 @@ import { Button } from '@material-ui/core';
 import { orange, green, red, blue } from '@material-ui/core/colors';
 import axios from 'axios';
 import './Profile.css';
-import ProfileAppointments from '../../AppointmentManagement/ProfileAppointments';
-import ProfilePrescription from '../../PrescriptionManagement/History/ProfilePrescription';
 
 function Profile() {
 
@@ -214,10 +212,7 @@ function Profile() {
                             style={{ backgroundColor: blue[500], color: 'white'}} onClick={logout} endIcon={<ExitToAppIcon/>}>
                             Log Out  
                         </Button>
-                        <Button variant="contained" className="mb-4" fullWidth disableElevation size="large" 
-                            style={{ backgroundColor: green[400], color: 'white' }} onClick={GenerateReport} endIcon={<CloudDownloadIcon/>}>
-                            Generate Report
-                        </Button>
+
                         <Button color="primary" variant="contained" className="mb-4" fullWidth disableElevation size="large"
                             style={{ backgroundColor: blue[500], color: 'white'}} onClick={ResetPassword} endIcon={<LockIcon/>}>
                             Reset Password
@@ -229,14 +224,7 @@ function Profile() {
                     </center>
                 </div>
             </div>
-            <div className="row mt-3">
-                <div className="col-6">
-                    <ProfileAppointments/>                     
-                </div>
-                <div className="col-6"> 
-                    <ProfilePrescription/>
-                </div>
-            </div>                                
+
         </div>
     )
 }

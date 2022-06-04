@@ -8,8 +8,8 @@
     box-shadow:0px 24px 48px 0 rgba(0,0,0,0.1);
 }
 
-.boxSignIn Input[type="email"],.boxSignIn Input[type="text"],
-.boxSignIn Input[type="password"] {
+.boxSignIn Input[type="email1"],.boxSignIn Input[type="text"],
+.boxSignIn Input[type="password1"] {
     border-bottom: none;
     border: 0;
     background: none;
