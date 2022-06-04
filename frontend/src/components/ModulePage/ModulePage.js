@@ -94,8 +94,8 @@ console.log(Document.weekName)
                 <div className='week1'>
                     <h4 className='weekT1'>Student Group Registration</h4>
                     <div className='inside'>
-                        <img className="link" src={require('../../../public/images/internet.png')} style={{ width: 30, height: 30, marginTop: -5 }} />
-                        <h5 className='mid'>Research Project - Group Registration</h5>
+                        <a className='linkModule' href="/group/add"><img className="link" src={require('../../../public/images/internet.png')} style={{ width: 30, height: 30, marginTop: -5 }} />
+                            <h5 className='mid'>Research Project - Group Registration</h5></a>
                         <p className='para'>
 
                             Please note that the deadline for the group registration is 24th April 2023 (Sunday). </p>

@@ -89,7 +89,7 @@ function UpdateProfile(props) {
         };
 
         try {
-            await axios.put(`http://localhost:8070/student/updateprofile/${props.match.params.id}`,updatedPatient, config);
+            await axios.put(`http://localhost:8070/student/updateStudent/${props.match.params.id}`,updatedProfile, config);
                 alert("Updated Successfully")
                 history.push('/student/profile')
         } catch (error) {
@@ -211,7 +211,9 @@ function UpdateProfile(props) {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="form-group">
+
                                 <input className="form-submit-btn mb-0 form_btn12" type="submit" value="Update" />
+
                             </div> 
                         </div>
                     </div> 

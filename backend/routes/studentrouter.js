@@ -10,10 +10,10 @@ router.post('/signup', studentsignup);
 router.post('/signin', studentsignin);
 
 //student update profile
-router.put('/updateprofile/:id', studentauth, updateStudent);
+router.put('/updateStudent/:id', updateStudent);
 
 //student delete profile
-router.delete('/deleteprofile/:id', studentauth, deleteStudent);
+router.delete('/deleteStudent/:id', studentauth, deleteStudent);
 
 //student forgotPassword
 router.post('/forgotpassword', forgotPassword);

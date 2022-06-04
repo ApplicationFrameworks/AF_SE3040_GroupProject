@@ -69,12 +69,12 @@ function Profile() {
         const config = {
             headers: {
                 "content-Type": "application/json",
-                Authorization: `${localStorage.getItem("patientAuthToken")}`,
+                Authorization: `${localStorage.getItem("studentAuthToken")}`,
             },
         };
 
         if (window.confirm('Are you sure?\nThis action cannot be undone')) {
-            await axios.delete(`http://localhost:8070/student/deleteprofile/${user._id}`, config).then(() => {
+            await axios.delete(`http://localhost:8070/student/deleteStudent/${user._id}`, config).then(() => {
                 alert("Account deleted successfully")
                 localStorage.clear()
                 history.push('/student/signin')
