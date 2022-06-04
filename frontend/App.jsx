@@ -29,6 +29,7 @@ import ViewMarks from "./src/components/EvaluationMarksManagement/ViewMarks/View
 import ViewOneMark from "./src/components/EvaluationMarksManagement/ViewMarks/ViewOneMark";
 import SubmissionType from "./src/components/SubmissionTypesManagement/SubmissionType";
 import Profile from "./src/components/StudentManagement/Profile/Profile.js";
+import UpdateProfile from "./src/components/StudentManagement/UpdateProfile/UpdateProfile.js";
 
 
 function App() {
@@ -64,7 +65,7 @@ function App() {
                 <Route path="/evaluationMarksView/:id" exact component={ViewOneMark}/>
                 <Route path="/submissionTypeAdd" exact component={SubmissionType}/>
                 <Route path="/student/profile" exact component={Profile}/>
-
+                <Route path="/student/updateProfile/:id" exact component={UpdateProfile}/>
 
             </Switch>
             <Footer/>

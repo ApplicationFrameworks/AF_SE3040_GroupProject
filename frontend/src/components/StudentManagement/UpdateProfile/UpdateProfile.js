@@ -13,7 +13,7 @@ function UpdateProfile(props) {
     const [lastname,setLastName] = useState("");
     const [email,setEmail] = useState("");
     const [phone,setPhone] = useState("");
-    const [address,setAddress] = useState("");
+    const [itNo,setAddress] = useState("");
     const [height, setHeight] = useState("");
     const [weight, setWeight] = useState("");
     const [bloodGroup, setBloodGroup] = useState("");

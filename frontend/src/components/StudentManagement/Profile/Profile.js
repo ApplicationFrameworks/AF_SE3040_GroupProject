@@ -123,7 +123,7 @@ function Profile() {
                     <h6 className="middle_div">{user.phone}</h6><br/><br/>
 
                     <Link style={{border: "none", fontWeight: "bold"}} className="btn btn-sm btn-primary middle_div1"
-                          to={`/student/updateprofile/${user._id}`}>Edit Profile</Link>
+                          to={`/student/updateProfile/${user._id}`}>Edit Profile</Link>
 
                 </div>
 
