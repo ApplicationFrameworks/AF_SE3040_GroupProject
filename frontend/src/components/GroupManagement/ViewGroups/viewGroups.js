@@ -46,7 +46,7 @@ function DisplayGroups() {
 
     function handleSearchAll(event) {
         const searchTerm = event.currentTarget.value
-        axios.get(`http://localhost:8270/groups`).then((res) => {
+        axios.get(`http://localhost:8070/groups`).then((res) => {
             filterContent(res.data, searchTerm.toLowerCase())
         }).catch((error) => {
             alert("Admin Failed to fetch groups")

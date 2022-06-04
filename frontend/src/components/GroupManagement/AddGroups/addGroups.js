@@ -52,13 +52,13 @@ function AddGroups() {
     }
 
     return (
-        <div>
+        <div style={{width:'100%'}}>
         
-        <div className="container" align="left" >
-            <div className="row">
+        <div className="container main_div_group" align="left" style={{width:'600px'}}>
+            <div className="row" >
                 <div className="col-12">
                     <div className="pb-2 px-3 d-flex flex-wrap align-items-center justify-content-between">
-                        <h2 style={{ fontSize: '26px',fontWeight:800,marginLeft:170 }}> <br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Group Registration</h2>
+                        <h2 style={{ fontSize: '26px',fontWeight:800,marginLeft:-170 }}> <br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<nobr>Group Registration</nobr></h2>
                     </div>
                 </div>
             </div>
@@ -213,7 +213,7 @@ function AddGroups() {
                            
                         </div>
                         <div className="form-group50">
-                        <input className="btn" type="submit" value="Submit" style={{ padding: '5px 20px', borderRadius: '10px', background: 'orange', color: 'white',fontSize:'18px',position:'absolute',left:'25%',top:'200%' }}/>
+                        <input className="btn" type="submit" value="Submit" style={{ padding: '5px 20px', borderRadius: '10px', background: 'orange', color: 'white',fontSize:'18px',position:'absolute',left:'-75%',top:'10%' }}/>
                     </div>
                     </div>
 
