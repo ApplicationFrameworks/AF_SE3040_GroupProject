@@ -118,9 +118,9 @@ function Profile() {
                 <div className="col-xl-3 px-4  ">
                     <br/><br/>
                     <h4 className="middle_div">{user.firstname + ` ` + user.lastname}</h4><br/>
-                    <h6 className="middle_div">{user.email}</h6><br/>
-                    <h6 className="middle_div">{user.itNo}</h6><br/>
-                    <h6 className="middle_div">{user.phone}</h6><br/><br/>
+                    <h6 className="middle_div">Email : {user.email}</h6><br/>
+                    <h6 className="middle_div">Index Number : {user.itNo}</h6><br/>
+                    <h6 className="middle_div">Phone Number : {user.phone}</h6><br/>
 
                     <Link style={{border: "none", fontWeight: "bold"}} className="btn btn-sm btn-primary middle_div1"
                           to={`/student/updateProfile/${user._id}`}>Edit Profile</Link>
