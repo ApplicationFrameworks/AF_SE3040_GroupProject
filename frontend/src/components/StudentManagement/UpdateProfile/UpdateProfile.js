@@ -67,10 +67,10 @@ function UpdateProfile(props) {
         if(previewSource){
             const formData = new FormData();
             formData.append("file", selectedFile) 
-            formData.append("upload_preset", "user_pictures")
+            formData.append("upload_preset", "student_pictures")
 
             try {
-                await axios.post("https://api.cloudinary.com/v1_1/aspirushealthcare/image/upload", formData).then((res) =>{
+                await axios.post("https://api.cloudinary.com/v1_1/movie-reservation/image/upload", formData).then((res) =>{
                     imgUrl = res.data.secure_url
                 })
             } catch (error) {
