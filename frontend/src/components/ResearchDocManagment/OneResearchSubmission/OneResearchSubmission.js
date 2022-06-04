@@ -21,7 +21,6 @@ function OneResearchSubmission(props) {
     const [topic, setTopic] = useState("");
     const [group, setGroup] = useState("");
     const [leader, setLeader] = useState("");
-    
     const [url, setUrl] = useState("");
     const history = useHistory()
     const [user, setUser] = useState("");
@@ -42,6 +41,8 @@ function OneResearchSubmission(props) {
         if (localStorage.getItem("staffAuthToken")) {
             setIsAdmin(true)
         }
+
+        //getting one research documents from the db
         async function getResearchDocumentDetails() {
             axios.get(`http://localhost:8070/researchdoc/one/${props.match.params.id}`).then((res) => {
                 setId(res.data.researchdocument._id)
@@ -50,14 +51,14 @@ function OneResearchSubmission(props) {
                 setLeader(res.data.researchdocument.leader)
                 setUrl(res.data.researchdocument.url)
             }).catch((err) => {
-                alert("Failed to Fetch Details")
+                alert("Failed to Fetch Research Document Details")
             })
         }
         getResearchDocumentDetails();
 
     }, [props])
 
-
+    //when user clicks on the document it will be open from a new window
     function Pdf(url) {
         window.open(url);
     }
@@ -67,7 +68,7 @@ function OneResearchSubmission(props) {
     }
 
     const reply1 = [
-        'In Progress', 'Approved', 'Rejected'
+        'In Progress', '20 out of 100', '30 out of 100', '40 out of 100', '50 out of 100', '60 out of 100', '70 out of 100', '80 out of 100', '90 out of 100', 'Rejected'
     ]
 
 
@@ -147,7 +148,7 @@ function OneResearchSubmission(props) {
                     </div>
                     <div>
                         <a className="approve" onClick={togglePopup}>
-                            Reply  |  Evaluate
+                            Allocate Marks
                         </a>
                     </div>
 

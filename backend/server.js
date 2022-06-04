@@ -16,6 +16,7 @@ const DocumentRouter = require("./routes/documentrouter");
 const AdminRouter = require("./routes/adminrouter.js");
 const StudentRouter = require("./routes/studentrouter");
 const ResearchDocumentRouter = require("./routes/researchdocrouter");
+const ChatRouter = require("./routes/chatRouter");
 
 //getting the database url
 const URL = process.env.MONGODB_URL;
@@ -42,8 +43,11 @@ app.use("/staff",StaffRouter);
 app.use("/tdoc",DocumentRouter);
 //when http://localhost:8070/admin ran it will execute adminrouter.js file
 app.use("/admin",AdminRouter);
-//when http://localhost:8070/staff ran it will execute researchdocrouter.js file
+//when http://localhost:8070/researchdoc ran it will execute researchdocrouter.js file
 app.use("/researchdoc",ResearchDocumentRouter);
+//when http://localhost:8070/chatmsg ran it will execute chatRouter.js file
+app.use("/chatmsg",ChatRouter);
+
 
 
 //defining a port to run the application

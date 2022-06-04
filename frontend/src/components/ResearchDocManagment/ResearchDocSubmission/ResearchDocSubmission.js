@@ -4,28 +4,13 @@ import './ResearchDocSubmission.css'
 import Button from "@material-ui/core/Button";
 import AddAPhotoIcon from '@material-ui/icons/AddAPhoto';
 import OutlinedInput from "@material-ui/core/OutlinedInput";
-import FileUploadOutlinedIcon from '@mui/icons-material/FileUploadOutlined';
-import OutlinedInput from "@material-ui/core/OutlinedInput";
-import KeyboardOutlinedIcon from '@mui/icons-material/KeyboardOutlined';
-import FormatColorTextOutlinedIcon from '@mui/icons-material/FormatColorTextOutlined';
-import FormatBoldOutlinedIcon from '@mui/icons-material/FormatBoldOutlined';
-import FormatItalicOutlinedIcon from '@mui/icons-material/FormatItalicOutlined';
-import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBulletedOutlined';
-import FormatListNumberedOutlinedIcon from '@mui/icons-material/FormatListNumberedOutlined';
-import FormatAlignCenterOutlinedIcon from '@mui/icons-material/FormatAlignCenterOutlined';
-import FormatAlignJustifyOutlinedIcon from '@mui/icons-material/FormatAlignJustifyOutlined';
-import FormatAlignLeftOutlinedIcon from '@mui/icons-material/FormatAlignLeftOutlined';
-import FormatAlignRightOutlinedIcon from '@mui/icons-material/FormatAlignRightOutlined';
-import AddPhotoAlternateOutlinedIcon from '@mui/icons-material/AddPhotoAlternateOutlined';
 
-
+//research documents submitting function
 function ResearchDocumentSubmission() {
 
     const[group,setGroup]=useState("");
     const[topic,setTopic]=useState("");
     const[leader,setLeader]=useState(""); 
-    
-
     const [previewSource, setPreviewSource] = useState();
     const [selectedFile, setSelectedFile] = useState();
     const [fileInputState, setFileInputState] = useState('');

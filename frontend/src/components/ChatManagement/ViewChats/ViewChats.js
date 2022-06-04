@@ -1,63 +1,67 @@
 import React, { useEffect, useState } from 'react'
 import { useHistory, useLocation } from 'react-router';
 import { orange, red, blue, green } from '@material-ui/core/colors';
-import './ViewResearchSubmissions.css'
+//import './ViewResearchSubmissions.css'
 import axios from 'axios'
 import IconButton from '@material-ui/core/IconButton';
 import AddIcon from '@material-ui/icons/Add';
-import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+
 import SearchIcon from '@mui/icons-material/Search';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
-function ViewResearchSubmissions() {
+function ViewChats() {
 
-  const [document, setDocuments] = useState([])
-  const history = useHistory()
-  const location = useLocation()
-  const [user, setUser] = useState("");
+    // const[group,setGroup]=useState("");
+    // const[topic,setTopic]=useState("");
+    // const[leader,setLeader]=useState(""); 
+    // const[message,setMessage]=useState("");
+    // const[reply,setReply]=useState(""); 
+    const [chat, setChats] = useState([])
+    const history = useHistory()
+    const location = useLocation()
 
   useEffect(() => {
     if (localStorage.getItem("user")) {
       setUser(JSON.parse(localStorage.getItem('user')))
     }
 
-    async function getAllDocuments() {
-      axios.get(`http://localhost:8070/researchdoc`).then((res) => {
-        setDocuments(res.data)
+    async function getAllChats() {
+      axios.get(`http://localhost:8070/chatmsg/getchats`).then((res) => {
+        setChats(res.data)
       }).catch((error) => {
-        alert("Failed to fetch research document")
+        alert("Failed to fetch data")
       })
     }
 
-    getAllDocuments();
+    getAllChats();
   }, [location])
 
 
 
   function filterContent(data, searchTerm) {
-    const result = data.filter((product) =>
-      product.group.toLowerCase().includes(searchTerm)
+    const result = data.filter((chat) =>
+    chat.group.toLowerCase().includes(searchTerm)
     )
-    setDocuments(result)
+    setChats(result)
   }
 
 
   function handleSearchAll(event) {
     const searchTerm = event.currentTarget.value
-    axios.get(`http://localhost:8070/researchdoc`).then((res) => {
+    axios.get(`http://localhost:8070/researchdoc/getchats`).then((res) => {
       filterContent(res.data, searchTerm.toLowerCase())
     }).catch((error) => {
-      alert("Failed to fetch documents")
+      alert("Failed to fetch data")
     })
   }
 
   function view(id) {
-    history.push(`/researchdocView/${id}`)
+    history.push(`/onechat/${id}`)
   }
 
-  function add(id) {
-    history.push(`/researchdocAdd`)
-  }
+//   function add(id) {
+//     history.push(`/createchat`)
+//   }
 
 
   return (
@@ -83,32 +87,20 @@ function ViewResearchSubmissions() {
         </div>
       </div>
 
-      <span>
-        <button className="productBtn" style={{ backgroundColor: orange[400],fontSize:'20px',padding:'7px 30px' ,borderRadius:'10px',border:'2px solid orange',position:'relative',top:'-28px'}} onClick={() => add()}><AddIcon/> Add Submission</button>
-      </span>
       <div className="productGrid"  >
-        {document.map((Document, key) => (
+        {chat.map((Chat, key) => (
           <div key={key}>
               <div className="p-3" style={{overflowX:'auto'}}>
                 <table>
                   <tbody>
                   <tr>
-                <td style={{width:600}}>{Document.topic}</td>
-                <td style={{width:260}}>{Document.group}</td>
-                <td style={{width:300}}>{Document.leader}</td>
-               
-                <td style={{width:120}}>
-
-                  <IconButton>
-                    <PictureAsPdfIcon style={{ color: red[500], backgroundPosition: 'center' }} ></PictureAsPdfIcon>
-                  </IconButton>
-                </td>
-                  <td>
-                  <span>
-                    <MoreHorizIcon style={{ color: orange[900] ,cursor:'pointer'}} onClick={() => view(Document._id)}/>
-                  </span>
-                  </td>
-                  </tr>
+                <td style={{width:600}}>{Chat.topic}</td>
+                <td style={{width:260}}>{Chat.group}</td>
+                <td style={{width:300}}>{Chat.leader}</td>
+                <td style={{width:300}}>{Chat.message}</td>
+                <td style={{width:300}}>{Chat.reply}</td>
+                <td><button className="btn btn-primary" onClick={() => view(Chat._id)}>View Message</button>&nbsp;&nbsp;</td>
+                </tr>
                 </tbody>
                 </table>
               </div>
@@ -119,4 +111,4 @@ function ViewResearchSubmissions() {
   )
 }
 
-export default ViewResearchSubmissions
+export default ViewChats
