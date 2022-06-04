@@ -23,7 +23,7 @@ function Profile() {
     //getting user data
     useEffect(() => {
         async function fetchUser(){
-            await axios.get(`http://localhost:8070/patient/${user._id}`).then((res)=>{
+            await axios.get(`http://localhost:8070/student/${user._id}`).then((res)=>{
                 //setting user
                 localStorage.setItem("user", JSON.stringify(res.data.result))
 
@@ -39,19 +39,19 @@ function Profile() {
 
     //redirecting to update page
     function editCardData() {
-        history.push(`/patient/updateprofile/${user._id}`)
+        history.push(`/student/updateprofile/${user._id}`)
     }
 
     //redirecting to generate report page
     function GenerateReport() {
-        history.push(`/patient/report`)
+        history.push(`/student/report`)
     }
     
     //reset password
     async function ResetPassword(){
         let email = user.email
         try {
-            await axios.post("http://localhost:8070/patient/forgotpassword", {email});
+            await axios.post("http://localhost:8070/student/forgotpassword", {email});
 
             alert(`We have sent a password reset link to ${email}`);
         } catch (error) {
@@ -74,10 +74,10 @@ function Profile() {
         };
 
         if(window.confirm('Are you sure?\nThis action cannot be undone')){
-            await axios.delete(`http://localhost:8070/patient/deleteprofile/${user._id}`, config).then(() => {
+            await axios.delete(`http://localhost:8070/student/deleteprofile/${user._id}`, config).then(() => {
                 alert("Account deleted successfully")
                 localStorage.clear()
-                history.push('/patient/signin')
+                history.push('/student/signin')
             }).catch((error) => {
                 alert(`Failed to delete the Account`)
             })
@@ -104,108 +104,18 @@ function Profile() {
                     <div className="white-card ">
                         <div className="profile_img">
                             {user.imgUrl === ""? 
-                                <img src="/images/avatar.jpg" className="rounded-circle" alt="profile pic"/>
+                                <img  src={require('../../../../public/images/avatar.jpg')} className="rounded-circle" alt="profile pic"/>
                             :
                                 <img src={`${user.imgUrl}`} className="rounded-circle" alt="profile pic"/>
                             }
                         </div>
                         <h4>{user.firstname +` `+ user.lastname}</h4>
                         <p>{user.email}</p>
-                        <Link className="btn btn-sm btn-primary" to={`/patient/updateprofile/${user._id}`}>Edit Profile</Link>
+                        <Link className="btn btn-sm btn-primary" to={`/student/updateprofile/${user._id}`}>Edit Profile</Link>
                     </div>
                 </div>
-                <div className="col-xl-4">
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <div className="white-card-sm ">
-                                <div className="d-flex align-items-center justify-content-between">
-                                    <p></p>
-                                    <IconButton onClick={editCardData}><EditIcon fontSize="small"/></IconButton>
-                                </div>
-                                <div className="card-body">
-                                    <h4>{user.bloodGroup}</h4>
-                                    <p>Blood Group</p>
-                                </div>
-                                <HeartIcon className="heart" style={{ color: red[500], fontSize: 60 }}/>
-                            </div>
-                        </div>
-                        <div className="col-lg-6">
-                            <div className="orange-card-sm">
-                                <div className="d-flex align-items-center justify-content-between">
-                                    <BarChartIcon fontSize="large"/>
-                                    <IconButton onClick={editCardData}><EditIcon fontSize="small" style={{ color: 'white'}}/></IconButton>
-                                </div>
-                                <div className="card-body">
-                                    <h4>{user.bloodPressure + ` mm/Hg`}</h4>
-                                    <p>Blood Pressure</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-12">
-                            <div className="white-card-sm mb-0">
-                                <div className="card-head d-flex align-items-center justify-content-between">
-                                    <h4 className="mb-0 text-white">Body Mass Index</h4>
-                                    <IconButton onClick={editCardData}><EditIcon fontSize="small" style={{ color: 'white'}}/></IconButton>
-                                </div>
-                                <div className="card-body d-flex justify-content-between">
-                                    <div>
-                                        <center>
-                                        <p>Height</p>
-                                        <h4>{user.height + ` m`}</h4>
-                                        </center>
-                                    </div>
-                                    <div>
-                                        <center>
-                                        <p>Weight</p>
-                                        <h4>{user.weight + ` kg`}</h4>
-                                        </center>
-                                    </div>                                       
-                                    <div>
-                                        <center>
-                                        <p>BMI</p>
-                                        {
-                                            user.bmi >= 24.9 ?
-                                                <h4 style={{ color: red[500] }}>{user.bmi}</h4>
-                                            : user.bmi >= 18.5 ?
-                                                <h4 style={{ color: green[500] }}>{user.bmi}</h4>
-                                            : (user.bmi <= 18.5 && user.bmi > 0) &&
-                                                <h4 style={{ color: orange[500] }}>{user.bmi}</h4>
-                                        }   
-                                        </center>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="d-flex align-items-center justify-content-between">
-                                <p></p>
-                                <p className="text-muted"><CircleIcon fontSize="small" style={{ color: orange[500] }}/>Underweight</p>
-                                <p className="text-muted"><CircleIcon fontSize="small" style={{ color: green[500] }}/>Normal</p>
-                                <p className="text-muted"><CircleIcon fontSize="small" style={{ color: red[500] }}/>Overweight</p>
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-xl-2">
-                    <div className="green-card-sm">
-                        <div className="d-flex align-items-center justify-content-between">
-                            <BarChartIcon fontSize="large"/>
-                            <IconButton onClick={editCardData}><EditIcon fontSize="small" style={{ color: 'white'}}/></IconButton>
-                        </div>
-                        <div className="card-body">
-                            <h4>{user.sugarLevel + ` mg/dL`}</h4>
-                            <p>Sugar Level</p>
-                        </div>
-                    </div>
-                    <div className="white-card-sm">
-                        <div className="d-flex align-items-center justify-content-between">
-                            <BarChartIcon fontSize="large"/>
-                        </div>
-                        <div className="card-body mt-1">
-                            <h5>Age - {user.age}</h5><br/>
-                            <h5>Gender- {user.gender}</h5>
-                        </div>
-                    </div>
-                </div>
+
+
                 <div className="col-xl-3 px-4">
                     <center>
                         <Button color="primary" variant="contained" className="mb-4 mt-4" fullWidth disableElevation size="large"

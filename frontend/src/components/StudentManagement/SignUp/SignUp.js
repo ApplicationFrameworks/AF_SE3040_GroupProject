@@ -277,7 +277,7 @@ function SignUp() {
                                 {previewSource ?
                                     <img src={previewSource} alt="preview" className="img_input_filed"/>
                                     :
-                                    <img  src="/images/avatar.jpg" className="img_input_filed" alt="profile pic"/>
+                                    <img  src={require('../../../../public/images/avatar.jpg')} className="img_input_filed" alt="profile pic"/>
                                 }
                                 <div className="">
                                     <label htmlFor="profilepic">
