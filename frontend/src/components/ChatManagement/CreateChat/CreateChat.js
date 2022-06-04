@@ -44,12 +44,14 @@ function CreateChat() {
     }
 
     return (
-    <div>
+    <div align="center">
         <div style={{ width: '1000px', height: '900px' }}>
             <div className="container" align="left" >
+            <br /><br />
             <div className="row">
             <div className="col-12">
                 <div className="pb-2 px-3 d-flex flex-wrap align-items-center justify-content-between">
+                
                     <h2>&nbsp;Chat with groups | Create your chat</h2>
                 </div>
             </div>
@@ -106,16 +108,7 @@ function CreateChat() {
                                     </div>
                                 </div>
 
-                                <label className='label1'>Reply</label><br /><br />
-                                <div className="col-md-10 mb-4">
-                                    <div className="form-group3">
-                                        <OutlinedInput 
-                                            type="textarea" id="leader" placeholder="Enter Rply" fullWidth
-                                            onChange={(e)=>setReply(e.target.value)}
-                                            inputProps={{style: {padding: 12}}}
-                                        />
-                                    </div>
-                                </div>
+                                
                             </div>
                                   
                            
@@ -126,8 +119,8 @@ function CreateChat() {
                 </div>
                 <div className="row">
                     <div className="col-md-12">
-                        <div className="form-group">
-                            <input className="form-submit-btn" type="submit" value="Submit" />
+                        <div className="form-group" align="center">
+                            <input className="btn btn-primary" type="submit" value="Create" />
                         </div>
                     </div>
                 </div>

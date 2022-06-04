@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useHistory, useLocation } from 'react-router';
 import { orange, red, blue, green } from '@material-ui/core/colors';
-//import './ViewResearchSubmissions.css'
+import './ViewChats.css'
 import axios from 'axios'
 import IconButton from '@material-ui/core/IconButton';
 import AddIcon from '@material-ui/icons/Add';
@@ -11,11 +11,6 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
 function ViewChats() {
 
-    // const[group,setGroup]=useState("");
-    // const[topic,setTopic]=useState("");
-    // const[leader,setLeader]=useState(""); 
-    // const[message,setMessage]=useState("");
-    // const[reply,setReply]=useState(""); 
     const [chat, setChats] = useState([])
     const history = useHistory()
     const location = useLocation()
@@ -59,9 +54,9 @@ function ViewChats() {
     history.push(`/onechat/${id}`)
   }
 
-//   function add(id) {
-//     history.push(`/createchat`)
-//   }
+  function add(id) {
+    history.push(`/createchat`)
+  }
 
 
   return (
@@ -71,10 +66,9 @@ function ViewChats() {
           <div className="pb-2 px-3 d-flex flex-wrap align-items-center justify-content-between">
           </div>
         </div>
-        <div className="col-3">
-        </div>
+       
         <div className="col-5">
-          <div className="px-3 search" align="right" style={{top:'40px',position:'relative'}}>
+          <div className="px-3 search" align="right" style={{top:'40px',}}>
             <input style={{color:"black",fontWeight:"500",borderRadius:"8px",border:"2px solid grey",padding:'6px 83px'}}
               type="text"
               name="search"
@@ -87,6 +81,7 @@ function ViewChats() {
         </div>
       </div>
 
+      
       <div className="productGrid"  >
         {chat.map((Chat, key) => (
           <div key={key}>
@@ -106,6 +101,12 @@ function ViewChats() {
               </div>
             </div>
         ))}
+      </div>
+          <br/><br/>
+        <div allign='center'>
+      <span>
+      <button className="productBtn" style={{ backgroundColor: blue[400],fontSize:'15px',padding:'7px 30px' ,borderRadius:'10px',position:'relative',top:'-28px'}} onClick={() => add()}><AddIcon/> Create your own chat forum</button>
+      </span>
       </div>
     </div>
   )

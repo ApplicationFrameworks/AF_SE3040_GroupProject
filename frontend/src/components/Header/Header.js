@@ -58,6 +58,12 @@ function Header() {
             cName: 'nav-text'
         },
         {
+            title: 'Chat With Groups',
+            path: '/chatView',
+            icon: <PeopleIcon/>,
+            cName: 'nav-text'
+        },
+        {
           title: 'Prescriptions',
           path: `/prescription/history/${user._id}`,
           icon: <AssignmentIcon/>,

@@ -31,9 +31,13 @@ function UpdateChat(props) {
     }, [props]);
 
     async function update(event) {
-
         event.preventDefault();
-       
+        const config = {
+            headers: {
+                "content-Type": "application/json",
+            }
+        };
+
         const updatedChat = {
             group,
             topic,
@@ -41,13 +45,6 @@ function UpdateChat(props) {
             message,
             reply
         }
-
-        const config = {
-            headers: {
-                "content-Type": "application/json",
-            }
-        };
-
 
         try {
             await axios.put(`http://localhost:8070/chatmsg/updatechat/${props.match.params.id}`, updatedChat, config);
@@ -60,13 +57,13 @@ function UpdateChat(props) {
 
 
     return (
-        <div>
+        <div align="center">
         <div style={{ width: '1000px', height: '900px' }}>
             <div className="container" align="left" >
             <div className="row">
             <div className="col-12">
                 <div className="pb-2 px-3 d-flex flex-wrap align-items-center justify-content-between">
-                    <h2>&nbsp;Reply to Chat</h2>
+                    <h2>&nbsp;Reply to Message</h2>
                 </div>
             </div>
         </div>
@@ -79,6 +76,7 @@ function UpdateChat(props) {
                             <br /><br />
                             <div>
                                 
+                            <label className='label1'>Message from: </label>
                                 <div className="col-md-10 mb-4">
                                     <div className="form-group3">
                                         <OutlinedInput 
@@ -110,6 +108,7 @@ function UpdateChat(props) {
                                     </div>
                                 </div>
 
+                                <label className='label1'>Message : </label>
                                 <div className="col-md-10 mb-4">
                                     <div className="form-group3">
                                         <OutlinedInput 
@@ -120,6 +119,7 @@ function UpdateChat(props) {
                                     </div>
                                 </div>
 
+                                <label className='label1'>Reply : </label>
                                 <div className="col-md-10 mb-4">
                                     <div className="form-group3">
                                         <OutlinedInput 
@@ -139,8 +139,8 @@ function UpdateChat(props) {
                 </div>
                 <div className="row">
                     <div className="col-md-12">
-                        <div className="form-group">
-                            <input className="form-submit-btn" type="submit" value="Submit" />
+                        <div className="form-group" align="center">
+                            <input className="btn btn-info" type="submit" value="Reply" />
                         </div>
                     </div>
                 </div>

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {useHistory} from 'react-router-dom';
 import {OutlinedInput} from "@material-ui/core";
 import axios from 'axios';
+import './ViewOneChat.css'
 
 function ViewOneChat(props) {
 
@@ -50,25 +51,27 @@ function ViewOneChat(props) {
     //   }
 
     return (
-        <div>
+        <div align="center">
         <div style={{ width: '1000px', height: '900px' }}>
             <div className="container" align="left" >
+            <br /><br />
             <div className="row">
             <div className="col-12">
                 <div className="pb-2 px-3 d-flex flex-wrap align-items-center justify-content-between">
-                    <h2>&nbsp;Reply to Chat</h2>
+                    <h2>&nbsp; &nbsp;View Message</h2>
                 </div>
             </div>
         </div>
         <br></br>
         <div className="create_sub">
-            <form >
+            <form className="addDoc">
                 <div className="row">
                     <div className="col-8">
                         <div className="row">
                             <br /><br />
                             <div>
                                 
+                            <label className='label1'>Message from: </label>
                                 <div className="col-md-10 mb-4">
                                     <div className="form-group3">
                                         <OutlinedInput 
@@ -100,6 +103,7 @@ function ViewOneChat(props) {
                                     </div>
                                 </div>
 
+                                <label className='label1'>Message : </label>
                                 <div className="col-md-10 mb-4">
                                     <div className="form-group3">
                                         <OutlinedInput 
@@ -114,16 +118,14 @@ function ViewOneChat(props) {
                                 <div className="col-md-10 mb-4">
                                     <div className="form-group3">
                                     
-                                    <button className="btn btn-primary">
+                                    <button className="btn btn-warning">
                                        <a href={`/updateChat/${id}`}>
-                                    Rply
+                                    Reply
                                      </a>
-                </button>
+                                    </button>
                                     </div>
                                 </div>
-                            </div>
-                                  
-                           
+                            </div> 
                         </div>
 
                     </div>
