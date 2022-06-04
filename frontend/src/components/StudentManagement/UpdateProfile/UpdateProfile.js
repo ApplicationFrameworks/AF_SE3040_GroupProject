@@ -156,7 +156,7 @@ function UpdateProfile(props) {
                                     <div className="">
                                         <OutlinedInput
                                             className="input_filed1"
-                                            type=" " id="itNo" placeholder="phone" required fullWidth
+                                            type=" " id="itNo" placeholder="IT Number" required fullWidth
                                             value={itNo}
                                             onChange={(event)=> {setItNo(event.target.value)}}
                                             inputProps={{style: {padding: 12}, }}
