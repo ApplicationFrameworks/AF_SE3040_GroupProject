@@ -108,6 +108,7 @@ function StaffUpdate(props){
 
     return(
         <div className="container" align="center">
+            <br/><br/><br/>
             <div className="row">
                 <div className="col-12">
                     <div className="pb-2 px-3 d-flex flex-wrap align-items-center justify-content-between">
@@ -115,6 +116,7 @@ function StaffUpdate(props){
                     </div>
                 </div>
             </div>
+            <br/><br/>
             <form onSubmit={update} encType="multipart/form-data" className="docUpdate" align="center">
                <div className="row">
                <div className="col-8">
