@@ -52,7 +52,7 @@ function UpdateChat(props) {
             alert("Reply Sent Unsuccess!")
         }
     }
-
+    
     return (
         <div align="center">
                <br></br>   <br></br>   <br></br>
@@ -147,8 +147,6 @@ function UpdateChat(props) {
     </div>
     </div>
 </div>
-
-
     )
 
 }
