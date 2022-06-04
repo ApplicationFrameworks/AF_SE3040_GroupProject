@@ -22,10 +22,8 @@ exports.groupRegistration = async (req, res) => {
         thirdMemberEmail
     } = req.body;
 
-    try {
-
         //creating a new group
-        const group = await Group.create({leaderName,
+        const group =new Group({leaderName,
             leaderItNo,
             leaderEmail,
             firstMemberName,
@@ -36,12 +34,16 @@ exports.groupRegistration = async (req, res) => {
             secondMemberEmail,
             thirdMemberName,
             thirdMemberItNo,
-            thirdMemberEmail});
+            thirdMemberEmail
+        });
 
 
-    } catch (error) {
-        res.status(500).json({message: "Something went wrong", error: error.message})
-    }
+    //saving the object to the db
+    group.save().then(() => {
+        res.status(200).json({ status: "New Group Added" });
+    }).catch((error) => {
+        res.status(500).json({message:"Fail to Add Group",error:error.message})
+    })
 }
 
 //update Group controller

@@ -1,16 +1,21 @@
 .main_input_filed {
     width: 100%;
-    height: 1110px;
+    height: 1250px;
 }
 
-h6 {
+.h6 {
     font-weight: bold;
+    font-size: 25px;
+    color: red;
+
 }
 
 .main_input_filed_2 {
-    width: 50%;
-    height: 900px;
-    margin-left: 33%;
+    width: 45%;
+    height: 1200px;
+    margin-left: 28%;
+    border: 3px solid #02254b;
+    border-radius: 5px;
 }
 
 
@@ -26,8 +31,9 @@ h6 {
 }
 
 .signup_text {
-    font-weight: 700;
-    font-size: 30px;
+    font-weight: 800;
+    font-size: 35px;
+    margin-right: 10%;
 }
 
 .flex-container12 {
@@ -40,26 +46,27 @@ h6 {
 }
 
 .form_btn {
-    background-image: linear-gradient(#0015ff, #0080ff, #002aff, rgb(0, 0, 0));
+    background-color: #ffa500;
     text-decoration: none;
     color: white;
     width: 120px;
     height: 50px;
     border: none;
-    border-radius: 20px;
-    margin-left: 25%;
+    border-radius: 5px;
+    margin-left: 40%;
 
 }
 
 .form_btn1 {
-    background-image: linear-gradient(#0015ff, #0080ff, #002aff, rgb(0, 0, 0));
+    background-image: linear-gradient(#ffa500, #ffa500, #ffa500, rgb(255, 165, 0));
+
     text-decoration: none;
     color: white;
     width: 300px;
     height: 40px;
     border: none;
     border-radius: 20px;
-    left: 35%;
+    left: 85%;
 
 }
 
@@ -74,9 +81,10 @@ h6 {
     font-weight: 600;
     height: 45px;
     width: 500px;
-    border: 2px solid darkblue;
+    border: 2px solid #02254b;
     border-radius: 10%;
     box-shadow: 0 4px 8px 0 black, 0 3px 10px black;
+    margin-left: 170px;
 }
 
 .input_filed:hover {
@@ -92,7 +100,7 @@ h6 {
 .img_input_filed {
     width: 150px;
     height: 150px;
-    margin-left: 25%;
+    margin-left: 40%;
 }
 
 .items_in_form{
