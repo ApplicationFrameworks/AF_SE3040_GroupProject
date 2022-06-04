@@ -30,6 +30,7 @@ import ViewOneMark from "./src/components/EvaluationMarksManagement/ViewMarks/Vi
 import SubmissionType from "./src/components/SubmissionTypesManagement/SubmissionType";
 import Profile from "./src/components/StudentManagement/Profile/Profile.js";
 import DisplayGroups from "./src/components/GroupManagement/ViewGroups/viewGroups";
+import AddGroups from "./src/components/GroupManagement/AddGroups/addGroups";
 
 
 function App() {
@@ -66,6 +67,7 @@ function App() {
                 <Route path="/submissionTypeAdd" exact component={SubmissionType}/>
                 <Route path="/student/profile" exact component={Profile}/>
                 <Route path="/group/view" exact component={DisplayGroups}/>
+                <Route path="/group/add" exact component={AddGroups}/>
 
 
             </Switch>
