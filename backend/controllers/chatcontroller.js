@@ -35,8 +35,6 @@ exports.updateChat = async (req, res) => {
   }
 }
 
-
-
 //view all chats
 exports.viewAllChats = async (req,res) => { 
  
@@ -47,8 +45,7 @@ exports.viewAllChats = async (req,res) => {
     })
   }
    
-  
-  
+   
   //view one Chat
   exports.viewOneChat = async (req, res) => {
     let chatId = req.params.id;
