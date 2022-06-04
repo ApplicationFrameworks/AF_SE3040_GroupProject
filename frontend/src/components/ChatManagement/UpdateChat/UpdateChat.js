@@ -12,8 +12,6 @@ function UpdateChat(props) {
     const[reply,setReply]=useState(""); 
     const history = useHistory();
 
-
-
     useEffect(() => {
         async function fetchChat() {
             await axios.get(`http://localhost:8070/chatmsg/onechat/${props.match.params.id}`).then((res) => {
@@ -54,7 +52,6 @@ function UpdateChat(props) {
             alert("Reply Sent Unsuccess!")
         }
     }
-
 
     return (
         <div align="center">
