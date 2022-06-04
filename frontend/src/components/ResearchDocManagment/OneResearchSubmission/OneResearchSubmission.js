@@ -161,7 +161,7 @@ function OneResearchSubmission(props) {
                 </div>
             </div>
 
-            <div className='replyCard'><h6 style={{top:'25px',position:'relative'}}>Status</h6><br/><br/><div style={{background:'#02254bd0',color:'white'}}>{reply}</div></div>
+            <div className='replyCard'><h6 style={{top:'25px',position:'relative'}}>Marks</h6><br/><br/><div style={{background:'#02254bd0',color:'white'}}>{reply}</div></div>
         </div>
     )
 }

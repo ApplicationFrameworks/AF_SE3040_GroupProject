@@ -72,21 +72,13 @@ function ViewResearchSubmissions() {
         <br></br>
       <div align='center'>
         <div className="col-5">
-          <div className="px-3 search" align="right" style={{top:'40px',position:'relative'}}>
-            <input style={{color:"black",fontWeight:"500",borderRadius:"8px",border:"2px solid grey",padding:'6px 83px'}}
-              type="text"
-              name="search"
-              id="search"
-              placeholder="Search"
-              onChange={handleSearchAll}
-              required
-            /><div style={{position:'relative',right:'25px',top:'-35px'}}><SearchIcon/></div>
-          </div>
+        
+          
         </div>
         </div>
-
-      <span>
-        <button className="productBtn" style={{ backgroundColor: orange[400],fontSize:'20px',padding:'7px 30px' ,borderRadius:'10px',border:'2px solid orange',position:'relative',top:'-28px'}} onClick={() => add()}><AddIcon/> Add Submission</button>
+<br/>
+        <span>
+        <button className="productBtn" style={{ backgroundColor: orange[400],fontSize:'19px',padding:'7px 30px' ,borderRadius:'10px',border:'2px solid orange',position:'relative',top:'-28px'}} onClick={() => add()}><AddIcon/> Add Submission</button>
       </span>
       <div className="productGrid"  >
         {document.map((Document, key) => (
