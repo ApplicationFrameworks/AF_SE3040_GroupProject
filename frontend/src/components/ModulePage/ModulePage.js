@@ -104,7 +104,7 @@ function Modulepage() {
           <a href="#">Internet Security</a>
         </div>
       </aside>
-      <div style={{ height: 2000 }}>
+      <div style={{ height: 2700 }}>
         <div className="week1">
           <h4 className="weekT1">Student Group Registration</h4>
           <div className="inside">
@@ -215,19 +215,29 @@ function Modulepage() {
 
         <div className="week5">
           <h4 className="weekT4">Documentations / Presentations Evaluation</h4>
-          <div style={{ left: "900px", position: "absolute", top: "8px" }}>
+          <div style={{ left: "600px", position: "absolute", top: "8px" }}>
             {isAdmin && (
               <div style={{ width: 180 }}>
                 <a href="/submissionTypeAdd">
                   <button className="addBtnSubmission" onClick={() => add()}>
-                    Add
+                    Add Types
                   </button>
                 </a>
+                <a href="/videoSubmissionView">
+                <button className="addMarksBtn" onClick={() => add()}>
+                    Add Marks
+                  </button>
+                  </a>
+                  <a href="/markingSchemaAdd">
+                <button className="addSchemaBtn" onClick={() => add()}>
+                    Add Schemes
+                  </button>
+                  </a>
               </div>
             )}
           </div>
           <div className="inside1">
-            <a className="linkModule" href="/request/view">
+            <a className="linkModule" href="">
               <img
                 className="link"
                 src={require("../../../public/images/internet.png")}
@@ -255,7 +265,7 @@ function Modulepage() {
               />
             </a>
 
-            <a className="linkModule" href="/request/view">
+            <a className="linkModule" href="">
               <img
                 className="link"
                 src={require("../../../public/images/internet.png")}
@@ -269,7 +279,7 @@ function Modulepage() {
               />
             </a>
 
-            <a className="linkModule" href="/request/view">
+            <a className="linkModule" href="">
               <img
                 className="link"
                 src={require("../../../public/images/internet.png")}
@@ -278,6 +288,34 @@ function Modulepage() {
                   height: 30,
                   position: "absolute",
                   top: "460px",
+                  left: "22px",
+                }}
+              />
+            </a>
+
+            <a className="linkModule" href="/evaluationMarksView">
+              <img
+                className="link"
+                src={require("../../../public/images/internet.png")}
+                style={{
+                  width: 30,
+                  height: 30,
+                  position: "absolute",
+                  top: "601px",
+                  left: "22px",
+                }}
+              />
+            </a>
+
+            <a className="linkModule" href="/markingSchemaView">
+              <img
+                className="link"
+                src={require("../../../public/images/internet.png")}
+                style={{
+                  width: 30,
+                  height: 30,
+                  position: "absolute",
+                  top: "743px",
                   left: "22px",
                 }}
               />
