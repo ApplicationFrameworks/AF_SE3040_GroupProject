@@ -1,73 +1,61 @@
 .white-card{
-    padding: 25px;
-    margin-bottom: 30px !important;
-    background-color: white;
-    height: calc(100% - 30px);
-    border-radius: 15px;
-    text-align: center;
-    box-shadow:0px 24px 48px 0 rgba(0,0,0,0.1);
+    padding-left: 10%;
+    padding-top: 10%;
 }
 
-.profile_img img {
-    box-shadow: 0 0 2rem 0 rgba(136, 152, 170, .15) !important;
-    border-radius: 50% !important;
+.profile_img11 img {
     vertical-align: middle;
     border-style: none;
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 280px;
+    height: 320px;
     transition: all .15s ease;
     transform: translate(0%, 0%);
-    margin-bottom: 20px;
 }
 
-.profile_img img:hover {
+.profile_img11 img:hover {
     transform: translate(0%, -3%);
 }
 
-.white-card-sm{
-    margin-bottom:20px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow:0px 24px 48px 0 rgba(0,0,0,0.1);
+.profile_div{
+    width:1300px;
+    height: 400px;
+    background-color: none;
+    border: 5px solid #02254b;
+    border-radius: 10px;
+    box-shadow:10px 24px 48px 0 rgba(0,0,0,0.1);
 }
 
-.white-card-sm .card-head{
-    background-color: #0374c4 !important;
-    padding: 5px 20px;
-    border-radius: 15px 15px 0px 0px;
+.middle_div{
+    padding-left: 30%;
 }
 
-.white-card-sm .card-body{
-    padding: 10px 25px 5px 25px;
+.profile_text {
+    font-weight: 800;
+    font-size: 35px;
+    margin-left: 42%;
 }
 
-.heart{
+.middle_div1{
     position: absolute;
-    margin-top: -80px;
-    margin-left: 130px;
-}
-
-.orange-card-sm{
-    margin-bottom:20px;
-    background-image: -webkit-linear-gradient(90deg,#ee0979 0%,#ff6a00 100%);
-    border-radius: 15px;
-    box-shadow:0px 24px 48px 0 rgba(0,0,0,0.1);
+    left: 36%;
+    background-image: linear-gradient(#ffa500, #ffa500, #ffa500, rgb(255, 165, 0));
+font-weight:800;
+    text-decoration: none;
     color: white;
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
 }
 
-.orange-card-sm .card-body{
-    padding: 10px 25px 5px 25px;
-}
-
-.green-card-sm{
-    margin-bottom:20px;
-    background-image: -webkit-linear-gradient(90deg,#11998e 0%,#38ef7d 100%);
-    border-radius: 15px;
-    box-shadow:0px 24px 48px 0 rgba(0,0,0,0.1);
+.middle_div2{
+    position: absolute;
+    left: 66%;
+    background-image: linear-gradient(#ffa500, #ffa500, #ffa500, rgb(255, 165, 0));
+    font-weight:800;
+    text-decoration: none;
     color: white;
-}
-
-.green-card-sm .card-body{
-    padding: 10px 25px 5px 25px;
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
 }

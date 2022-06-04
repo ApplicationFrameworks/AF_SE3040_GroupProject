@@ -155,7 +155,7 @@ function SignUp() {
                                         />
                                     </div>
                                 </div><br/>
-                                <h6 className="h6" style={{fontWeight:"bold",fontSize:18,color:"black",textAlign:"center"}}>Course </h6>
+                                <h6 className="h6" style={{fontWeight:"bold",fontSize:18,color:"black",textAlign:"center"}}>Registration Number </h6>
                                 <div className="div_input_filed">
                                     <div className="">
 
