@@ -1,12 +1,12 @@
 .tableRow:hover {
-  background-color: #ffaa00f1;
+  background-color: #c7c7c794;
   cursor: pointer;
 }
 
 .tableRow {
   padding: 1px;
   text-align: left;
-  background-color: #c7c7c794;
+  background-color: #fff;
 }
 
 .tableData {
@@ -26,4 +26,12 @@ table,
 td,
 th {
   border-bottom: 1px solid rgb(128, 128, 128);
+}
+
+.textScheme {
+  font-size: 28px;
+  margin-left: 550px;
+  font-weight: 600;
+  padding-bottom: 30px;
+  margin-top: 180px;
 }

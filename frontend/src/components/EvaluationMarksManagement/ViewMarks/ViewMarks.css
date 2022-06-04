@@ -7,20 +7,21 @@
 
 .textMarks {
   font-size: 25px;
-  margin-left: 580px;
+  margin-left: 680px;
   font-weight: 600;
   padding-bottom: 30px;
+  margin-top: 100px;
 }
 
 .tableRow:hover {
-  background-color: #ffaa00f1;
+  background-color: #c7c7c794;
   cursor: pointer;
 }
 
 .tableRow {
   padding: 1px;
   text-align: left;
-  background-color: #c7c7c794;
+  background-color: #fff;
 }
 
 .tableData {

@@ -1,139 +1,162 @@
-.large{
-    width:800px;
-    height:500px;
-    top:90px;
-    position: relative;
-
+.large {
+  width: 800px;
+  height: 500px;
+  top: 90px;
+  position: relative;
 }
 
-.mail{
-    position: relative;
-    left:70px;
+.mail {
+  position: relative;
+  left: 70px;
 }
 
-.week1{
-    width:1000px;
-    height:50px;
-    top:0px;
-    position: relative;
-    background-color: rgba(164, 165, 167, 0.418);
-    border-left: 6px solid orange;
-
+.week1 {
+  width: 1000px;
+  height: 50px;
+  top: 0px;
+  position: relative;
+  background-color: rgba(164, 165, 167, 0.418);
+  border-left: 6px solid orange;
 }
 
-.weekT1{
-    top:8px;
-    position: relative;
-    left:60px;
-
+.weekT1 {
+  top: 8px;
+  position: relative;
+  left: 60px;
 }
 
-.inside{
-    width:1000px;
-    height:200px;
-    top:50px;
-    position: relative;
-    background-color: #ffffff;
-    border-radius: 10px;
-    border:2.5px solid rgb(151, 151, 151);
-
+.inside {
+  width: 1000px;
+  height: 200px;
+  top: 50px;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 2.5px solid rgb(151, 151, 151);
 }
 
-.week2{
-    width:1000px;
-    height:50px;
-    top:300px;
-    position: relative;
-    background-color: rgba(164, 165, 167, 0.418);
-    border-left: 6px solid orange;
-
+.week2 {
+  width: 1000px;
+  height: 50px;
+  top: 300px;
+  position: relative;
+  background-color: rgba(164, 165, 167, 0.418);
+  border-left: 6px solid orange;
 }
 
-.weekT2{
-    top:8px;
-    position: relative;
-    left:60px;
-
+.weekT2 {
+  top: 8px;
+  position: relative;
+  left: 60px;
 }
 
-.week3{
-    width:1000px;
-    height:50px;
-    top:600px;
-    position: relative;
-    background-color: rgba(164, 165, 167, 0.418);
-    border-left: 6px solid orange;
-
+.week3 {
+  width: 1000px;
+  height: 50px;
+  top: 600px;
+  position: relative;
+  background-color: rgba(164, 165, 167, 0.418);
+  border-left: 6px solid orange;
 }
 
-.weekT3{
-    top:8px;
-    position: relative;
-    left:60px;
-
+.weekT3 {
+  top: 8px;
+  position: relative;
+  left: 60px;
 }
 
-.week4{
-    width:1000px;
-    height:50px;
-    top:900px;
-    position: relative;
-    background-color: rgba(164, 165, 167, 0.418);
-    border-left: 6px solid orange;
-
+.week4 {
+  width: 1000px;
+  height: 50px;
+  top: 900px;
+  position: relative;
+  background-color: rgba(164, 165, 167, 0.418);
+  border-left: 6px solid orange;
 }
 
-.weekT4{
-    top:8px;
-    position: relative;
-    left:60px;
-
+.weekT4 {
+  top: 8px;
+  position: relative;
+  left: 60px;
 }
 
-.week5{
-    width:1000px;
-    height:50px;
-    top:1200px;
-    position: relative;
-    background-color: rgba(164, 165, 167, 0.418);
-    border-left: 6px solid orange;
-
+.week5 {
+  width: 1000px;
+  height: 50px;
+  top: 1200px;
+  position: relative;
+  background-color: rgba(164, 165, 167, 0.418);
+  border-left: 6px solid orange;
 }
 
-.weekT5{
-    top:8px;
-    position: relative;
-    left:60px;
-
+.weekT5 {
+  top: 8px;
+  position: relative;
+  left: 60px;
 }
 
-.link{
-    position: relative;
-    left:20px;
-    top:35px;
+.link {
+  position: relative;
+  left: 20px;
+  top: 35px;
 }
 
-.mid{
-    position: relative;
-    left:80px;
-    top:5px;
-    font-size: 18.5;
+.mid {
+  position: relative;
+  left: 80px;
+  top: 5px;
+  font-size: 18.5;
 }
 
-.para{
-    font-size: 18;
-    position: relative;
-    left:120px;
-    top:15px;
-
+.para {
+  font-size: 18;
+  position: relative;
+  left: 120px;
+  top: 15px;
 }
 
-.linkModule{
-    text-decoration: none;
-    color: black;
+.linkModule {
+  text-decoration: none;
+  color: black;
 }
 
+.addBtnSubmission {
+  background-color: orange;
+  color: white;
+  border-radius: 6px;
+  width: 60px;
+  padding: 5px;
+  border: none;
+  transition: transform 0.2s;
+}
 
+.addBtnSubmission:hover {
+  transform: scale(1.1);
+}
 
+.inside1 {
+  width: 1000px;
+  max-height: 1000px;
+  top: 50px;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 2.5px solid rgb(151, 151, 151);
+}
 
+.viewBtnSubmission {
+  background-color: orange;
+  color: white;
+  border-radius: 6px;
+  width: 60px;
+  padding: 5px;
+  border: none;
+  transition: transform 0.2s;
+  position: absolute;
+  margin-left: 850px;
+  margin-top: -30px;
+}
 
+.viewBtnSubmission:hover {
+  transform: scale(1.1);
+}

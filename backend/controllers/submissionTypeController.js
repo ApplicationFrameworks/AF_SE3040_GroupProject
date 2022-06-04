@@ -63,7 +63,7 @@ exports.viewAllSubmissionType = async (req, res) => {
   SubmissionType.find().then((document) => {
     res.status(200).json(document)
   }).catch((error) => {
-    res.status(500).json({ message: "Error with fetching Product", error: error.message });
+    res.status(500).json({ message: "Error with fetching SubmissionType", error: error.message });
   })
 }
  

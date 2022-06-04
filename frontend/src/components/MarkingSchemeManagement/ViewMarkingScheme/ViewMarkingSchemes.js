@@ -68,6 +68,7 @@ function ViewMarkingSchemes() {
         height: "550px",
       }}
     >
+      <h2 className="textScheme">Marking Schemes</h2>
       <div className="row">
         <div className="col-4">
           <div className="pb-2 px-3 d-flex flex-wrap align-items-center justify-content-between"></div>
@@ -78,47 +79,9 @@ function ViewMarkingSchemes() {
             className="px-3 search"
             align="right"
             style={{ top: "40px", position: "relative", right: "460px" }}
-          >
-            <input
-              style={{
-                color: "black",
-                fontWeight: "500",
-                borderRadius: "8px",
-                border: "2px solid grey",
-                padding: "6px 123px",
-              }}
-              type="text"
-              name="search"
-              id="search"
-              placeholder="Search"
-              onChange={handleSearchAll}
-              required
-            />
-            <div style={{ position: "relative", right: "510px", top: "-35px" }}>
-              <SearchIcon />
-            </div>
-          </div>
+          ></div>
         </div>
       </div>
-
-      <span>
-        <button
-          className="productBtn"
-          style={{
-            backgroundColor: orange[400],
-            fontSize: "18px",
-            padding: "7px 30px",
-            borderRadius: "10px",
-            border: "2px solid orange",
-            position: "relative",
-            top: "-28px",
-            left: "1100px",
-          }}
-          onClick={() => add()}
-        >
-          <AddIcon /> Add New
-        </button>
-      </span>
       <div className="productGrid">
         {document.map((Document, key) => (
           <div key={key}>

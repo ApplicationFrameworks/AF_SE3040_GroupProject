@@ -49,7 +49,7 @@ function SubmissionType() {
               fontSize: "28px",
               fontWeight: "700",
               color: "black",
-              marginTop: "120px",
+              marginTop: "140px",
               marginLeft: "640px",
             }}
           >
@@ -84,7 +84,7 @@ function SubmissionType() {
                       height: "150px",
                       marginTop: "130px",
                       marginLeft: "230px",
-                      position: "absolute"
+                      position: "absolute",
                     }}
                   ></img>
                 </div>
@@ -93,42 +93,6 @@ function SubmissionType() {
                 <div className="col-8">
                   <div className="row">
                     <br />
-
-                    {/* <div className="col-8 d-flex justify-content-center">
-                      <div>
-                        {previewSource ? (
-                          <img className="previewImgsub" />
-                        ) : (
-                          <img className="previewImgsub" />
-                        )}
-                        <div className="form-group17">
-                          <label htmlFor="profilepic">
-                            <input
-                              style={{ display: "none" }}
-                              id="profilepic"
-                              name="profilepic"
-                              type="file"
-                              accept=".pdf"
-                              onChange={handleFileInputChange}
-                              value={fileInputState}
-                            />
-                            <Button
-                              color="primary"
-                              variant="contained"
-                              component="span"
-                              className="uploadBtn"
-                              style={{
-                                padding: "10px 20px",
-                                fontWeight: "600",
-                                fontSize: "15px",
-                              }}
-                            >
-                              <FileUploadOutlinedIcon /> &nbsp; Upload PDF
-                            </Button>
-                          </label>
-                        </div>
-                      </div>
-                    </div> */}
 
                     <div>
                       <label
@@ -162,19 +126,25 @@ function SubmissionType() {
                         </div>
                       </div>
 
-                      <label className="label18"
-                      style={{
-                        left: "-150px",
-                        top: "80px",
-                      }}>Submission Name :</label>
+                      <label
+                        className="label18"
+                        style={{
+                          left: "-150px",
+                          top: "80px",
+                        }}
+                      >
+                        Submission Name :
+                      </label>
                       <br />
                       <div className="col-md-7 mb-4">
-                        <div className="form-group18"
-                        style={{
+                        <div
+                          className="form-group18"
+                          style={{
                             position: "relative",
                             left: "30px",
                             top: "100px",
-                          }}>
+                          }}
+                        >
                           <OutlinedInput
                             type="subName"
                             id="subName"
@@ -187,19 +157,25 @@ function SubmissionType() {
                         </div>
                       </div>
 
-                      <label className="label18" 
-                      style={{
-                        left: "-190px",
-                        top: "80px",
-                      }}>Details :</label>
+                      <label
+                        className="label18"
+                        style={{
+                          left: "-190px",
+                          top: "80px",
+                        }}
+                      >
+                        Details :
+                      </label>
                       <br />
                       <div className="col-md-7 mb-4">
-                        <div className="form-group18"
-                        style={{
+                        <div
+                          className="form-group18"
+                          style={{
                             position: "relative",
                             left: "30px",
                             top: "100px",
-                          }}>
+                          }}
+                        >
                           <OutlinedInput
                             type="details"
                             id="details"

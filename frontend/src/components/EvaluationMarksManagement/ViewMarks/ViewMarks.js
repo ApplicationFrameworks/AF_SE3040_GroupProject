@@ -63,19 +63,7 @@ function ViewMarks() {
           <div className="pb-2 px-3 d-flex flex-wrap align-items-center justify-content-between"></div>
         </div>
         <div className="col-3"></div>
-        <div className="col-5">
-          {/* Search function disabled*/}
-          {/* <div className="px-3 search" align="right" style={{top:'40px',position:'relative',right:'460px'}}>
-            <input style={{color:"black",fontWeight:"500",borderRadius:"8px",border:"2px solid grey",padding:'6px 123px'}}
-              type="text"
-              name="search"
-              id="search"
-              placeholder="Search"
-              onChange={handleSearchAll}
-              required
-            /><div style={{position:'relative',right:'510px',top:'-35px'}}><SearchIcon/></div>
-          </div> */}
-        </div>
+        <div className="col-5"></div>
       </div>
 
       <div className="productGrid">
@@ -91,18 +79,6 @@ function ViewMarks() {
                     <td className="tableData" style={{ width: 900 }}>
                       {Document.topic}
                     </td>
-                    {/* <td className="tableData" style={{ width: 200 }}>
-                      {Document.marks} Marks
-                    </td> */}
-
-                    {/* <td style={{ width: 150 }}>
-                      <PictureAsPdfIcon
-                        style={{
-                          color: red[800],
-                          backgroundPosition: "center",
-                        }}
-                      ></PictureAsPdfIcon>
-                    </td> */}
                     <td>
                       <span>
                         <IconButton>
