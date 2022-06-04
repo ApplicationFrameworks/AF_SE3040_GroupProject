@@ -31,9 +31,7 @@ function ResearchDocumentSubmission() {
             setPreviewSource(reader.result)
         }
     }
-
     
-
     async function add(event){
         event.preventDefault();
         const config = {
