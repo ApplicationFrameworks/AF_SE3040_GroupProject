@@ -56,7 +56,7 @@ function AdminLogin() {
                     <h1 className="form-h1">Sign In</h1><br/>
                     <p className="text-muted"> All your project needs at one place!</p> 
                     <input 
-                        type="email" 
+                        type=""
                         name="email" 
                         id="email"
                         placeholder="E-mail&nbsp;&nbsp; Address" 
